@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
-import { DrawerActions } from '@react-navigation/native';
+import { DrawerActions, NavigationProp, useNavigation } from '@react-navigation/native';
+import Busca from "./Busca";
 
 const CustomHeader = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProp<any>>();
 
   const abrirDrawer = () => {
     navigation.dispatch(DrawerActions.openDrawer());
@@ -14,21 +14,18 @@ const CustomHeader = () => {
   return (
     <View style={styles.header}>
       <View style={styles.leftContainer}>
-        {/* Ícone de menu */}
         <TouchableOpacity onPress={abrirDrawer} style={styles.menuIcon}>
           <Ionicons name="menu" size={28} color="#2e7d32" />
         </TouchableOpacity>
-
-        {/* Logo à esquerda */}
         <Image
           source={require('../../assets/images/textLogo.png')}
           style={styles.logo}
           resizeMode="contain"
         />
       </View>
-
-      {/* Placeholder para manter altura */}
-      <View style={{ width: 32 }} />
+      <View style={styles.rightContainer}>
+        <Busca />
+      </View>
     </View>
   );
 };
@@ -40,7 +37,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
     borderBottomWidth: 2,
     borderBottomColor: '#2e7d32',
 
@@ -55,6 +51,11 @@ const styles = StyleSheet.create({
   leftContainer: {
     flexDirection: 'row',
     alignItems: 'center',
+    flex: 1,
+  },
+
+  rightContainer: {
+    alignItems: 'flex-end',
   },
 
   menuIcon: {

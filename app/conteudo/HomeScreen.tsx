@@ -1,9 +1,10 @@
 import React from 'react';
 import { View, ScrollView, StyleSheet, Image } from 'react-native';
-
-import  ImageCarousel from '../../src/components/Carrossel';
+import  ImageCarousel from '../../src/components/CarrosselAvaliacao';
+import  CarouselDate from '../../src/components/CarrosselData';
 import { useNavigation } from '@react-navigation/native';
 import { Text } from 'react-native';
+import Historia from "../../src/components/Sessoes"
 
 const images = [
   require('../../assets/images/1.png'),
@@ -19,8 +20,6 @@ const navigation = useNavigation();
 
   return (
     <ScrollView style={styles.container}>
-
-
       <View style={styles.imageContainer}>
         <Image
           source={require('../../assets/images/heroImg.png')}
@@ -29,10 +28,11 @@ const navigation = useNavigation();
         />
       </View>
 
-      <Text style={styles.title}>Livros em Destaque</Text>
-
-
-      <ImageCarousel images={images} interval={4000} />
+      <Text style={styles.title}>Melhor Avaliados</Text>
+      <ImageCarousel />
+        <Text style={styles.title}>Recentemente adicionados</Text>
+      <CarouselDate/>
+      <Historia/>
     </ScrollView>
   );
 }

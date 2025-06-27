@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
-import { Video } from 'expo-av';
+import { Video, ResizeMode } from 'expo-av';
 import { Asset } from 'expo-asset';
 import { useRouter, useRootNavigationState } from 'expo-router';
 import { Dimensions } from 'react-native';
@@ -44,15 +44,18 @@ export default function LoadingScreen() {
       <Video
         source={require('../assets/images/loadingVideo.mp4')}
         style={styles.video}
-        resizeMode="contain"  
+         resizeMode={ResizeMode.CONTAIN}  
         shouldPlay
         isLooping={false}
         onLoad={() => setVideoLoaded(true)}
-        onPlaybackStatusUpdate={(status) => {
-          if (videoLoaded && status.didJustFinish) {
-            handleVideoEnd();
-          }
-        }}
+       onPlaybackStatusUpdate={(status) => {
+  if (!videoLoaded) return;
+
+  if ('didJustFinish' in status && status.didJustFinish) {
+    handleVideoEnd();
+  }
+}}
+
       />
     </View>
   );

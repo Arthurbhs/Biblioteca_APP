@@ -1,59 +1,36 @@
 // app/(drawer)/_layout.tsx
 import React from 'react';
-import { Drawer } from 'expo-router/drawer';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import { DrawerContentScrollView, DrawerItemList, DrawerItem } from '@react-navigation/drawer';
 import { View } from 'react-native';
-import { auth } from '../../firebase'; // ajuste o caminho se necessário
+import { auth } from '../../firebase';
+import HomeScreen from './Home';
+import PerfilScreen from './Profile'; // ou './index' se estiver usando a tela principal como index
+import CustomDrawerContent from "../../src/components/CustomDrawerContent"
+import FiltroScreen from "../conteudo/LivrosFiltrados"
+const Drawer = createDrawerNavigator();
 
 export default function Layout() {
   return (
-    <Drawer
+    <Drawer.Navigator
       screenOptions={{
         headerShown: false,
-        drawerStyle: {
-          backgroundColor: '#2e7d32',
-        },
-        drawerContentContainerStyle: {
-          padding: 0,
-        },
-        drawerActiveTintColor: '#000000',
-        drawerInactiveTintColor: '#ffffff',
+        drawerStyle: { backgroundColor: '#2e7d32' },
+        drawerActiveTintColor: '#000',
+        drawerInactiveTintColor: '#fff',
         drawerActiveBackgroundColor: '#ffeb3b',
-        drawerItemStyle: {
-          borderRadius: 0,
-          margin: 0,
-        },
-        drawerLabelStyle: {
-          fontWeight: 'bold',
-        },
+        drawerItemStyle: { borderRadius: 0, margin: 0 },
+        drawerLabelStyle: { fontWeight: 'bold' },
       }}
       drawerContent={(props) => <CustomDrawerContent {...props} />}
-    />
+    >
+      <Drawer.Screen name="index" component={HomeScreen} options={{ title: 'Início' }} />
+      <Drawer.Screen name="profile" component={PerfilScreen} options={{ title: 'Perfil' }} />
+       <Drawer.Screen name="Filtro" component={FiltroScreen} options={{ title: '' }} />
+  
+      {/* Adicione outras telas se quiser */}
+    </Drawer.Navigator>
   );
 }
 
-function CustomDrawerContent(props: any) {
-  return (
-    <DrawerContentScrollView {...props}>
-      <DrawerItemList {...props} />
 
-      <View style={{ marginTop: 10, borderTopWidth: 1, borderTopColor: '#ccc' }} />
-
-      <DrawerItem
-        label="Sair"
-        labelStyle={{ color: '#ffffff', fontWeight: 'bold' }}
-        onPress={async () => {
-          try {
-            await auth.signOut();
-            props.navigation.reset({
-              index: 0,
-             routes: [{ name: 'autentificacao/loginScreen' }],
-            });
-          } catch (error) {
-            console.error('Erro ao deslogar:', error);
-          }
-        }}
-      />
-    </DrawerContentScrollView>
-  );
-}
