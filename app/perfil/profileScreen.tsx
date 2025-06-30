@@ -5,7 +5,7 @@ import { auth, db } from '../../firebase';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import * as ImagePicker from 'expo-image-picker';
 import * as FileSystem from 'expo-file-system';
-import { useNavigation } from '@react-navigation/native';
+import CustomHeader from '@/src/components/Header';
 
 
 
@@ -121,6 +121,7 @@ export default function ProfileScreen() {
   };
 
   return (
+    <><CustomHeader/>
     <ScrollView contentContainerStyle={styles.container}>
 
 
@@ -194,6 +195,7 @@ export default function ProfileScreen() {
         <Button title="Editar" onPress={() => setEditando(true)} buttonStyle={styles.botao} />
       )}
     </ScrollView>
+    </>
   );
 }
 

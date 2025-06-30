@@ -7,6 +7,7 @@ import {
   ActivityIndicator,
   StyleSheet,
 } from 'react-native';
+import Header  from '../../src/components/Header';
 import LivroButton  from '../../src/components/LivroButton';
 
 type Livro = {
@@ -75,13 +76,16 @@ const SearchPage = () => {
 
   if (!termo || livros.length === 0) {
     return (
+      <><Header/>
       <View style={styles.container}>
         <Text style={styles.header}>Nenhum livro encontrado para "{termo}".</Text>
       </View>
+      </>
     );
   }
 
   return (
+    <><Header/>
     <View style={styles.container}>
       <Text style={styles.header}>Resultados para "{termo}"</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -94,6 +98,7 @@ const SearchPage = () => {
         ))}
       </ScrollView>
     </View>
+    </>
   );
 };
 

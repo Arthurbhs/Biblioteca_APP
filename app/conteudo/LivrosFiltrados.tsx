@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { useRoute, RouteProp } from '@react-navigation/native';
 import { useRouter } from 'expo-router';
 import LivroButton from '../../src/components/LivroButton';
+import Header  from '../../src/components/Header';
 
 type Livro = {
   id: number;
@@ -68,7 +69,9 @@ export default function LivrosFiltrados() {
   }
 
   return (
+    <> <Header/>
     <View style={{ padding: 16, flex: 1 }}>
+     
       <Text style={styles.titulo}>Livros por filtro: {filtros.join(', ')}</Text>
 
       <ScrollView>
@@ -81,6 +84,7 @@ export default function LivrosFiltrados() {
         ))}
       </ScrollView>
     </View>
+    </>
   );
 }
 

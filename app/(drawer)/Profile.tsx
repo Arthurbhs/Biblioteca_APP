@@ -14,7 +14,6 @@ export default function WrappedProfileScreen() {
 
   return (
     <View style={{ flex: 1 }}>
-      <Header navigation={navigation} />
       <Profile />
     </View>
   );

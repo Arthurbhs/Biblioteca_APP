@@ -1,12 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { Text, TextInput, Button, View, FlatList, StyleSheet, Image } from 'react-native';
-import { collection, query, where, orderBy, onSnapshot, addDoc, serverTimestamp, doc, getDoc, Timestamp } from 'firebase/firestore';
+import {
+  Text, TextInput, Button, View, FlatList,
+  StyleSheet, Image, TouchableOpacity
+} from 'react-native';
+import {
+  collection, query, where, orderBy,
+  onSnapshot, addDoc, serverTimestamp, doc,
+  getDoc, Timestamp
+} from 'firebase/firestore';
 import { db } from '../../firebase';
 import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
+import { useRouter } from 'expo-router';
+
 
 interface Comentario {
   id: string;
   texto: string;
+  userId: string;
   userEmail: string;
   nome: string;
   avatar: string;
@@ -21,13 +31,13 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
   const [comentarios, setComentarios] = useState<Comentario[]>([]);
   const [comentario, setComentario] = useState('');
   const [user, setUser] = useState<User | null>(null);
+  const router = useRouter();
 
   useEffect(() => {
     const auth = getAuth();
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
+    const unsubscribe = onAuthStateChanged(auth, (u) => {
+      setUser(u);
     });
-
     return () => unsubscribe();
   }, []);
 
@@ -51,9 +61,10 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
           return {
             id: docSnap.id,
             texto: data.texto,
+            userId: data.userId,
             userEmail: data.userEmail,
-            nome: nome,
-            avatar: avatar,
+            nome,
+            avatar,
             createdAt: data.createdAt ?? null
           };
         })
@@ -65,11 +76,7 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
   }, [livroId]);
 
   const enviarComentario = async () => {
-    if (!comentario.trim()) return;
-    if (!user) {
-      console.error('Usuário não autenticado');
-      return;
-    }
+    if (!comentario.trim() || !user) return;
 
     try {
       const userRef = doc(db, 'users', user.uid);
@@ -83,8 +90,8 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
         texto: comentario,
         userId: user.uid,
         userEmail: user.email,
-        nome: nome,
-        avatar: avatar,
+        nome,
+        avatar,
         createdAt: serverTimestamp()
       });
 
@@ -105,16 +112,30 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
     return `${dia}/${mes}/${ano} - ${horas}:${minutos}`;
   };
 
+  const navegarParaPerfil = (userId: string) => {
+    if (!user) return;
+    if (user.uid === userId) {
+      router.push('/perfil/profileScreen');
+    } else {
+      router.push(`/perfil/${userId}`);
+    }
+  };
+
   const renderItem = ({ item }: { item: Comentario }) => (
     <View style={styles.comentario}>
       <View style={styles.userInfo}>
-        {item.avatar ? (
-          <Image source={{ uri: item.avatar }} style={styles.avatar} />
-        ) : (
-          <View style={styles.avatarPlaceholder} />
-        )}
+        <TouchableOpacity onPress={() => navegarParaPerfil(item.userId)}>
+          {item.avatar ? (
+            <Image source={{ uri: item.avatar }} style={styles.avatar} />
+          ) : (
+            <View style={styles.avatarPlaceholder} />
+          )}
+        </TouchableOpacity>
+
         <View style={styles.nomeData}>
-          <Text style={styles.nome}>{item.nome}</Text>
+          <TouchableOpacity onPress={() => navegarParaPerfil(item.userId)}>
+            <Text style={styles.nome}>{item.nome}</Text>
+          </TouchableOpacity>
           <Text style={styles.data}>{formatarData(item.createdAt)}</Text>
         </View>
       </View>
