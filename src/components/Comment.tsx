@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import {
   Text, TextInput, Button, View, FlatList,
-  StyleSheet, Image, TouchableOpacity
+  StyleSheet, Image, TouchableOpacity,
+  KeyboardAvoidingView, Platform
 } from 'react-native';
 import {
   collection, query, where, orderBy,
   onSnapshot, addDoc, serverTimestamp, doc,
-  getDoc, Timestamp
+  getDoc, Timestamp, updateDoc, deleteDoc
 } from 'firebase/firestore';
 import { db } from '../../firebase';
 import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
 import { useRouter } from 'expo-router';
-
+import { Ionicons } from '@expo/vector-icons';
+import Modal from 'react-native-modal';
 
 interface Comentario {
   id: string;
@@ -31,13 +33,17 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
   const [comentarios, setComentarios] = useState<Comentario[]>([]);
   const [comentario, setComentario] = useState('');
   const [user, setUser] = useState<User | null>(null);
+  const [editandoId, setEditandoId] = useState<string | null>(null);
+  const [novoTexto, setNovoTexto] = useState('');
+  const [modalVisible, setModalVisible] = useState(false);
+  const [modalComentarioId, setModalComentarioId] = useState<string | null>(null);
+  const [modalPosition, setModalPosition] = useState({ x: 0, y: 0 });
+
   const router = useRouter();
 
   useEffect(() => {
     const auth = getAuth();
-    const unsubscribe = onAuthStateChanged(auth, (u) => {
-      setUser(u);
-    });
+    const unsubscribe = onAuthStateChanged(auth, setUser);
     return () => unsubscribe();
   }, []);
 
@@ -54,10 +60,8 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
           const data = docSnap.data();
           const userRef = doc(db, 'users', data.userId);
           const userSnap = await getDoc(userRef);
-
           const nome = userSnap.exists() ? userSnap.data().nome : 'Anônimo';
           const avatar = userSnap.exists() ? userSnap.data().avatarBase64 : '';
-
           return {
             id: docSnap.id,
             texto: data.texto,
@@ -81,7 +85,6 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
     try {
       const userRef = doc(db, 'users', user.uid);
       const userSnap = await getDoc(userRef);
-
       const nome = userSnap.exists() ? userSnap.data().nome : 'Anônimo';
       const avatar = userSnap.exists() ? userSnap.data().avatarBase64 : '';
 
@@ -101,15 +104,32 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
     }
   };
 
-  const formatarData = (data: Timestamp | null) => {
-    if (!data) return '';
-    const date = data.toDate();
-    const dia = String(date.getDate()).padStart(2, '0');
-    const mes = String(date.getMonth() + 1).padStart(2, '0');
-    const ano = date.getFullYear();
-    const horas = String(date.getHours()).padStart(2, '0');
-    const minutos = String(date.getMinutes()).padStart(2, '0');
-    return `${dia}/${mes}/${ano} - ${horas}:${minutos}`;
+  const deletarComentario = async (comentarioId: string) => {
+    try {
+      await deleteDoc(doc(db, 'comentarios', comentarioId));
+    } catch (error) {
+      console.error('Erro ao deletar comentário:', error);
+    }
+  };
+
+  const editarComentario = async (comentarioId: string, novoTexto: string) => {
+    try {
+      await updateDoc(doc(db, 'comentarios', comentarioId), {
+        texto: novoTexto
+      });
+      setEditandoId(null);
+      setNovoTexto('');
+    } catch (error) {
+      console.error('Erro ao editar comentário:', error);
+    }
+  };
+
+  const podeEditar = (createdAt: Timestamp | null) => {
+    if (!createdAt) return false;
+    const agora = new Date();
+    const dataCriacao = createdAt.toDate();
+    const diffDias = (agora.getTime() - dataCriacao.getTime()) / (1000 * 60 * 60 * 24);
+    return diffDias <= 2;
   };
 
   const navegarParaPerfil = (userId: string) => {
@@ -121,55 +141,151 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
     }
   };
 
-  const renderItem = ({ item }: { item: Comentario }) => (
-    <View style={styles.comentario}>
-      <View style={styles.userInfo}>
-        <TouchableOpacity onPress={() => navegarParaPerfil(item.userId)}>
-          {item.avatar ? (
-            <Image source={{ uri: item.avatar }} style={styles.avatar} />
-          ) : (
-            <View style={styles.avatarPlaceholder} />
-          )}
-        </TouchableOpacity>
+  const formatarData = (data: Timestamp | null) => {
+    if (!data) return '';
+    const date = data.toDate();
+    return `${date.toLocaleDateString()} - ${date.getHours()}:${date.getMinutes().toString().padStart(2, '0')}`;
+  };
 
-        <View style={styles.nomeData}>
+  const renderItem = ({ item }: { item: Comentario }) => {
+    const isAuthor = user?.uid === item.userId;
+    const podeAlterar = isAuthor && podeEditar(item.createdAt);
+
+    return (
+      <View style={styles.comentario}>
+        <View style={styles.userInfo}>
           <TouchableOpacity onPress={() => navegarParaPerfil(item.userId)}>
-            <Text style={styles.nome}>{item.nome}</Text>
+            {item.avatar ? (
+              <Image source={{ uri: item.avatar }} style={styles.avatar} />
+            ) : (
+              <View style={styles.avatarPlaceholder} />
+            )}
           </TouchableOpacity>
-          <Text style={styles.data}>{formatarData(item.createdAt)}</Text>
+          <View style={styles.nomeData}>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <TouchableOpacity onPress={() => navegarParaPerfil(item.userId)}>
+                <Text style={styles.nome}>{item.nome}</Text>
+              </TouchableOpacity>
+              {isAuthor && (
+                <TouchableOpacity
+                  onPress={(event) => {
+                    const { pageX, pageY } = event.nativeEvent;
+                    setModalComentarioId(item.id);
+                    setModalPosition({ x: pageX, y: pageY });
+                    setModalVisible(true);
+                  }}
+                  style={{ marginLeft: 8 }}
+                >
+                  <Ionicons name="ellipsis-vertical" size={18} color="gray" />
+                </TouchableOpacity>
+              )}
+            </View>
+            <Text style={styles.data}>{formatarData(item.createdAt)}</Text>
+          </View>
         </View>
+
+        {editandoId === item.id ? (
+          <>
+            <TextInput
+              value={novoTexto}
+              onChangeText={setNovoTexto}
+              style={[styles.input, { marginTop: 8 }]}
+              multiline
+            />
+            <View style={{ flexDirection: 'row', marginTop: 4 }}>
+              <Button title="Salvar" onPress={() => editarComentario(item.id, novoTexto)} />
+              <View style={{ width: 8 }} />
+              <Button title="Cancelar" color="gray" onPress={() => setEditandoId(null)} />
+            </View>
+          </>
+        ) : (
+          <Text>{item.texto}</Text>
+        )}
       </View>
-      <Text>{item.texto}</Text>
-    </View>
-  );
+    );
+  };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.titulo}>Comentários</Text>
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      keyboardVerticalOffset={100}
+    >
       <FlatList
         data={comentarios}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
+        contentContainerStyle={{ paddingBottom: 120 }}
       />
-      <TextInput
-        placeholder="Escreva um comentário"
-        value={comentario}
-        onChangeText={setComentario}
-        style={styles.input}
-      />
-      <Button title="Enviar" onPress={enviarComentario} />
-    </View>
+
+      <View style={{ paddingBottom: 16 }}>
+        <TextInput
+          placeholder="Escreva um comentário"
+          value={comentario}
+          onChangeText={setComentario}
+          style={styles.input}
+          multiline
+        />
+        <Button title="Enviar" onPress={enviarComentario} />
+      </View>
+
+      <Modal
+        isVisible={modalVisible}
+        onBackdropPress={() => setModalVisible(false)}
+        backdropColor="transparent"
+        animationIn="fadeIn"
+        animationOut="fadeOut"
+        style={{
+          justifyContent: 'flex-start',
+          alignItems: 'flex-start',
+          margin: 0,
+          paddingTop: modalPosition.y,
+          paddingLeft: modalPosition.x + 20, // agora à direita do ícone
+        }}
+      >
+        <View style={styles.menuContainer}>
+          {modalComentarioId && (
+            <>
+              {comentarios.find(c => c.id === modalComentarioId)?.userId === user?.uid &&
+                podeEditar(comentarios.find(c => c.id === modalComentarioId)?.createdAt || null) && (
+                  <TouchableOpacity
+                    style={styles.menuButton}
+                    onPress={() => {
+                      const texto = comentarios.find(c => c.id === modalComentarioId)?.texto || '';
+                      setEditandoId(modalComentarioId);
+                      setNovoTexto(texto);
+                      setModalVisible(false);
+                    }}
+                  >
+                    <Text style={styles.menuText}>Editar</Text>
+                  </TouchableOpacity>
+                )}
+              <TouchableOpacity
+                style={styles.menuButton}
+                onPress={() => {
+                  deletarComentario(modalComentarioId);
+                  setModalVisible(false);
+                }}
+              >
+                <Text style={[styles.menuText, { color: 'red' }]}>Excluir</Text>
+              </TouchableOpacity>
+            </>
+          )}
+        </View>
+      </Modal>
+    </KeyboardAvoidingView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 16,
+    flex: 1,
     paddingHorizontal: 16
   },
   titulo: {
     fontSize: 18,
     fontWeight: 'bold',
+    marginTop: 16,
     marginBottom: 8
   },
   comentario: {
@@ -212,8 +328,28 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 4,
     padding: 8,
-    marginTop: 8,
+    backgroundColor: '#fff',
     marginBottom: 8
+  },
+  menuContainer: {
+    backgroundColor: '#fff',
+    padding: 8,
+    borderRadius: 6,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    minWidth: 120,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  menuButton: {
+    paddingVertical: 6,
+  },
+  menuText: {
+    fontSize: 14,
+    color: '#333',
   }
 });
 

@@ -6,14 +6,15 @@ import { doc, getDoc, setDoc } from 'firebase/firestore';
 import * as ImagePicker from 'expo-image-picker';
 import * as FileSystem from 'expo-file-system';
 import CustomHeader from '@/src/components/Header';
-
+import LivrosReservados from "../../src/components/ReserveBook"
+import { User } from 'firebase/auth';
 
 
 
 export default function ProfileScreen() {
   const [editando, setEditando] = useState(false);
   const [carregando, setCarregando] = useState(false);
-  const [usuario, setUsuario] = useState();
+const [usuario, setUsuario] = useState<User | null>(null);
   const [nome, setNome] = useState('');
   const [profissao, setProfissao] = useState('');
   const [email, setEmail] = useState('');
@@ -193,7 +194,14 @@ export default function ProfileScreen() {
         <Button title={carregando ? 'Salvando...' : 'Salvar'} onPress={salvarAlteracoes} buttonStyle={styles.botao} disabled={carregando} />
       ) : (
         <Button title="Editar" onPress={() => setEditando(true)} buttonStyle={styles.botao} />
+        
       )}
+{usuario && (
+  <LivrosReservados uid={usuario.uid} mostrarCancelar />
+)}
+
+
+
     </ScrollView>
     </>
   );

@@ -5,6 +5,7 @@ import { router } from 'expo-router';
 import Header from '../../src/components/Header';
 import AvaliacaoEstrelas from '../../src/components/Avaliation';
 import Comentario from '../../src/components/Comment'
+import ReservaButton from "../../src/components/ReserveButton"
 
 const screenWidth = Dimensions.get('window').width;
 
@@ -100,10 +101,9 @@ export default function LivroDetalhes() {
    <AvaliacaoEstrelas livroId={livro.id}/>
 
         {/* BOTÕES */}
-        <TouchableOpacity style={styles.botao}>
-          <Text style={styles.botaoTexto}>Reservar</Text>
-        </TouchableOpacity>
-        
+     <ReservaButton livroId={livro.id} titulo={livro.titulo} />
+
+
      
 
 

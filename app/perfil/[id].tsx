@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { db } from '../../firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import CustomHeader from '@/src/components/Header';
+import LivrosReservados from "../../src/components/ReserveBook"
 
 export default function PerfilUsuario() {
   const { id } = useLocalSearchParams();
@@ -27,7 +28,8 @@ export default function PerfilUsuario() {
       )}
       <Text style={styles.nome}>{dados.nome}</Text>
       <Text style={styles.email}>{dados.email}</Text>
-      {/* Adicione outros dados públicos aqui, como bio, cidade, etc. */}
+    
+
     </View>
     </>
   );

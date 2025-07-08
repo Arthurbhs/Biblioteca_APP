@@ -12,7 +12,10 @@ type Livro = {
   dataPublicacao: string;
   tema: string;
   genero: string;
+  classificacaoLiteraria: string;
+  resumo: string;
 };
+
 
 const ListaCategorias = () => {
   const router = useRouter();
@@ -38,12 +41,21 @@ const ListaCategorias = () => {
   const normalizar = (texto: string) =>
     texto?.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
-  const filtrarPorPalavra = (palavra: string) =>
-    livros.filter((livro) => {
-      const tema = normalizar(livro.tema || '');
-      const genero = normalizar(livro.genero || '');
-      return tema.includes(palavra) || genero.includes(palavra);
-    });
+ const filtrarPorPalavra = (palavra: string) =>
+  livros.filter((livro) => {
+    const camposParaBuscar = [
+      livro.titulo,
+      livro.tema,
+      livro.genero,
+      livro.classificacaoLiteraria,
+      livro.resumo,
+    ];
+
+    return camposParaBuscar.some((campo) =>
+      normalizar(campo || '').includes(normalizar(palavra))
+    );
+  });
+
 
   const filtrarRecentes = () =>
     [...livros]
@@ -91,11 +103,14 @@ const ListaCategorias = () => {
 
   return (
     <ScrollView>
-      {renderSecao('📚 Histórias', filtrarPorPalavra('historia'))}
-      {renderSecao('🌍 Cultura', filtrarPorPalavra('cultura'))}
-      {renderSecao('🗺️ Aventura', filtrarPorPalavra('aventura'))}
-      {renderSecao('🆕 Recentemente Adicionados', filtrarRecentes())}
-      {renderSecao('🚀 Lançamentos de ' + new Date().getFullYear(), filtrarLancamentosAnoAtual())}
+
+    {renderSecao('🪘 Capoeira', filtrarPorPalavra('capoeira'))}
+    {renderSecao('♀️ Empoderamento Feminino', filtrarPorPalavra('empoderamento feminino'))}
+    {renderSecao('👧 Infanto Juvenil', filtrarPorPalavra('infanto juvenil'))}
+    {renderSecao('⚖️ Questões Sociais', filtrarPorPalavra('questões sociais'))}
+
+
+
     </ScrollView>
   );
 };
