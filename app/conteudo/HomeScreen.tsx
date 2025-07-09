@@ -6,11 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Text } from 'react-native';
 import Historia from "../../src/components/Sessoes"
 
-const images = [
-  require('../../assets/images/1.png'),
-  require('../../assets/images/2.png'),
-  require('../../assets/images/3.png'),
-];
+
 
 
 export default function HomeScreen() {

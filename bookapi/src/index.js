@@ -1,8 +1,11 @@
 
+
+
 export default {
   async fetch(request) {
     const { method, url } = request;
     const { pathname } = new URL(url);
+
 
 
 	  // Dados simulados (substitua por sua lógica real)
@@ -19,8 +22,8 @@ export default {
     resumo: "Neste conto de fadas moderno, a princesa não é uma jovem fraca que desmaia diante do dragão. Contrariando todas as expectativas, ela invade o quarto da bruxa e enfrenta quadros com bocas e olhos de verdade, tudo para resgatar o príncipe.",
     dataPublicacao: "2012-01-01",
     dataCatalogo: "2025-05-18",
-    capa: "./192.168.0.104:8081/assets/?unstable_path=.%2Fassets%2Fimages%2Fcapa/APrincesaQueSalvaPrincipe.jpg",
-    mostruario: "./192.168.0.104:8081/assets/?unstable_path=.%2Fassets%2Fimages%2Fthumbnaill/APrincesaQueSalvaPrincipe.jpg"
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
   },
   {
     id: 2,
@@ -34,9 +37,9 @@ export default {
     resumo: "A história da rainha Nzinga, uma das mulheres mais importantes da história africana, que lutou contra a escravidão e a colonização em Angola. Um livro que valoriza a cultura afro-brasileira e a resistência feminina.",
     dataPublicacao: "2021-01-01",
     dataCatalogo: "2025-05-25",
-    capa: "./192.168.0.104:8081/assets/?unstable_path=.%2Fassets%2Fimages%2Fcapa/AGingaRainha.jpg",
-    mostruario: "./192.168.0.104:8081/assets/?unstable_path=.%2Fassets%2Fimages%2Fthumbnaill/AGingaRainha.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 3,
     titulo: "O Menino Azul",
@@ -49,8 +52,8 @@ export default {
     resumo: "Um poema clássico de Cecília Meireles, ilustrado por Lúcia Hiratsuka, que fala sobre o desejo de uma criança por um burrinho para viver aventuras e alimentar sua imaginação.",
     dataPublicacao: "2020-01-01",
     dataCatalogo: "2025-05-25",
-    capa: "./192.168.0.104:8081/assets/?unstable_path=.%2Fassets%2Fimages%2Fcapa/CecíliaMeirelesMeninoAzul.jpg",
-    mostruario: "./192.168.0.104:8081/assets/?unstable_path=.%2Fassets%2Fimages%2Fthumbnaill/CecíliaMeirelesMeninoAzul.jpg"
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
   },
 
 {
@@ -65,8 +68,8 @@ export default {
   resumo: "Este livro apresenta de forma educativa e acessível os fundamentos da capoeira, suas origens, movimentos e importância cultural. Voltado para o público jovem, busca ensinar valores históricos e sociais por meio da prática dessa arte afro-brasileira.",
   dataPublicacao: "2006-01-01",
   dataCatalogo: "2025-06-13",
-  capa: "./192.168.0.104:8081/assets/?unstable_path=./assets/images/capa/ABCDaCapoeira.jpg",
-  mostruario: "./192.168.0.104:8081/assets/?unstable_path=./assets/images/thumbnaill/ABCDaCapoeira.jpg"
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
 },
 {
   id: 5,
@@ -80,8 +83,8 @@ export default {
   resumo: "Reunindo histórias passadas de geração em geração no continente africano, o livro convida o leitor a mergulhar em contos que se desenrolam às margens dos rios, nas florestas densas e nas vastas savanas. Uma celebração da oralidade e da diversidade cultural da África.",
   dataPublicacao: "2009-01-01",
   dataCatalogo: "2025-06-13",
-  capa: "./192.168.0.104:8081/assets/?unstable_path=./assets/images/capa/AfricaContoRioSelvaSavana.jpg",
-  mostruario: "./192.168.0.104:8081/assets/?unstable_path=./assets/images/thumbnaill/AfricaContoRioSelvaSavana.jpg"
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
 },
 
 {
@@ -96,8 +99,8 @@ export default {
   resumo: "Apresenta de forma leve e ilustrada palavras de origem africana incorporadas ao português, explicando suas raízes em quimbundo, iorubá, jeje e banto.",
   dataPublicacao: "15-01-2021",
   dataCatalogo: "2025-06-13",
-  capa: "./capa/AFricaqueVoceFala.jpg",
-  mostruario: "./thumbnaill/AFricaqueVoceFala.jpg"
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
 },
 {
   id: 7,
@@ -111,8 +114,8 @@ export default {
   resumo: "Reconta lendas e histórias do continente africano em formato acessível para crianças, valorizando a oralidade e a diversidade cultural.",
   dataPublicacao: "2019-01-01",
   dataCatalogo: "2025-06-13",
-  capa: "./capa/AfricaRecontadaCrianças.jpg",
-  mostruario: "./thumbnaill/AfricaRecontadaCrianças.jpg"
+ capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
 },
 
 {
@@ -127,8 +130,8 @@ export default {
   resumo: "Uma princesa que vive no morro e quebra estereótipos tradicionais de fadas: real, forte, periférica e protagonista de sua própria história.",
   dataPublicacao: "2020-01-01",
   dataCatalogo: "2025-06-13",
-  capa: "./capa/AquiNoMorroTemPrincesaSim.jpg",
-  mostruario: "./thumbnaill/AquiNoMorroTemPrincesaSim.jpg"
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
 },
 
 {
@@ -143,8 +146,8 @@ export default {
   resumo: "Inspirado na música 'Amoras', o livro celebra a autoestima e o orgulho racial desde a infância, por meio de texto poético e ilustrações suaves.",
   dataPublicacao: "14-09-2018",
   dataCatalogo: "2025-06-13",
-  capa: "./capa/Amoras.jpg",
-  mostruario: "./thumbnaill/Amoras.jpg"
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
 },
 
 {
@@ -159,8 +162,8 @@ export default {
   resumo: "Baseado no curta vencedor do Oscar “Hair Love”, o livro narra o carinho entre pai e filha enquanto eles encontram o penteado perfeito para celebrar um momento especial, valorizando o cabelo crespo e o amor familiar.",
   dataPublicacao: "04-05-2020",
   dataCatalogo: "2025-06-13",
-  capa: "./capa/AmorDeCabelo.jpg",
-  mostruario: "./thumbnaill/AmorDeCabelo.jpg"
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
 },
 {
   id: 10,
@@ -174,8 +177,8 @@ export default {
   resumo: "A pequena capoeirinha vive uma divertida confusão no quintal durante seu batizado simbólico como capoeirista, entre rodas improvisadas, batuques e a comunidade que a acompanha.",
   dataPublicacao: "2018-01-01",
   dataCatalogo: "2025-06-13",
-  capa: "./capa/BatismoDaCapoeirinha.jpg",
-  mostruario: "./thumbnaill/BatismoDaCapoeirinha.jpg"
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
 },
 {
   id: 11,
@@ -189,8 +192,8 @@ export default {
   resumo: "Baseado na infância de Mãe Beata de Iemanjá, a obra mostra a ligação espiritual da menina com a natureza, celebrando sua vocação e legado de resistência religiosa :contentReference[oaicite:1]{index=1}.",
   dataPublicacao: "17-04-2021",
   dataCatalogo: "2025-06-13",
-  capa: "./capa/BeataAMeninaDasAguas.jpg",
-  mostruario: "./thumbnaill/BeataAMeninaDasAguas.jpg"
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
 },
 {
   id: 12,
@@ -204,8 +207,8 @@ export default {
   resumo: "Através da personagem Betina, o livro promove reflexão sobre a autoestima e a identidade negra desde a infância, com linguagem acessível e imagens evocativas.",
   dataPublicacao: "2022-01-01",
   dataCatalogo: "2025-06-13",
-  capa: "./capa/Betina.jpg",
-  mostruario: "./thumbnaill/Betina.jpg"
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
 },
 {
   id: 13,
@@ -219,8 +222,8 @@ export default {
   resumo: "A história acompanha Bolota, uma jabuticaba curiosa e destemida, em aventuras pela mata, ensinando sobre amizade, ecologia e o ciclo da vida de forma divertida.",
   dataPublicacao: "2021-01-01",
   dataCatalogo: "2025-06-13",
-  capa: "./capa/BolotaJabuticaba.jpg",
-  mostruario: "./thumbnaill/BolotaJabuticaba.jpg"
+ capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
 },
 {
   id: 14,
@@ -234,8 +237,8 @@ export default {
   resumo: "Uma celebração poética da infância, do brincar na rua e da inventividade das crianças que transformam a rua em palco de suas histórias cotidianas e sonhos.",
   dataPublicacao: "2020-01-01",
   dataCatalogo: "2025-06-13",
-  capa: "./capa/BrincarNaRua.jpg",
-  mostruario: "./thumbnaill/BrincarNaRua.jpg"
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
 },
 
 {
@@ -249,8 +252,8 @@ export default {
   numeroPaginas: 24,
   resumo: "Primeiro livro infantil a retratar o universo mítico africano, contando de forma lúdica e didática como a galinha-d’angola participou da criação do mundo, a partir da curiosidade de Bruna e das narrativas de sua avó travessa.",
   dataPublicacao:"19-03-2009",
-  capa: "./capa/BrunaEGalinhaDAngola.jpg",
-  mostruario: "./thumbnaill/BrunaEGalinhaDAngola.jpg"
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
 },
 
  {
@@ -265,9 +268,9 @@ export default {
         resumo: "Bucala é uma princesa quilombola que vive no Quilombo do Cabula no século XIX...",
         dataPublicacao: "2019-01-01",
         dataCatalogo: "2025-06-13",
-        capa: "./capa/BucalaPrincesaQuilomboCabula.jpg",
-        mostruario: "./thumbnaill/BucalaPrincesaQuilomboCabula.jpg"
-      },
+         capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+  },
 
  {
     id: 17,
@@ -282,8 +285,8 @@ export default {
     resumo: "A protagonista Calu transforma seu bairro em um 'museu a céu aberto', celebrando a cultura local e fortalecendo o sentimento de pertencimento e preservação do patrimônio imaterial.",
     data_publicacao: "2017-01-02",
     data_catalogo: "2025-06-17",
-    url_capa: "./capa/CaluMeninaHistorias.jpg",
-    url_mostruario: "./thumbnaill/CaluMeninaHistorias.jpg"
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
   },
   {
     id: 18,
@@ -297,8 +300,8 @@ export default {
     resumo: "No Chade, o menino Tomás celebra as chuvas que o tornam fértil, colhendo mangas e construindo um carrinho de lata. Uma narrativa que constrói empatia cultural e convida à reflexão sobre valores simples e universais.",
     data_publicacao: "2005-11-04",
     data_catalogo: "2025-06-17",
-    url_capa: "./capa/ChuvaDeManga.jpg",
-    url_mostruario: "./thumbnaill/ChuvaDeManga.jpg"
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
   },
 {
   id: 19,
@@ -313,8 +316,8 @@ export default {
     resumo: "Durante a festa de 100 anos do bisavô Seu Benedito, as bisnetas escolhem penteados especiais e presenteiam o centenário com as virtudes que mais admiram, celebrando ancestralidade, família, negritude e representatividade capilar.",
     dataPublicacao: "2021-06-04",
     dataCatalogo: "2025-06-17",
-    capa: "./capa/ComQualPenteadoEuVou.jpg",
-    mostruario: "./thumbnaill/ComQualPenteadoEuVou.jpg"
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
   },
   {
     id: 20,
@@ -329,9 +332,9 @@ export default {
     resumo: "Monadenge, contador de histórias do quilombo de Alquatune, narra dois contos fantásticos às crianças, conectando passado africano e legado quilombola em um resgate poético das raízes.",
     dataPublicacao: "2023-01-01", // geralmente volumes da coleção são recentes ,
     dataCatalogo: "2025-06-17",
-    capa: "./capa/ContosDeMonadenge.jpg",
-    mostruario: "./thumbnaill/ContosDeMonadenge.jpg"
-  },
+ capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 21,
     titulo: "De grão em grão, o sucesso vem na mão",
@@ -345,9 +348,9 @@ export default {
     resumo: "Inspirado em fatos reais, conta a trajetória de Kojo, menino que ajuda a mãe vendendo ovos, volta à escola, obtém empréstimos e constrói uma granja — um poderoso relato sobre resiliência e futuro.",
     dataPublicacao: "2008-11-08",
     dataCatalogo: "2025-06-17",
-    capa: "./capa/DeGraoEmGraoSucesso.jpg",
-    mostruario: "./thumbnaill/DeGraoEmGraoSucesso.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
 
   {
     id: 22,
@@ -362,9 +365,9 @@ export default {
     resumo: "A história aproxima o leitor dos pequenos gestos do cotidiano familiar — carinhos, cheiros, danças — contados pela moringa de Voinha, objeto que simboliza a ancestralidade e os afetos herdados da família quilombola em uma crônica poética e delicada.",
     dataPublicacao: "2023-06-27",
     dataCatalogo: "2025-06-17",
-    capa: "./capa/DengosNaMoringa.jpg",
-    mostruario: "./thumbnaill/DengosNaMoringa.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 23,
     titulo: "De passinho em passinho",
@@ -378,9 +381,9 @@ export default {
     resumo: "Livro que celebra o passinho — dança urbana carioca com influências do funk, capoeira, samba e frevo —, retratando sonhos, movimento e representatividade, com texto poético e ilustrações vibrantes.",
     dataPublicacao: "2021-07-13",
     dataCatalogo: "2025-06-17",
-    capa: "./capa/DePassinhoEmPassinho.jpg",
-    mostruario: "./thumbnaill/DePassinhoEmPassinho.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 24,
     titulo: "Descobertas de Kito",
@@ -393,9 +396,9 @@ export default {
     resumo: "Kito, uma criança curiosa, explora o mundo ao seu redor, levantando perguntas sobre plantas, animais e fenômenos, de forma lúdica e incentivando o pensamento crítico e científico desde cedo.",
     dataPublicacao: "2022-01-01",      // estimado,
     dataCatalogo: "2025-06-17",
-    capa: "",
-    mostruario: ""
-  },
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 25,
     titulo: "ÉDÁ, EDÁ - as palavras e cores da criação Òkè",
@@ -409,9 +412,9 @@ export default {
     resumo: "Inspirado nas narrativas iorubás sobre a criação do mundo, o livro apresenta a cosmogonia Òkè através de imagens coloridas e linguagem poética. Um convite à imaginação e à valorização das raízes africanas.",
     dataPublicacao: "2023-10-01",
     dataCatalogo: "2025-06-17",
-    capa: "",
-    mostruario: ""
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 26,
     titulo: "Eu, curiosa?",
@@ -425,9 +428,9 @@ export default {
     resumo: "Uma menina negra cheia de perguntas embarca em descobertas sobre si mesma, sobre a vida e sobre o mundo. O livro propõe uma valorização da infância negra através da curiosidade e imaginação.",
     dataPublicacao: "2023-07-01",
     dataCatalogo: "2025-06-17",
-    capa: "",
-    mostruario: ""
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 27,
     titulo: "Era dos Erês; uma era ao culto da natureza e dos orixás",
@@ -441,9 +444,9 @@ export default {
     resumo: "A obra apresenta os Erês, entidades infantis da mitologia afro-brasileira, e sua relação com os orixás e a natureza. Um livro que resgata saberes sagrados com linguagem acessível e ilustrações simbólicas.",
     dataPublicacao: "2021-11-15",
     dataCatalogo: "2025-06-17",
-    capa: "",
-    mostruario: ""
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
 
     {
     id: 28,
@@ -458,9 +461,9 @@ export default {
     resumo: "Lili revive suas férias na Bahia, entre lagoas, praia e memórias de encantamentos da infância, vivenciados à beira do Abaeté e cheios de magia e religiosidade ligada aos Orixás.",
     dataPublicacao: "2018-09-30",
     dataCatalogo: "2025-06-17",
-    capa: "",
-    mostruario: ""
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 29,
     titulo: "Foi assim que eu e a escuridão ficamos amigas",
@@ -474,9 +477,9 @@ export default {
     resumo: "Duas meninas‑personificações do dia e da noite se conhecem e descobrem que, apesar dos medos iniciais, podem se tornar amigas, em narrativa poética que trata ansiedade e empoderamento emocional.",
     dataPublicacao: "2020-10-05",
     dataCatalogo: "2025-06-17",
-    capa: "./capa/FoiAssimEscuridaoAmigas.jpg",
-    mostruario: "./thumbnaill/FoiAssimEscuridaoAmigas.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 30,
     titulo: "Gabriela; a princesa do Daomé",
@@ -490,9 +493,9 @@ export default {
     resumo: "Gabriela é retratada como jovem princesa do antigo reino do Daomé, em território da atual Benim, seu percurso inspira reflexão sobre o poder feminino e a história africana.",
     dataPublicacao: "2022-01-01", // estimado,
     dataCatalogo: "2025-06-17",
-    capa: "",
-    mostruario: ""
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
 
    {
     id: 32,
@@ -507,8 +510,8 @@ export default {
     resumo: "O livro apresenta histórias que aproximam as culturas africana e afro-brasileira, celebrando suas raízes e influências no cotidiano e na história do Brasil.",
     dataPublicacao: "2007-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "",
-    mostruario: ""
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
   },
   {
     id: 33,
@@ -523,9 +526,9 @@ export default {
     resumo: "Coletânea de contos africanos, com lições de vida, valores e tradições, pensada para preservar a sabedoria dos griôs e incentivar a oralidade nas crianças.",
     dataPublicacao: "2003-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/www.editoradobrasil.com.br/wp-content/uploads/2017/09/Hist%C3%B3rias-Africanas-para-contar-e-recontar-1.jpg",
-    mostruario: "/www.editoradobrasil.com.br/wp-content/uploads/2017/09/Hist%C3%B3rias-Africanas-para-contar-e-recontar-1-150x150.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 34,
     titulo: "Histórias do tio Jimbo",
@@ -539,9 +542,9 @@ export default {
     resumo: "O Tio Jimbo, griô africano, narra contos divertidos e educativos sobre a vida, os valores e os deuses africanos, promovendo uma imersão cultural.",
     dataPublicacao: "2007-01-01", // estimado,
     dataCatalogo: "2025-06-17",
-    capa: "./capa/HistoriaTioJimbo.jpg",
-    mostruario: "./thumbnaill/HistoriaTioJimbo.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 35,
     titulo: "Ifá, o Adivinho",
@@ -555,9 +558,9 @@ export default {
     resumo: "Baseado no sistema de adivinhação Ifá, o livro apresenta contos que explicam a sabedoria do oráculo africano e o papel dos Orixás na orientação das pessoas.",
     dataPublicacao: "2004-08-01",
     dataCatalogo: "2025-06-17",
-    capa: "/img.skoob.com.br/FdpNfVCOemhAYF1a-QpIEavb8ZE=/600x0/center/top/filters:format(jpeg)//skoob.s3.amazonaws.com/livros/471/IFA_O_ADIVINHO_1293580152B.jpg",
-    mostruario: "/img.skoob.com.br/FdpNfVCOemhAYF1a-QpIEavb8ZE=/150x150/center/top/filters:format(jpeg)//skoob.s3.amazonaws.com/livros/471/IFA_O_ADIVINHO_1293580152B.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 36,
     titulo: "Igbo e as princesas",
@@ -571,9 +574,9 @@ export default {
     resumo: "Através da jornada de Igbo e das princesas, o autor apresenta elementos mitológicos africanos e valores como solidariedade, honra e ancestralidade.",
     dataPublicacao: "2022-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "./capa/IgboPrincesas.jpg",
-    mostruario: "./thumbnaill/IgboPrincesas.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 37,
     titulo: "Jongo",
@@ -587,8 +590,8 @@ export default {
     resumo: "O livro apresenta o Jongo, dança de origem africana trazida por negros escravizados, mostrando sua musicalidade, oralidade e importância cultural no Brasil.",
     dataPublicacao: "2007-06-01",
     dataCatalogo: "2025-06-17",
-    capa: "/img.travessa.com.br/livro/BA/63/63b165a2-d09e-4a2b-9e59-fc68cfad325e.jpg",
-    mostruario: "/img.travessa.com.br/livro/BA/63/63b165a2-d09e-4a2b-9e59-fc68cfad325e_150x150.jpg"
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
   },
 
    {
@@ -603,8 +606,8 @@ export default {
     resumo: "História sensível que introduz elementos do Candomblé e da ancestralidade com respeito e afeto para crianças.",
     dataPublicacao: "2022-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/aletria.com.br/wp-content/uploads/2022/09/nos-de-axe.jpg",
-    mostruario: "/aletria.com.br/wp-content/uploads/2022/09/nos-de-axe-150x150.jpg"
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
   },
   {
     id: 39,
@@ -618,9 +621,9 @@ export default {
     resumo: "Garota viaja por nove reinos africanos em busca de pentes mágicos, aprendendo sobre história, autoestima e empoderamento.",
     dataPublicacao: "2019-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/mazzaedicoes.com.br/wp-content/uploads/2020/03/nove-pentes.jpg",
-    mostruario: "/mazzaedicoes.com.br/wp-content/uploads/2020/03/nove-pentes-150x150.jpg"
-  },
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 40,
     titulo: "Obax",
@@ -633,9 +636,9 @@ export default {
     resumo: "Obax é uma menina cheia de sonhos que transforma sua aldeia com a força de sua imaginação e conexão com a natureza.",
     dataPublicacao: "2010-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/www.brinquebook.com.br/wp-content/uploads/2019/09/obax.jpg",
-    mostruario: "/www.brinquebook.com.br/wp-content/uploads/2019/09/obax-150x150.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
 
     {
     id: 41,
@@ -650,9 +653,9 @@ export default {
     resumo: "Koumba é um jovem africano que herda o tambor mágico de seu avô. A história valoriza a ancestralidade e o poder da música como elo cultural.",
     dataPublicacao: "2011-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/img.travessa.com.br/livro/BA/8f/8f20fc1e-400c-4036-85ef-157b3e8e3ef9.jpg",
-    mostruario: "/img.travessa.com.br/livro/BA/8f/8f20fc1e-400c-4036-85ef-157b3e8e3ef9_150x150.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 42,
     titulo: "Lenço de cetim da mamãe",
@@ -666,9 +669,9 @@ export default {
     resumo: "Baseado em conto de Chimamanda, o livro retrata a relação de uma criança com sua mãe e os símbolos culturais herdados, como o lenço de cetim.",
     dataPublicacao: "2022-05-01",
     dataCatalogo: "2025-06-17",
-    capa: "/img.travessa.com.br/livro/BA/94/943d28aa-6a77-4791-922c-7465ae35663f.jpg",
-    mostruario: "/img.travessa.com.br/livro/BA/94/943d28aa-6a77-4791-922c-7465ae35663f_150x150.jpg"
-  },
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 43,
     titulo: "Lendas de Dandara",
@@ -682,9 +685,9 @@ export default {
     resumo: "Reconta lendas inspiradas na guerreira Dandara dos Palmares, abordando temas de luta, liberdade e protagonismo feminino negro.",
     dataPublicacao: "2015-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/pbs.twimg.com/media/EN4Bx71XsAAzAaS.jpg",
-    mostruario: "/pbs.twimg.com/media/EN4Bx71XsAAzAaS?format=jpg&name=small"
-  },
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 44,
     titulo: "Letras de Carvão",
@@ -698,9 +701,9 @@ export default {
     resumo: "Menina da zona rural aprende a ler e escrever, superando obstáculos. Homenagem à educação e à força das comunidades marginalizadas.",
     dataPublicacao: "2016-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/www.pulodogatoeditora.com.br/media/2020/04/letras-de-carvao.jpg",
-    mostruario: "/www.pulodogatoeditora.com.br/media/2020/04/letras-de-carvao-150x150.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 45,
     titulo: "Luz de Aisha",
@@ -714,9 +717,9 @@ export default {
     resumo: "Aisha vive uma jornada de descoberta sobre sua herança iorubá e a presença dos Orixás em sua vida cotidiana.",
     dataPublicacao: "2023-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/rebulico.com.br/wp-content/uploads/2023/04/luz-de-aisha.png",
-    mostruario: "/rebulico.com.br/wp-content/uploads/2023/04/luz-de-aisha-150x150.png"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 46,
     titulo: "Makeba vai à Escola",
@@ -730,9 +733,9 @@ export default {
     resumo: "Makeba é uma menina negra que enfrenta o primeiro dia de aula lidando com sua identidade, cabelo e aceitação, com leveza e representatividade.",
     dataPublicacao: "2020-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/www.editoracogito.com.br/uploads/2/6/1/6/26160438/s704845316771925537_p14_i2_w1920.jpeg",
-    mostruario: "/www.editoracogito.com.br/uploads/2/6/1/6/26160438/s704845316771925537_p14_i2_w150.jpeg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 47,
     titulo: "Makori; a pequena princesa",
@@ -746,9 +749,9 @@ export default {
     resumo: "Makori é uma jovem princesa africana que aprende sobre valores e ancestralidade através de aventuras com animais sagrados.",
     dataPublicacao: "2021-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "./makori.jpg",
-    mostruario: "./makori_thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 48,
     titulo: "Mandisa e a vovó Alegria",
@@ -762,9 +765,9 @@ export default {
     resumo: "Mandisa aprende com sua avó sobre as histórias de seu povo, costumes africanos e valores como afeto, respeito e autoestima.",
     dataPublicacao: "2021-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/editoramale.com.br/wp-content/uploads/2021/07/mandisa_vovo_alegria.jpg",
-    mostruario: "/editoramale.com.br/wp-content/uploads/2021/07/mandisa_vovo_alegria-150x150.jpg"
-  },
+     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 49,
     titulo: "Mar de Manu",
@@ -778,9 +781,9 @@ export default {
     resumo: "Manu navega por mares simbólicos que representam suas emoções e sua ancestralidade, em um texto lírico e sensível.",
     dataPublicacao: "2022-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/kuanza.com.br/wp-content/uploads/2022/07/mar-de-manu.jpg",
-    mostruario: "/kuanza.com.br/wp-content/uploads/2022/07/mar-de-manu-150x150.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 50,
     titulo: "Meninas negras",
@@ -794,9 +797,9 @@ export default {
     resumo: "Uma homenagem poética à força, beleza e diversidade das meninas negras, com ilustrações vibrantes e mensagens de autoestima.",
     dataPublicacao: "2018-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/www.mazzaedicoes.com.br/wp-content/uploads/2019/08/meninasnegras.jpg",
-    mostruario: "/www.mazzaedicoes.com.br/wp-content/uploads/2019/08/meninasnegras-150x150.jpg"
-  },
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 51,
     titulo: "Menina Nicinha",
@@ -810,8 +813,8 @@ export default {
     resumo: "Nicinha vive uma história sensível sobre identidade, convivência familiar e descobertas no contexto de sua cultura local afro-baiana.",
     dataPublicacao: "2022-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/lendomulheresnegras.com.br/wp-content/uploads/2022/10/menina-nicinha.jpg",
-    mostruario: "/lendomulheresnegras.com.br/wp-content/uploads/2022/10/menina-nicinha-150x150.jpg"
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
   },
 
   {
@@ -826,9 +829,9 @@ export default {
     resumo: "Um menino e seu avô compartilham sonhos e histórias que iluminam a infância em meio à realidade da periferia.",
     dataPublicacao: "2022-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/www.literaturasuburbana.com.br/img/menino-voador.jpg",
-    mostruario: "/www.literaturasuburbana.com.br/img/menino-voador-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 53,
     titulo: "Menino coração de tambor",
@@ -841,9 +844,9 @@ export default {
     resumo: "Narrativa sobre um menino que encontra no tambor um elo com suas raízes, fortalecendo sua autoestima e cultura.",
     dataPublicacao: "2007-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/mazzaedicoes.com.br/wp-content/uploads/2022/03/menino-coracao.jpg",
-    mostruario: "/mazzaedicoes.com.br/wp-content/uploads/2022/03/menino-coracao-150x150.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 54,
     titulo: "Minha dança tem história",
@@ -856,9 +859,9 @@ export default {
     resumo: "Poema de bell hooks traduzido com imagens expressivas, reforçando orgulho do corpo negro e suas expressões culturais.",
     dataPublicacao: "2018-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/boitata.curitiba.br/wp-content/uploads/2018/10/minha-danca-tem-historia.jpg",
-    mostruario: "/boitata.curitiba.br/wp-content/uploads/2018/10/minha-danca-tem-historia-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 55,
     titulo: "Minha mãe é negra sim!",
@@ -871,9 +874,9 @@ export default {
     resumo: "Menina aprende a reconhecer a beleza e força de sua mãe negra em uma história afetuosa sobre orgulho racial.",
     dataPublicacao: "2020-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/mazzaedicoes.com.br/wp-content/uploads/2020/03/minha-mae-e-negra-sim.jpg",
-    mostruario: "/mazzaedicoes.com.br/wp-content/uploads/2020/03/minha-mae-e-negra-sim-150x150.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 56,
     titulo: "Meu crespo é de rainha",
@@ -886,9 +889,9 @@ export default {
     resumo: "Poema de empoderamento que celebra os cabelos crespos e sua beleza única, com ilustrações vibrantes.",
     dataPublicacao: "2018-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/boitata.curitiba.br/wp-content/uploads/2018/04/meu-crespo.jpg",
-    mostruario: "/boitata.curitiba.br/wp-content/uploads/2018/04/meu-crespo-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 57,
     titulo: "Neguinha sim!",
@@ -901,9 +904,9 @@ export default {
     resumo: "Uma menina negra encontra força para se afirmar e se orgulhar de quem é, enfrentando o racismo com poesia.",
     dataPublicacao: "2021-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/www.editorasamenina.com.br/img/neguinha-sim.jpg",
-    mostruario: "/www.editorasamenina.com.br/img/neguinha-sim-150x150.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 58,
     titulo: "Neta de Anita",
@@ -916,9 +919,9 @@ export default {
     resumo: "Garota herda a força de sua ancestral, Anita Garibaldi, e inspira coragem nas novas gerações.",
     dataPublicacao: "2020-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/mazzaedicoes.com.br/wp-content/uploads/2020/11/neta-de-anita.jpg",
-    mostruario: "/mazzaedicoes.com.br/wp-content/uploads/2020/11/neta-de-anita-150x150.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 59,
     titulo: "Nikkê",
@@ -931,9 +934,9 @@ export default {
     resumo: "Nikkê descobre a importância de seu nome e da sua origem, mergulhando nas histórias e símbolos da cultura afro-brasileira.",
     dataPublicacao: "2021-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/mazzaedicoes.com.br/wp-content/uploads/2021/06/nikke.jpg",
-    mostruario: "/mazzaedicoes.com.br/wp-content/uploads/2021/06/nikke-150x150.jpg"
-  },
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
 
     {
     id: 68,
@@ -947,9 +950,9 @@ export default {
     resumo: "Uma menina sonha em ser porta-estandarte em um desfile de carnaval, revivendo tradições culturais com beleza e esperança.",
     dataPublicacao: "2022-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/editoraseed.com.br/img/pequena-porta.jpg",
-    mostruario: "/editoraseed.com.br/img/pequena-porta-thumb.jpg"
-  },
+     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 69,
     titulo: "Pênalti",
@@ -962,9 +965,9 @@ export default {
     resumo: "História de um menino negro apaixonado por futebol que enfrenta obstáculos sociais e raciais em busca de seus sonhos.",
     dataPublicacao: "2015-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/www.editoramale.com.br/img/penalti.jpg",
-    mostruario: "/www.editoramale.com.br/img/penalti-thumb.jpg"
-  },
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 60,
     titulo: "Pequeno príncipe preto",
@@ -977,8 +980,8 @@ export default {
     resumo: "Inspirado em 'O Pequeno Príncipe', esta obra reconstrói o protagonismo de um menino negro em um universo afetivo e poético.",
     dataPublicacao: "2021-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/novafronteira.com.br/wp-content/uploads/2021/09/pequeno-principe-preto.jpg",
-    mostruario: "/novafronteira.com.br/wp-content/uploads/2021/09/pequeno-principe-preto-thumb.jpg"
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
   },
  
     {
@@ -993,9 +996,9 @@ export default {
     resumo: "Histórias de princesas africanas inspiradas nos orixás femininos, reforçando o empoderamento de meninas negras.",
     dataPublicacao: "2009-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/mazzaedicoes.com.br/wp-content/uploads/2020/03/omo-oba.jpg",
-    mostruario: "/mazzaedicoes.com.br/wp-content/uploads/2020/03/omo-oba-150x150.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 62,
     titulo: "Omo: o rio da liberdade",
@@ -1008,9 +1011,9 @@ export default {
     resumo: "Poema que narra o encontro de uma criança com o rio Omo, símbolo de força, liberdade e ancestralidade africana.",
     dataPublicacao: "2022-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/paeeditora.com.br/img/omo-rio-liberdade.jpg",
-    mostruario: "/paeeditora.com.br/img/omo-rio-liberdade-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 65,
     titulo: "O ônibus de Rosa",
@@ -1023,9 +1026,9 @@ export default {
     resumo: "Baseado na história de Rosa Parks, este livro inspira coragem e resistência contra o racismo desde a infância.",
     dataPublicacao: "2008-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/www.smeditora.com.br/img/o-onibus-de-rosa.jpg",
-    mostruario: "/www.smeditora.com.br/img/o-onibus-de-rosa-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 66,
     titulo: "Oranyam e a grande pescaria",
@@ -1038,9 +1041,9 @@ export default {
     resumo: "Oranyam aprende com seu avô sobre valores ancestrais e a relação com o mar e os ciclos da vida.",
     dataPublicacao: "2020-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/mazzaedicoes.com.br/wp-content/uploads/2020/03/oranyam.jpg",
-    mostruario: "/mazzaedicoes.com.br/wp-content/uploads/2020/03/oranyam-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 67,
     titulo: "Panela de barro e colher de pau; broa de milho, berimbau e carnaval",
@@ -1053,9 +1056,9 @@ export default {
     resumo: "Livro poético que celebra os utensílios, comidas e sons da cultura negra com ritmo, sabor e memória.",
     dataPublicacao: "2019-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/mazzaedicoes.com.br/wp-content/uploads/2020/03/panela-de-barro.jpg",
-    mostruario: "/mazzaedicoes.com.br/wp-content/uploads/2020/03/panela-de-barro-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
 
     {
     id: 68,
@@ -1069,9 +1072,9 @@ export default {
     resumo: "Coletânea de histórias inspiradas na tradição oral africana, com o griot Camará como narrador.",
     dataPublicacao: "2016-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/editorabejiro.com.br/img/quem-contou-foi-camara.jpg",
-    mostruario: "/editorabejiro.com.br/img/quem-contou-foi-camara-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 69,
     titulo: "Ruas do brincar",
@@ -1084,9 +1087,9 @@ export default {
     resumo: "Registro fotográfico e poético das brincadeiras tradicionais de rua com forte influência afro-brasileira.",
     dataPublicacao: "2020-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/colecaobesouro.com.br/img/ruas-do-brincar.jpg",
-    mostruario: "/colecaobesouro.com.br/img/ruas-do-brincar-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 70,
     titulo: "Semente que veio da África",
@@ -1099,9 +1102,9 @@ export default {
     resumo: "Explica a influência da África no Brasil a partir da história de uma semente, símbolo da cultura viva.",
     dataPublicacao: "2007-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/salamandra.com.br/img/semente-que-veio-da-africa.jpg",
-    mostruario: "/salamandra.com.br/img/semente-que-veio-da-africa-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
 
   {
     id: 71,
@@ -1115,8 +1118,8 @@ export default {
     resumo: "Antologia com histórias inspiradas em narrativas africanas e afrodescendentes, com reflexões sobre identidade e cultura.",
     dataPublicacao: "2012-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/www.smeditora.com.br/img/pequenos-contos-negros.jpg",
-    mostruario: "/www.smeditora.com.br/img/pequenos-contos-negros-thumb.jpg"
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
   },
   {
     id: 72,
@@ -1130,9 +1133,9 @@ export default {
     resumo: "Releitura afrocentrada do clássico 'Branca de Neve', com protagonismo negro e elementos culturais brasileiros.",
     dataPublicacao: "2010-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/www.paulinas.org.br/img/pretinha-de-neve.jpg",
-    mostruario: "/www.paulinas.org.br/img/pretinha-de-neve-thumb.jpg"
-  },
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 73,
     titulo: "Princesa e o vento",
@@ -1145,8 +1148,8 @@ export default {
     resumo: "A história de uma princesa que escuta a sabedoria do vento e mergulha em uma viagem ancestral.",
     dataPublicacao: "2018-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/mazzaedicoes.com.br/wp-content/uploads/2020/03/princesa-e-o-vento.jpg",
-    mostruario: "/mazzaedicoes.com.br/wp-content/uploads/2020/03/princesa-e-o-vento-thumb.jpg"
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
   },
   {
     id: 74,
@@ -1160,9 +1163,9 @@ export default {
     resumo: "Livro ilustrado que valoriza a beleza e a diversidade das meninas negras, mostrando que todas podem ser princesas.",
     dataPublicacao: "2021-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/editoramale.com.br/img/princesas-negras.jpg",
-    mostruario: "/editoramale.com.br/img/princesas-negras-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 75,
     titulo: "Quanta África tem no dia de alguém?",
@@ -1175,9 +1178,9 @@ export default {
     resumo: "Mostra como a cultura africana está presente no cotidiano das crianças, mesmo que elas nem percebam.",
     dataPublicacao: "2021-08-01",
     dataCatalogo: "2025-06-17",
-    capa: "/cirandanaescola.com.br/img/quanta-africa.jpg",
-    mostruario: "/cirandanaescola.com.br/img/quanta-africa-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
 
     {
     id: 76,
@@ -1191,9 +1194,9 @@ export default {
     resumo: "Explora o universo das baianas do acarajé e suas tradições, com foco no respeito à cultura de matriz africana.",
     dataPublicacao: "2010-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/editorapallas.com.br/img/sonia-rosa-tabuleiro.jpg",
-    mostruario: "/editorapallas.com.br/img/sonia-rosa-tabuleiro-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 77,
     titulo: "Sonia Rosa; Jongo",
@@ -1206,8 +1209,8 @@ export default {
     resumo: "Apresenta o jongo, dança de origem africana presente na cultura popular brasileira, de forma acessível às crianças.",
     dataPublicacao: "2010-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/editorapallas.com.br/img/sonia-rosa-jongo.jpg",
-    mostruario: "/editorapallas.com.br/img/sonia-rosa-jongo-thumb.jpg"
+     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
   },
   {
     id: 78,
@@ -1221,9 +1224,9 @@ export default {
     resumo: "Sulwe é uma menina com a pele da cor da meia-noite que embarca em uma jornada para descobrir sua beleza interior.",
     dataPublicacao: "2020-03-01",
     dataCatalogo: "2025-06-17",
-    capa: "/www.rocco.com.br/wp-content/uploads/2020/03/sulwe.jpg",
-    mostruario: "/www.rocco.com.br/wp-content/uploads/2020/03/sulwe-thumb.jpg"
-  },
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
 
  {
     id: 79,
@@ -1237,9 +1240,9 @@ export default {
     resumo: "Livro introdutório sobre a capoeira, com linguagem acessível e ilustrações que retratam a importância dessa manifestação cultural.",
     dataPublicacao: "2010-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/editorapallas.com.br/img/sonia-rosa-capoeira.jpg",
-    mostruario: "/editorapallas.com.br/img/sonia-rosa-capoeira-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 80,
     titulo: "Sonia Rosa; Maracatu",
@@ -1252,9 +1255,9 @@ export default {
     resumo: "Apresenta a história do maracatu e sua importância como expressão cultural afro-brasileira, em linguagem lúdica.",
     dataPublicacao: "2010-01-01",
     dataCatalogo: "2025-06-17",
-    capa: "/editorapallas.com.br/img/sonia-rosa-maracatu.jpg",
-    mostruario: "/editorapallas.com.br/img/sonia-rosa-maracatu-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
 
    {
     id: 81,
@@ -1268,9 +1271,9 @@ export default {
     resumo: "Tunde é um menino curioso que embarca numa jornada mágica para salvar aves encantadas e redescobrir tradições ancestrais.",
     dataPublicacao: "2020-09-01",
     dataCatalogo: "2025-06-17",
-    capa: "/ereginga.com.br/uploads/tunde-capa.jpg",
-    mostruario: "/ereginga.com.br/uploads/tunde-thumb.jpg"
-  },
+     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
   {
     id: 82,
     titulo: "Xangô, o trovão",
@@ -1283,9 +1286,9 @@ export default {
     resumo: "Um retrato encantador de Xangô, o orixá do trovão e da justiça, apresentado com linguagem acessível e rica em elementos simbólicos.",
     dataPublicacao: "2001-08-01",
     dataCatalogo: "2025-06-17",
-    capa: "/images.companhiadasletrinhas.com.br/xango-o-trovao.jpg",
-    mostruario: "/images.companhiadasletrinhas.com.br/xango-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+ },
   {
     id: 83,
     titulo: "Zula, a Guerreira",
@@ -1298,9 +1301,9 @@ export default {
     resumo: "Zula é uma heroína determinada a mudar o mundo com coragem, representando o poder das meninas negras em suas lutas e sonhos.",
     dataPublicacao: "2023-04-01",
     dataCatalogo: "2025-06-17",
-    capa: "/criancasdiversas.com.br/img/zula-guerreira.jpg",
-    mostruario: "/criancasdiversas.com.br/img/zula-guerreira-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+},
     {
     id: 84,
     titulo: "Super negro",
@@ -1313,10 +1316,296 @@ export default {
     resumo: "Uma narrativa inspiradora sobre um menino negro que descobre seu valor e poderes ao enfrentar desafios cotidianos como um verdadeiro herói.",
     dataPublicacao: "2021-06-01",
     dataCatalogo: "2025-06-17",
-    capa: "/www.caiodocordel.com.br/images/super-negro.jpg",
-    mostruario: "/www.caiodocordel.com.br/images/super-negro-thumb.jpg"
-  },
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",},
  
+{
+  id: 85,
+  titulo: "Conceição Evaristo",
+  autor: "Orlando Nilha",
+  editora: "Editora Mostarda",
+  tema: "Empoderamento Feminino",
+  genero: "Biografia infantil/juvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 32,
+  resumo: "Biografia ilustrada da escritora Conceição Evaristo, destacando sua trajetória desde a favela Pendura Saia até se tornar professora, doutora em Literatura e uma das maiores vozes negras do Brasil.",
+  dataPublicacao: "08 de fevereiro de 2021",
+  colecao: "Black Power",
+  dataCatalogo: "", 
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Conceicao.jpe?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Conceicao.jpeg?raw=true"},
+
+ {
+    id: 86,
+    titulo: "Black Power Abdias do Nascimento",
+    autor: "s/a",
+    editora: "Mostarda",
+    tema: "Empoderamento Negro",
+    genero: "Biografia infantojuvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: null,
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+
+    
+  },
+  {
+    id: 87,
+    titulo: "Black Power Aleijadinho – Antonio Francisco Lisboa",
+    autor: "s/a",
+    editora: "Mostarda",
+    tema: "Empoderamento Negro",
+    genero: "Biografia infantojuvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: null,
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+
+  },
+  {
+    id: 88,
+    titulo: "Black Power Angela Davis",
+    autor: "Gabriela Bauerfeldt",
+    editora: "Mostarda",
+    tema: "Empoderamento Feminino ",
+    genero: "Não ficção infantil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: "9786588183069",
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+
+  },
+  {
+    id: 89,
+    titulo: "Black Power Barack Obama",
+    autor: "s/a",
+    editora: "Mostarda",
+    tema: "Empoderamento Negro",
+    genero: "Biografia infantojuvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: null,
+     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+
+  },
+  {
+    id: 90,
+    titulo: "Black Power Beatriz Nascimento",
+    autor: "s/a",
+    editora: "Mostarda",
+    tema: "Empoderamento Feminino ",
+    genero: "Biografia infantojuvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: null,
+     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+
+  },
+  {
+    id: 91,
+    titulo: "Carolina Maria de Jesus",
+    autor: "s/a",
+    editora: "Mostarda",
+    tema: "Empoderamento Feminino",
+    genero: "Biografia infantojuvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Carolina.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Carolina.jpg?raw=true",
+    isbn: null
+  },
+  {
+    id: 92,
+    titulo: "Black Power Conceição Evaristo",
+    autor: "Orlando Nilha",
+    editora: "Mostarda",
+    tema: "Empoderamento Feminino",
+    genero: "Biografia juvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: "9786588183038",
+     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+
+  },
+  {
+    id: 93,
+    titulo: "Black Power Dandara e Zumbi",
+    autor: "Maria Julia Maltese",
+    editora: "Mostarda",
+    tema: "Empoderamento Negro",
+    genero: "Biografia juvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: "9786588183021",
+     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+
+  },
+  {
+    id: 94,
+    titulo: "Black Power Glória Maria Matta da Silva – Edição Especial – Capa Dura",
+    autor: "s/a",
+    editora: "Mostarda",
+    tema: "Empoderamento Feminino e Negro",
+    genero: "Biografia infantojuvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: null,
+     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+
+  },
+  {
+    id: 95,
+    titulo: "Black Power Hamilton Naki",
+    autor: "s/a",
+    editora: "Mostarda",
+    tema: "Empoderamento Negro",
+    genero: "Biografia infantojuvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: null,
+     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+
+  },
+  {
+    id: 96,
+    titulo: "Mario Juruna",
+    autor: "s/a",
+    editora: "Mostarda",
+    tema: "Empoderamento Feminino",
+    genero: "Biografia infantojuvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: null,
+     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Juruna.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Juruna.jpg?raw=true"
+
+  },
+  {
+    id: 97,
+    titulo: "Davi Kopenawa",
+    autor: "s/a",
+    editora: "Mostarda",
+    tema: "Empoderamento Negro",
+    genero: "Biografia infantojuvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: null,
+     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Kopenawa.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Kopenawa.jpg?raw=true"
+
+  },
+  {
+    id: 98,
+    titulo: "Ailton Krenak",
+    autor: "s/a",
+    editora: "Mostarda",
+    tema: "Coleção Black Power",
+    genero: "Biografia infantojuvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: null,
+     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Krenak.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Krenak.jpg?raw=true"
+
+  },
+  {
+    id: 99,
+    titulo: "Laudelina de Campos de Melo",
+    autor: "s/a",
+    editora: "Mostarda",
+    tema: "Coleção Black Power",
+    genero: "Biografia infantojuvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: null,
+     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Laudelina.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Laudelina.jpg?raw=true"
+
+  },
+  {
+    id: 100,
+    titulo: "Luiz Gama",
+    autor: "s/a",
+    editora: "Mostarda",
+    tema: "Coleção Black Power ",
+    genero: "Biografia infantojuvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: null,
+     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Luiz.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Luiz.jpg?raw=true"
+
+  },
+
+  {
+    id: 101,
+    titulo: "Nelson Mandela",
+    autor: "s/a",
+    editora: "Mostarda",
+    tema: "Coleção Black Power",
+    genero: "Biografia infantojuvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: null,
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Mandela.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Mandela.jpg?raw=true"
+
+    
+  },
+ {
+    id: 102,
+    titulo: "Machado de Asis",
+    autor: "s/a",
+    editora: "Mostarda",
+    tema: "Coleção Black Power",
+    genero: "Biografia infantojuvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: null,
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Machado.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Machado.jpg?raw=true"
+
+    
+  },
+  {
+    id: 102,
+    titulo: "Machado de Asis",
+    autor: "s/a",
+    editora: "Mostarda",
+    tema: "Coleção Black Power",
+    genero: "Biografia infantojuvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: null,
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Machado.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Machado.jpg?raw=true"
+
+    
+  },
+{
+    id: 103,
+    titulo: "Malcolm X",
+    autor: "s/a",
+    editora: "Mostarda",
+    tema: "Coleção Black Power",
+    genero: "Biografia infantojuvenil",
+    numeroPaginas: 32,
+    dataPublicacao: "2021",
+    isbn: null,
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Malcolm.jpg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Malcolm.jpg?raw=true"
+
+    
+  },
+
 
 ];
 

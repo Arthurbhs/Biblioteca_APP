@@ -28,7 +28,7 @@ type LivroButtonProps = {
       style={styles.button}
       onPress={() => router.push(`/livros/${livro.id}`)}
     >
-      <Image source={{ uri: livro.capa }} style={styles.image} resizeMode="cover" />
+     <Image source={{ uri: livro.capa }}   style={styles.image} resizeMode="cover" />
       <View style={styles.titleContainer}>
         <Text style={styles.title}>{livro.titulo}</Text>
       </View>
