@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    aspectRatio: 1.5, // largura > altura
+    aspectRatio: 0.8, // largura > altura
     borderRadius: 8,
   },
   titleContainer: {

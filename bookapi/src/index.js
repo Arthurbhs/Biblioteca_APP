@@ -1323,288 +1323,298 @@ export default {
   titulo: "Conceição Evaristo",
   autor: "Orlando Nilha",
   editora: "Editora Mostarda",
-  tema: "Empoderamento Feminino",
+  tema: "Coleção Black Power",
   genero: "Biografia infantil/juvenil",
   classificacaoLiteraria: "Infantojuvenil",
   numeroPaginas: 32,
   resumo: "Biografia ilustrada da escritora Conceição Evaristo, destacando sua trajetória desde a favela Pendura Saia até se tornar professora, doutora em Literatura e uma das maiores vozes negras do Brasil.",
   dataPublicacao: "08 de fevereiro de 2021",
-  colecao: "Black Power",
-  dataCatalogo: "", 
-   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Conceicao.jpe?raw=true",
-  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Conceicao.jpeg?raw=true"},
+  dataCatalogo: "08 de fevereiro de 2021",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Conceicao.jpg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Conceicao.jpeg?raw=true"
+},
 
- {
-    id: 86,
-    titulo: "Black Power Abdias do Nascimento",
-    autor: "s/a",
-    editora: "Mostarda",
-    tema: "Empoderamento Negro",
-    genero: "Biografia infantojuvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: null,
-    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
-
-    
-  },
-  {
-    id: 87,
-    titulo: "Black Power Aleijadinho – Antonio Francisco Lisboa",
-    autor: "s/a",
-    editora: "Mostarda",
-    tema: "Empoderamento Negro",
-    genero: "Biografia infantojuvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: null,
-    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
-
-  },
-  {
-    id: 88,
-    titulo: "Black Power Angela Davis",
-    autor: "Gabriela Bauerfeldt",
-    editora: "Mostarda",
-    tema: "Empoderamento Feminino ",
-    genero: "Não ficção infantil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: "9786588183069",
-    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
-
-  },
-  {
-    id: 89,
-    titulo: "Black Power Barack Obama",
-    autor: "s/a",
-    editora: "Mostarda",
-    tema: "Empoderamento Negro",
-    genero: "Biografia infantojuvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: null,
-     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
-
-  },
-  {
-    id: 90,
-    titulo: "Black Power Beatriz Nascimento",
-    autor: "s/a",
-    editora: "Mostarda",
-    tema: "Empoderamento Feminino ",
-    genero: "Biografia infantojuvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: null,
-     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
-
-  },
-  {
-    id: 91,
-    titulo: "Carolina Maria de Jesus",
-    autor: "s/a",
-    editora: "Mostarda",
-    tema: "Empoderamento Feminino",
-    genero: "Biografia infantojuvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Carolina.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Carolina.jpg?raw=true",
-    isbn: null
-  },
-  {
-    id: 92,
-    titulo: "Black Power Conceição Evaristo",
-    autor: "Orlando Nilha",
-    editora: "Mostarda",
-    tema: "Empoderamento Feminino",
-    genero: "Biografia juvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: "9786588183038",
-     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
-
-  },
-  {
-    id: 93,
-    titulo: "Black Power Dandara e Zumbi",
-    autor: "Maria Julia Maltese",
-    editora: "Mostarda",
-    tema: "Empoderamento Negro",
-    genero: "Biografia juvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: "9786588183021",
-     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
-
-  },
-  {
-    id: 94,
-    titulo: "Black Power Glória Maria Matta da Silva – Edição Especial – Capa Dura",
-    autor: "s/a",
-    editora: "Mostarda",
-    tema: "Empoderamento Feminino e Negro",
-    genero: "Biografia infantojuvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: null,
-     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
-
-  },
-  {
-    id: 95,
-    titulo: "Black Power Hamilton Naki",
-    autor: "s/a",
-    editora: "Mostarda",
-    tema: "Empoderamento Negro",
-    genero: "Biografia infantojuvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: null,
-     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
-
-  },
-  {
-    id: 96,
-    titulo: "Mario Juruna",
-    autor: "s/a",
-    editora: "Mostarda",
-    tema: "Empoderamento Feminino",
-    genero: "Biografia infantojuvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: null,
-     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Juruna.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Juruna.jpg?raw=true"
-
-  },
-  {
-    id: 97,
-    titulo: "Davi Kopenawa",
-    autor: "s/a",
-    editora: "Mostarda",
-    tema: "Empoderamento Negro",
-    genero: "Biografia infantojuvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: null,
-     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Kopenawa.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Kopenawa.jpg?raw=true"
-
-  },
-  {
-    id: 98,
-    titulo: "Ailton Krenak",
-    autor: "s/a",
-    editora: "Mostarda",
-    tema: "Coleção Black Power",
-    genero: "Biografia infantojuvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: null,
-     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Krenak.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Krenak.jpg?raw=true"
-
-  },
-  {
-    id: 99,
-    titulo: "Laudelina de Campos de Melo",
-    autor: "s/a",
-    editora: "Mostarda",
-    tema: "Coleção Black Power",
-    genero: "Biografia infantojuvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: null,
-     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Laudelina.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Laudelina.jpg?raw=true"
-
-  },
-  {
-    id: 100,
-    titulo: "Luiz Gama",
-    autor: "s/a",
-    editora: "Mostarda",
-    tema: "Coleção Black Power ",
-    genero: "Biografia infantojuvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: null,
-     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Luiz.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Luiz.jpg?raw=true"
-
-  },
-
-  {
-    id: 101,
-    titulo: "Nelson Mandela",
-    autor: "s/a",
-    editora: "Mostarda",
-    tema: "Coleção Black Power",
-    genero: "Biografia infantojuvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: null,
-    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Mandela.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Mandela.jpg?raw=true"
-
-    
-  },
- {
-    id: 102,
-    titulo: "Machado de Asis",
-    autor: "s/a",
-    editora: "Mostarda",
-    tema: "Coleção Black Power",
-    genero: "Biografia infantojuvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: null,
-    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Machado.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Machado.jpg?raw=true"
-
-    
-  },
-  {
-    id: 102,
-    titulo: "Machado de Asis",
-    autor: "s/a",
-    editora: "Mostarda",
-    tema: "Coleção Black Power",
-    genero: "Biografia infantojuvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: null,
-    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Machado.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Machado.jpg?raw=true"
-
-    
-  },
 {
-    id: 103,
-    titulo: "Malcolm X",
-    autor: "s/a",
-    editora: "Mostarda",
-    tema: "Coleção Black Power",
-    genero: "Biografia infantojuvenil",
-    numeroPaginas: 32,
-    dataPublicacao: "2021",
-    isbn: null,
-    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Malcolm.jpg?raw=true",
-    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Malcolm.jpg?raw=true"
+  id: 86,
+  titulo: "Antônio Francisco Lisboa – Aleijadinho",
+  autor: "Fabiano Ormaneze e Douglas Reverie",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Retrata a inspiradora trajetória de Antônio Francisco Lisboa, filho de uma escravizada, que, mesmo acometido pela doença que deformou seu corpo, tornou-se um dos maiores escultores e arquitetos do Brasil colonial",
+  numeroPaginas: 32,
+  dataPublicacao: "2021-XX-XX",
+  dataCatalogo: "2025-07-10",
+  capa: "...",
+  mostruario: "...",
+  colecao: "Black Power"
+},
 
-    
-  },
+{
+  id: 87,
+  titulo: "Alice Walker",
+  autor: "s/a",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Apresenta a vida de Alice Walker, autora de ‘A Cor Púrpura’ e ativista pelos direitos civis e igualdade racial nos EUA",
+  numeroPaginas: 32,
+  dataPublicacao: "2021-XX-XX",
+  dataCatalogo: "2025-07-10",
+ capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Alice.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Alice.jpeg?raw=true",
+},
+
+{
+  id: 88,
+  titulo: "Abdias do Nascimento",
+  autor: "Júlio Emílio Braz",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Conta a história de Abdias do Nascimento, ator, dramaturgo, ativista e fundador do Teatro Experimental do Negro, que lutou pelo reconhecimento dos direitos civis da população negra no Brasil",
+  numeroPaginas: 32,
+  dataPublicacao: "2022-XX-XX",
+  dataCatalogo: "2025-07-10",
+  isbn: "978-65-88183-27-4",
+ capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Abdidas.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Abdidas.jpeg?raw=true",
+},
+
+{
+  id: 89,
+  titulo: "Alice Walker",
+  autor: "s/a",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Apresenta a vida de Alice Walker, autora de ‘A Cor Púrpura’ e ativista pelos direitos civis e igualdade racial nos EUA",
+  numeroPaginas: 32,
+  dataPublicacao: "2021-XX-XX",
+  dataCatalogo: "2025-07-10",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Alice.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Alice.jpeg?raw=true",
+  colecao: "Black Power"
+},
+
+{
+  id: 90,
+  titulo: "Beatriz Nascimento",
+  autor: "Maria Julia Maltese",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Conta a história de Maria Beatriz Nascimento, historiadora sergipana e pioneira no modo de pensar a história a partir de saberes africanos, que estudou os quilombos e foi militante antirracista.",
+  numeroPaginas: 32,
+  dataPublicacao: "2022",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Beatriz.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Beatriz.jpeg?raw=true",
+  
+},
+
+{
+  id: 91,
+  titulo: "João Cândido",
+  autor: "Júlio Emílio Braz",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Conta a história de João Cândido, o ‘Almirante Negro’, líder da Revolta da Chibata em 1910 na Marinha do Brasil.",
+  numeroPaginas: 32,
+  dataPublicacao: "11 de setembro de 2023",
+  isbn: "978-65-88183-394-6",
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Candido.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Candido.jpeg?raw=true",
+  
+},
+
+{
+  id: 92,
+  titulo: "Carolina Maria de Jesus",
+  autor: "Orlando Nilha",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Trajetória de Carolina Maria de Jesus, catadora de papel e autora de 'Quarto de Despejo', que se tornou uma das mais importantes escritoras negras do Brasil.",
+  numeroPaginas: 32,
+  dataPublicacao: "2019",
+  isbn: "978-65-80942-05-3",
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Carolina.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Carolina.jpeg?raw=true",
+   colecao: "Black Power"
+},
+
+{
+  id: 93,
+  titulo: "Maria Felipa",
+  autor: "Luciana Palmeira e Cássia Valle",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Retrata Maria Felipa de Oliveira, líder histórica da resistência negra na Bahia, que lutou contra os portugueses pela independência.",
+  numeroPaginas: 32,
+  dataPublicacao: "2022",
+  isbn: "",
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Felipa.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Felipa.jpeg?raw=true",
+   colecao: "Black Power"
+},
+
+{
+  id: 94,
+  titulo: "Maria Firmina dos Reis",
+  autor: "s/a",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Homenageia Maria Firmina dos Reis, maranhense e pioneira da literatura afro-brasileira, autora de 'Úrsula' (1859), marco abolicionista.",
+  numeroPaginas: 32,
+  dataPublicacao: "2024",
+  isbn: "",
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Firmina.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Firmina.jpeg?raw=true",
+
+},
+
+
+{
+  id: 96,
+  titulo: "Mario Juruna",
+  autor: "Fabiano Ormeneze",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Conta a história de Mário Juruna, líder indígena e primeiro deputado federal indígena, que lutou contra o Estatuto do Índio para defender os direitos e terras de seu povo Yanomami.",
+  numeroPaginas: 32,
+  dataPublicacao: "2021",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Juruna.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Juruna.jpeg?raw=true",
+  
+},
+
+{
+  id: 97,
+  titulo: "Davi Kopenawa",
+  autor: "Orlando Nilha",
+  editora: "Mostarda",
+  tema: "Empoderamento Negro",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Homenageia a trajetória de Davi Kopenawa Yanomami, líder que lutou contra a invasão de terras por garimpeiros e defendeu os direitos dos povos indígenas.",
+  numeroPaginas: 32,
+  dataPublicacao: "2023",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Kopenawa.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Kopenawa.jpeg?raw=true",
+  
+},
+
+{
+  id: 98,
+  titulo: "Ailton Krenak",
+  autor: "Francisco Lima Neto",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Conta a história de Ailton Krenak, líder indígena e intelectual do povo Krenak, referência política desde os anos 1970 por seus pensamentos sobre povos indígenas e meio ambiente.",
+  numeroPaginas: 32,
+  dataPublicacao: "2021",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Krenak.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Krenak.jpeg?raw=true",
+  
+},
+
+{
+  id: 99,
+  titulo: "Laudelina de Campos de Melo",
+  autor: "Francisco Lima Neto",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Retrata a trajetória de Laudelina de Campos Melo, mineira que fundou o primeiro sindicato de empregadas domésticas e lutou contra o racismo e exploração trabalhista no Brasil.",
+  numeroPaginas: 32,
+  dataPublicacao: "2021",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Laudalina.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Laudelina.jpeg?raw=true",
+  
+},
+
+{
+  id: 100,
+  titulo: "Luiz Gama",
+  autor: "Francisco Lima Neto",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Apresenta a trajetória de Luiz Gama, líder abolicionista, jornalista e poeta, que, mesmo impedido de obter diploma, atuou como advogado em prol da libertação de escravizados.",
+  numeroPaginas: 32,
+  dataPublicacao: "2022",
+  isbn: "978-65-88183-267-7", // possível variante
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Luiz.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Luiz.jpeg?raw=true",
+  
+},
+
+{
+  id: 101,
+  titulo: "Nelson Mandela",
+  autor: "Maria Julia Maltese",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Conta a trajetória de Nelson Mandela, líder contra o apartheid, ex‑presidente da África do Sul e vencedor do Prêmio Nobel da Paz." ,
+  numeroPaginas: 32,
+  dataPublicacao: "2021",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Mandela.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Mandela.jpeg?raw=true",
+  
+},
+
+{
+  id: 102,
+  titulo: "Machado de Assis",
+  autor: "s/a",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Revela a vida de Machado de Assis, nascido pobre e negro no Rio de Janeiro, que se tornou um dos maiores escritores brasileiros." ,
+  numeroPaginas: 32,
+  dataPublicacao: "2021",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Machado.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Machado.jpeg?raw=true",
+  
+},
+
+{
+  id: 103,
+  titulo: "Malcolm X",
+  autor: "Gabriela Bauerfeldt",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Traça a história de Malcolm X, ativista pelos direitos civis nos EUA nas décadas de 1950/60, símbolo do movimento Black Power.",
+  numeroPaginas: 32,
+  dataPublicacao: "2021",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Malcolm.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Malcolm.jpeg?raw=true",
+  
+}
+
 
 
 ];

@@ -105,6 +105,7 @@ const ListaCategorias = () => {
     <ScrollView>
 
     {renderSecao('🪘 Capoeira', filtrarPorPalavra('capoeira'))}
+    {renderSecao('✊ Coleção Black Power', filtrarPorPalavra('coleção black power'))}
     {renderSecao('♀️ Empoderamento Feminino', filtrarPorPalavra('empoderamento feminino'))}
     {renderSecao('👧 Infanto Juvenil', filtrarPorPalavra('infanto juvenil'))}
     {renderSecao('⚖️ Questões Sociais', filtrarPorPalavra('questões sociais'))}
