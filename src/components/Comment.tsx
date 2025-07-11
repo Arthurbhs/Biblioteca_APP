@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Keyboard } from 'react-native';
+
 import {
   Text, TextInput, Button, View, FlatList,
   StyleSheet, Image, TouchableOpacity,
@@ -142,10 +144,10 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
   };
 
   const formatarData = (data: Timestamp | null) => {
-    if (!data) return '';
-    const date = data.toDate();
-    return `${date.toLocaleDateString()} - ${date.getHours()}:${date.getMinutes().toString().padStart(2, '0')}`;
-  };
+  if (!data) return '';
+  const date = data.toDate();
+  return `${date.toLocaleDateString()} - ${date.getHours()}:${date.getMinutes().toString().padStart(2, '0')}`;
+};
 
   const renderItem = ({ item }: { item: Comentario }) => {
     const isAuthor = user?.uid === item.userId;
@@ -205,28 +207,38 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
     );
   };
 
-  return (
-    <KeyboardAvoidingView
-      style={styles.container}
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-      keyboardVerticalOffset={100}
+ return (
+  <KeyboardAvoidingView
+    style={{ flex: 1 }}
+    behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+    keyboardVerticalOffset={Platform.OS === 'ios' ? 100 : 0}
+  >
+       <Text style={styles.titulo}>Comentarios</Text>
+    <TouchableOpacity
+      style={{ flex: 1 }}
+      activeOpacity={1}
+      onPress={() => Keyboard.dismiss()}
     >
-      <FlatList
-        data={comentarios}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-        contentContainerStyle={{ paddingBottom: 120 }}
-      />
-
-      <View style={{ paddingBottom: 16 }}>
-        <TextInput
-          placeholder="Escreva um comentário"
-          value={comentario}
-          onChangeText={setComentario}
-          style={styles.input}
-          multiline
+      <View style={styles.container}>
+        <FlatList
+          data={comentarios}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
+          contentContainerStyle={{ paddingBottom: 120 }}
+          keyboardShouldPersistTaps="handled"
         />
-        <Button title="Enviar" onPress={enviarComentario} />
+
+      <View style={{ paddingBottom: 16, paddingHorizontal: 16, width: '100%' }}>
+  <TextInput
+    placeholder="Escreva um comentário"
+    value={comentario}
+    onChangeText={setComentario}
+    style={styles.input}
+    multiline
+  />
+  <Button title="Enviar" onPress={enviarComentario} />
+</View>
+
       </View>
 
       <Modal
@@ -240,7 +252,7 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
           alignItems: 'flex-start',
           margin: 0,
           paddingTop: modalPosition.y,
-          paddingLeft: modalPosition.x + 20, // agora à direita do ícone
+          paddingLeft: modalPosition.x + 20,
         }}
       >
         <View style={styles.menuContainer}>
@@ -273,8 +285,10 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
           )}
         </View>
       </Modal>
-    </KeyboardAvoidingView>
-  );
+    </TouchableOpacity>
+  </KeyboardAvoidingView>
+);
+
 };
 
 const styles = StyleSheet.create({
@@ -282,12 +296,14 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 16
   },
-  titulo: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginTop: 16,
-    marginBottom: 8
-  },
+ titulo: {
+  fontSize: 18,
+  fontWeight: 'bold',
+  marginTop: 16,
+  marginBottom: 8,
+  textAlign: 'center', // ✅ centraliza o texto
+},
+
   comentario: {
     marginBottom: 12,
     backgroundColor: '#f1f1f1',

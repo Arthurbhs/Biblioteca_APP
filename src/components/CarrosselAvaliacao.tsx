@@ -20,6 +20,7 @@ interface LivroComNota extends LivroAPI {
 const ImageCarouselTopRated: React.FC = () => {
   const [topLivros, setTopLivros] = useState<LivroComNota[]>([]);
   const flatListRef = useRef<FlatList>(null);
+  const currentIndexRef = useRef(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -60,6 +61,21 @@ const ImageCarouselTopRated: React.FC = () => {
     fetchData();
   }, []);
 
+  // 🔄 Scroll automático
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (flatListRef.current && topLivros.length > 0) {
+        currentIndexRef.current = (currentIndexRef.current + 1) % topLivros.length;
+        flatListRef.current.scrollToIndex({
+          index: currentIndexRef.current,
+          animated: true,
+        });
+      }
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [topLivros]);
+
   return (
     <FlatList
       ref={flatListRef}
@@ -94,10 +110,10 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   image: {
-    width: width * 0.3,
-    height: 250,
-    borderRadius: 12,
-  },
+  width: width * 0.9,         // 90% da largura da tela
+  aspectRatio: 16 / 9,        // mantém a proporção widescreen
+  borderRadius: 12,
+},
   title: {
     fontSize: 18,
     marginTop: 8,

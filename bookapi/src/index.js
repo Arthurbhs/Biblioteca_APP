@@ -1329,7 +1329,7 @@ export default {
   numeroPaginas: 32,
   resumo: "Biografia ilustrada da escritora Conceição Evaristo, destacando sua trajetória desde a favela Pendura Saia até se tornar professora, doutora em Literatura e uma das maiores vozes negras do Brasil.",
   dataPublicacao: "08 de fevereiro de 2021",
-  dataCatalogo: "08 de fevereiro de 2021",
+   dataCatalogo: "2025-07-10",
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Conceicao.jpg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Conceicao.jpeg?raw=true"
 },
@@ -1346,26 +1346,26 @@ export default {
   numeroPaginas: 32,
   dataPublicacao: "2021-XX-XX",
   dataCatalogo: "2025-07-10",
-  capa: "...",
-  mostruario: "...",
-  colecao: "Black Power"
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Alejadinho.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Alejadinho.jpeg?raw=true"
 },
 
 {
   id: 87,
-  titulo: "Alice Walker",
-  autor: "s/a",
+  titulo: "Glória Maria Matta da Silva",
+  autor: "Duílio Fabbri Júnior e Manoela Costa",
   editora: "Mostarda",
   tema: "Coleção Black Power",
   genero: "Biografia infantojuvenil",
   classificacaoLiteraria: "Infantojuvenil",
-  resumo: "Apresenta a vida de Alice Walker, autora de ‘A Cor Púrpura’ e ativista pelos direitos civis e igualdade racial nos EUA",
-  numeroPaginas: 32,
-  dataPublicacao: "2021-XX-XX",
-  dataCatalogo: "2025-07-10",
- capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Alice.jpeg?raw=true",
-  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Alice.jpeg?raw=true",
+  resumo: "Biografia ilustrada da jornalista Glória Maria, sua trajetória desde telefonista até se tornar uma das primeiras grandes repórteres negras da TV brasileira, enfrentando ambientes predominantemente masculinos e embranquecidos.",
+  numeroPaginas: 40,
+  dataPublicacao: "15 de fevereiro de 2024",
+   dataCatalogo: "2025-07-10",
+ capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Gloria.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Gloria.jpeg?raw=true"
 },
+
 
 {
   id: 88,
@@ -1379,7 +1379,6 @@ export default {
   numeroPaginas: 32,
   dataPublicacao: "2022-XX-XX",
   dataCatalogo: "2025-07-10",
-  isbn: "978-65-88183-27-4",
  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Abdidas.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Abdidas.jpeg?raw=true",
 },
@@ -1398,7 +1397,7 @@ export default {
   dataCatalogo: "2025-07-10",
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Alice.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Alice.jpeg?raw=true",
-  colecao: "Black Power"
+  
 },
 
 {
@@ -1412,6 +1411,7 @@ export default {
   resumo: "Conta a história de Maria Beatriz Nascimento, historiadora sergipana e pioneira no modo de pensar a história a partir de saberes africanos, que estudou os quilombos e foi militante antirracista.",
   numeroPaginas: 32,
   dataPublicacao: "2022",
+  dataCatalogo: "2025-07-10",
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Beatriz.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Beatriz.jpeg?raw=true",
   
@@ -1428,7 +1428,7 @@ export default {
   resumo: "Conta a história de João Cândido, o ‘Almirante Negro’, líder da Revolta da Chibata em 1910 na Marinha do Brasil.",
   numeroPaginas: 32,
   dataPublicacao: "11 de setembro de 2023",
-  isbn: "978-65-88183-394-6",
+  dataCatalogo: "2025-07-10",
    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Candido.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Candido.jpeg?raw=true",
   
@@ -1445,10 +1445,10 @@ export default {
   resumo: "Trajetória de Carolina Maria de Jesus, catadora de papel e autora de 'Quarto de Despejo', que se tornou uma das mais importantes escritoras negras do Brasil.",
   numeroPaginas: 32,
   dataPublicacao: "2019",
-  isbn: "978-65-80942-05-3",
+  dataCatalogo: "2025-07-10",
     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Carolina.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Carolina.jpeg?raw=true",
-   colecao: "Black Power"
+   
 },
 
 {
@@ -1462,10 +1462,10 @@ export default {
   resumo: "Retrata Maria Felipa de Oliveira, líder histórica da resistência negra na Bahia, que lutou contra os portugueses pela independência.",
   numeroPaginas: 32,
   dataPublicacao: "2022",
-  isbn: "",
+   dataCatalogo: "2025-07-10",
     capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Felipa.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Felipa.jpeg?raw=true",
-   colecao: "Black Power"
+   
 },
 
 {
@@ -1479,12 +1479,28 @@ export default {
   resumo: "Homenageia Maria Firmina dos Reis, maranhense e pioneira da literatura afro-brasileira, autora de 'Úrsula' (1859), marco abolicionista.",
   numeroPaginas: 32,
   dataPublicacao: "2024",
-  isbn: "",
+  dataCatalogo: "2025-07-10",
    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Firmina.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Firmina.jpeg?raw=true",
 
 },
 
+{
+  id: 95,
+  titulo: "Lélia Gonzalez",
+  autor: "Flávia Martins de Carvalho e Leonardo Malavazzi",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Homenageia a trajetória da intelectual Lélia Gonzalez, antropóloga e filósofa que refletiu sobre racismo, feminismo e identidade negra.",
+  numeroPaginas: 40,
+  dataPublicacao: "2022",
+  dataCatalogo: "2025-07-10",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Gonzalez.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Gonzalez.jpeg?raw=true",
+  
+},
 
 {
   id: 96,
@@ -1497,6 +1513,7 @@ export default {
   resumo: "Conta a história de Mário Juruna, líder indígena e primeiro deputado federal indígena, que lutou contra o Estatuto do Índio para defender os direitos e terras de seu povo Yanomami.",
   numeroPaginas: 32,
   dataPublicacao: "2021",
+  dataCatalogo: "2025-07-10",
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Juruna.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Juruna.jpeg?raw=true",
   
@@ -1507,12 +1524,13 @@ export default {
   titulo: "Davi Kopenawa",
   autor: "Orlando Nilha",
   editora: "Mostarda",
-  tema: "Empoderamento Negro",
+  tema: "Coleção Black Power",
   genero: "Biografia infantojuvenil",
   classificacaoLiteraria: "Infantojuvenil",
   resumo: "Homenageia a trajetória de Davi Kopenawa Yanomami, líder que lutou contra a invasão de terras por garimpeiros e defendeu os direitos dos povos indígenas.",
   numeroPaginas: 32,
   dataPublicacao: "2023",
+  dataCatalogo: "2025-07-10",
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Kopenawa.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Kopenawa.jpeg?raw=true",
   
@@ -1529,6 +1547,7 @@ export default {
   resumo: "Conta a história de Ailton Krenak, líder indígena e intelectual do povo Krenak, referência política desde os anos 1970 por seus pensamentos sobre povos indígenas e meio ambiente.",
   numeroPaginas: 32,
   dataPublicacao: "2021",
+  dataCatalogo: "2025-07-10",
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Krenak.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Krenak.jpeg?raw=true",
   
@@ -1545,6 +1564,7 @@ export default {
   resumo: "Retrata a trajetória de Laudelina de Campos Melo, mineira que fundou o primeiro sindicato de empregadas domésticas e lutou contra o racismo e exploração trabalhista no Brasil.",
   numeroPaginas: 32,
   dataPublicacao: "2021",
+  dataCatalogo: "2025-07-10",
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Laudalina.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Laudelina.jpeg?raw=true",
   
@@ -1561,7 +1581,7 @@ export default {
   resumo: "Apresenta a trajetória de Luiz Gama, líder abolicionista, jornalista e poeta, que, mesmo impedido de obter diploma, atuou como advogado em prol da libertação de escravizados.",
   numeroPaginas: 32,
   dataPublicacao: "2022",
-  isbn: "978-65-88183-267-7", // possível variante
+  dataCatalogo: "2025-07-10",
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Luiz.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Luiz.jpeg?raw=true",
   
@@ -1578,6 +1598,7 @@ export default {
   resumo: "Conta a trajetória de Nelson Mandela, líder contra o apartheid, ex‑presidente da África do Sul e vencedor do Prêmio Nobel da Paz." ,
   numeroPaginas: 32,
   dataPublicacao: "2021",
+  dataCatalogo: "2025-07-10",
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Mandela.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Mandela.jpeg?raw=true",
   
@@ -1594,6 +1615,7 @@ export default {
   resumo: "Revela a vida de Machado de Assis, nascido pobre e negro no Rio de Janeiro, que se tornou um dos maiores escritores brasileiros." ,
   numeroPaginas: 32,
   dataPublicacao: "2021",
+  dataCatalogo: "2025-07-10",
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Machado.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Machado.jpeg?raw=true",
   
@@ -1610,10 +1632,117 @@ export default {
   resumo: "Traça a história de Malcolm X, ativista pelos direitos civis nos EUA nas décadas de 1950/60, símbolo do movimento Black Power.",
   numeroPaginas: 32,
   dataPublicacao: "2021",
+  dataCatalogo: "2025-07-10",
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Malcolm.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Malcolm.jpeg?raw=true",
   
+},
+
+{
+  id: 104,
+  titulo: "Sônia Guajajara",
+  autor: "Rodrigo Luis",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Conta a história da liderança indígena do Maranhão, Sônia Guajajara, sua luta contra a destruição ambiental e pelos direitos dos povos originários.",
+  numeroPaginas: 32,
+  dataPublicacao: "2024",
+  dataCatalogo: "2025-07-10",
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Guajajara.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Guajajara.jpeg?raw=true",
+   
+},
+
+{
+  id: 105,
+  titulo: "Hamilton Naki",
+  autor: "Francisco Lima Neto",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Retrata a trajetória do pesquisador e professor sul-africano Hamilton Naki, que colaborou em cirurgias pioneiras apesar do apartheid.",
+  numeroPaginas: 32,
+  dataPublicacao: "2021",
+  dataCatalogo: "2025-07-10",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Hamilton.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Hamilton.jpeg?raw=true",
+   
+},
+
+{
+  id: 106,
+  titulo: "João do Rio",
+  autor: "Júlio Emílio Braz",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Conta a vida de João do Rio, pseudônimo de Paulo Barreto, jornalista, cronista e membro da ABL, conhecido por retratar o Rio de Janeiro nas primeiras décadas do século XX.",
+  numeroPaginas: 84,
+  dataPublicacao: "10 de outubro de 2023",
+  dataCatalogo: "2025-07-10",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Joao.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Joao.jpeg?raw=true",
+  
+},
+
+{
+  id: 106,
+  titulo: "Júlio Emílio Braz",
+  autor: "Júlio Emílio Braz",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Autobiografia ilustrada do próprio Júlio Emílio Braz, que narra sua trajetória pessoal e profissional, mostrando as batalhas da infância até se tornar escritor.",
+  numeroPaginas: 31,
+  dataPublicacao: "2022",
+  dataCatalogo: "2025-07-10",
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Julho.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Julho.jpeg?raw=true",
+  
+  
+},
+
+{
+  id: 107,
+  titulo: "Dandara e Zumbi",
+  autor: "Maria Julia Maltese",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Cobre a trajetória dos líderes do Quilombo dos Palmares, Zumbi e Dandara, destacando sua luta contra o racismo e colonização no período colonial.",
+  numeroPaginas: 32,
+  dataPublicacao: "2021",
+  dataCatalogo: "2025-07-10",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Zumbi.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Zumbi.jpeg?raw=true",
+},
+
+{
+  id: 108,
+  titulo: "Barreto – Lima Barreto",
+  autor: "André Augustus Diasz",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  resumo: "Biografia do escritor e jornalista Lima Barreto (1881–1922), que denunciou desigualdades, racismo e injustiças sociais na Primeira República, sendo um dos responsáveis pela modernização da literatura brasileira." ,
+  numeroPaginas: 40,
+  dataPublicacao: "31 de julho de 2023",
+  dataCatalogo: "2025-07-10",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Barreto.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Barreto.jpeg?raw=true",
 }
+
+
+
+
+
 
 
 
