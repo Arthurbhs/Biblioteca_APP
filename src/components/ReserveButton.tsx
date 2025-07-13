@@ -93,6 +93,11 @@ export default function BotaoReserva({ livroId, titulo, aoReservar }: Props) {
           uid: usuario.uid,
           nome: nomeUsuario, // 👈 usamos o nome tratado aqui
         }];
+        console.log('Atualizando somente a fila:', {
+  fila: novaFila
+});
+
+
 
         await updateDoc(doc(db, 'reservas', docAtual.id), {
           fila: novaFila,
@@ -100,6 +105,7 @@ export default function BotaoReserva({ livroId, titulo, aoReservar }: Props) {
 
         Toast.show({ type: 'success', text1: 'Adicionado à fila de espera!' });
         setFila(novaFila);
+        
         return;
       }
         console.log("Usuário logado:", {
@@ -139,6 +145,7 @@ export default function BotaoReserva({ livroId, titulo, aoReservar }: Props) {
     reservadoPor: usuario.uid,
     dataReserva: new Date().toISOString(),
     fila: [],
+    
   });
 
 
