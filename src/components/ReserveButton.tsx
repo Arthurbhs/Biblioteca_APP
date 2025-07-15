@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'expo-router';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 import { doc, collection, getDocs, addDoc, updateDoc, query, where, deleteDoc, getDoc } from 'firebase/firestore';
 import { db } from '../../firebase';
 import Toast from 'react-native-toast-message';
 import { getAuth } from 'firebase/auth';
+import { Linking } from 'react-native';
+
 
 interface Props {
   livroId: number;
   titulo: string;
   aoReservar?: () => void;
 }
+
+
+
 
 export default function BotaoReserva({ livroId, titulo, aoReservar }: Props) {
   const auth = getAuth();
@@ -18,6 +24,10 @@ export default function BotaoReserva({ livroId, titulo, aoReservar }: Props) {
   const [fila, setFila] = useState<{ uid: string; nome: string }[]>([]);
   const [reservaId, setReservaId] = useState<string | null>(null);
   const [carregando, setCarregando] = useState(true);
+  const [usuarioComLivro, setUsuarioComLivro] = useState<{ uid: string; nome: string } | null>(null);
+  const [mostrarFila, setMostrarFila] = useState(false);
+
+
 
   // Verifica se o livro já está reservado
   const verificarReserva = async () => {
@@ -35,9 +45,11 @@ export default function BotaoReserva({ livroId, titulo, aoReservar }: Props) {
         const data = docAtual.data();
         const reservadoPorOutro = data.usuario?.uid !== usuario.uid;
 
-        setReservaId(reservadoPorOutro ? null : docAtual.id);
-        setJaReservadoPorOutro(reservadoPorOutro);
-        setFila(data.fila || []);
+       setReservaId(reservadoPorOutro ? null : docAtual.id);
+setJaReservadoPorOutro(reservadoPorOutro);
+setFila(data.fila || []);
+setUsuarioComLivro(data.usuario || null);
+
       } else {
         setReservaId(null);
         setJaReservadoPorOutro(false);
@@ -69,8 +81,11 @@ export default function BotaoReserva({ livroId, titulo, aoReservar }: Props) {
     return;
   }
 
-  // ✅ Aqui tratamos o nome corretamente
-  const nomeUsuario = usuario.displayName?.trim() ? usuario.displayName : 'Sem nome';
+
+  const nomeUsuario =
+  usuario.displayName?.trim() ||
+  usuario.email?.split('@')[0] || // usa o início do e-mail
+  'Usuário Anônimo';
 
   try {
     const q = query(collection(db, 'reservas'), where('livroId', '==', livroId));
@@ -209,6 +224,34 @@ export default function BotaoReserva({ livroId, titulo, aoReservar }: Props) {
     }
   };
 
+  const sairDaFila = async () => {
+  if (!usuario) return;
+
+  try {
+    const q = query(collection(db, 'reservas'), where('livroId', '==', livroId));
+    const snap = await getDocs(q);
+
+    if (!snap.empty) {
+      const docAtual = snap.docs[0];
+      const data = docAtual.data();
+      const filaAtual = data.fila || [];
+
+      const novaFila = filaAtual.filter((p: any) => p.uid !== usuario.uid);
+
+      await updateDoc(doc(db, 'reservas', docAtual.id), {
+        fila: novaFila,
+      });
+
+      Toast.show({ type: 'success', text1: 'Você saiu da fila de espera.' });
+      setFila(novaFila);
+    }
+  } catch (error) {
+    console.error("Erro ao sair da fila:", error);
+    Toast.show({ type: 'error', text1: 'Erro ao sair da fila' });
+  }
+};
+ const router = useRouter();
+
   return (
     <>
       <TouchableOpacity
@@ -220,17 +263,57 @@ export default function BotaoReserva({ livroId, titulo, aoReservar }: Props) {
         ]}
         disabled={carregando}
       >
+      
         <Text style={styles.texto}>
           {carregando ? '...' : reservaId ? 'Cancelar Reserva' : 'Reservar'}
         </Text>
       </TouchableOpacity>
 
+{!reservaId && jaReservadoPorOutro && fila.some(p => p.uid === usuario?.uid) && (
+  <TouchableOpacity
+    onPress={sairDaFila}
+    style={[styles.botao, { backgroundColor: '#f44336' }]}
+  >
+    <Text style={styles.texto}>Sair da Fila</Text>
+  </TouchableOpacity>
+)}
+
+    {!carregando && fila.length > 0 && (
+  <TouchableOpacity onPress={() => setMostrarFila(!mostrarFila)}>
+  <Text style={styles.botaoLink}>
+    {mostrarFila ? 'Esconder Fila' : 'Ver Fila'}
+  </Text>
+</TouchableOpacity>
+
+)}
+
+{mostrarFila && (
+  <>
+    {usuarioComLivro && (
       <Text style={{ textAlign: 'center', marginTop: 8 }}>
-        {carregando ? '' :
-          reservaId ? 'Você reservou este livro' :
-          jaReservadoPorOutro ? `Livro já reservado. Fila de espera: ${fila.length}` :
-          ''}
+        📚 Com o livro agora: <Text style={{ fontWeight: 'bold' }}>{usuarioComLivro.nome}</Text>
       </Text>
+    )}
+
+    <Text style={{ textAlign: 'center', marginTop: 8, fontWeight: 'bold' }}>
+      Fila de espera:
+    </Text>
+
+    {fila.map((pessoa, index) => (
+  <TouchableOpacity
+    key={pessoa.uid}
+    onPress={() => router.push(`/perfil/${pessoa.uid}`)}
+  >
+    <Text style={styles.linkNome}>
+      {index + 1}º - {pessoa.nome}
+    </Text>
+  </TouchableOpacity>
+))}
+
+  </>
+)}
+
+
     </>
   );
 }
@@ -254,4 +337,21 @@ const styles = StyleSheet.create({
   botaoDesabilitado: {
     opacity: 0.6,
   },
+
+ botaoLink: {
+
+  color: '#1aba14', // azul claro
+  textDecorationLine: 'underline',
+  textAlign: 'center',
+  marginTop: 10,
+  marginBottom: 10
+ 
+},
+linkNome: {
+  color: '#126e0f', // azul escuro
+  textAlign: 'center',
+  marginTop: 4,
+},
+
+
 });
