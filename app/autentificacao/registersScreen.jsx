@@ -9,6 +9,10 @@ import { auth } from '../../firebase';
 import { db } from '../../firebase';
 import { doc, setDoc } from 'firebase/firestore';
 import { Image } from 'react-native';
+import { Switch } from 'react-native';
+import RadioForm from 'react-native-simple-radio-button';
+import escolasPG from '../../assets/Data/SchoolsData.json';
+
 
 
 
@@ -26,6 +30,9 @@ export default function RegisterScreen() {
   const [loading, setLoading] = useState(false);
   const [cidades, setCidades] = useState([]);
   const [errors, setErrors] = useState({});
+  const [isEstudante, setIsEstudante] = useState(false);
+const [listaEscolas, setListaEscolas] = useState([]);
+const [escolaSelecionada, setEscolaSelecionada] = useState('');
 
   const router = useRouter();
 
@@ -111,21 +118,23 @@ export default function RegisterScreen() {
       const userCredential = await createUserWithEmailAndPassword(auth, email, senha);
       const user = userCredential.user;
   
-      await setDoc(doc(db, "users", user.uid), {
-        uid: user.uid,
-        nome: nome.trim(),
-        profissao: profissao.trim(),
-        email: email.trim(),
-        endereco: {
-          rua: rua.trim(),
-          numero: numero.trim(),
-          bairro: bairro.trim(),
-          cidade: cidade,
-          estado: estado,
-        },
-        createdAt: new Date()
-      });
-  
+     await setDoc(doc(db, "users", user.uid), {
+  uid: user.uid,
+  nome: nome.trim(),
+  profissao: profissao.trim(),
+  email: email.trim(),
+  endereco: {
+    rua: rua.trim(),
+    numero: numero.trim(),
+    bairro: bairro.trim(),
+    cidade: cidade,
+    estado: estado,
+  },
+  isEstudante: isEstudante,
+  escola: isEstudante ? escolaSelecionada : null,
+  createdAt: new Date()
+});
+
       Alert.alert('Sucesso', 'Usuário registrado com sucesso!');
       router.replace('../(drawer)/conteudo/HomeScreen'); 
     } catch (error) {
@@ -136,7 +145,13 @@ export default function RegisterScreen() {
     }
   };
   
-  
+  useEffect(() => {
+  if (isEstudante) {
+    setListaEscolas(escolasPG);
+  }
+}, [isEstudante]);
+
+
 
   return (
 
@@ -161,6 +176,28 @@ export default function RegisterScreen() {
   onChangeText={setProfissao}
   inputContainerStyle={inputStyle}
 />
+
+<View style={{ flexDirection: 'row', alignItems: 'center', marginVertical: 10 }}>
+  <Switch
+    value={isEstudante}
+    onValueChange={setIsEstudante}
+    thumbColor={isEstudante ? '#4CAF50' : '#ccc'}
+    trackColor={{ false: '#ccc', true: '#A5D6A7' }}
+  />
+  <Text style={{ marginLeft: 10, fontSize: 16 }}>Sou estudante</Text>
+</View>
+
+
+{isEstudante && (
+  <Picker
+    selectedValue={escolaSelecionada}
+    onValueChange={setEscolaSelecionada}>
+    <Picker.Item label="Selecione a escola" value="" />
+    {listaEscolas.map(e => (
+  <Picker.Item key={e.id} label={e.nome} value={e.nome} />
+))}
+  </Picker>
+)}
 
 
       <Input
