@@ -110,6 +110,11 @@ const ListaCategorias = () => {
     {renderSecao('👧 Infanto Juvenil', filtrarPorPalavra('infanto juvenil'))}
     {renderSecao('⚖️ Questões Sociais', filtrarPorPalavra('questões sociais'))}
     {renderSecao('🧒👧 Infanto‑Juvenil', filtrarPorPalavra('Infanto‑Juvenil'))}
+     {renderSecao('📖 Questões sociais', filtrarPorPalavra('Questões sociais'))}
+      {renderSecao('🌳♻️ Meio ambiente / Reciclagem', filtrarPorPalavra('Meio ambiente / Reciclagem'))}
+     {renderSecao('❤️‍🩹🧠 Comportamento / Sentimentos', filtrarPorPalavra('Comportamento / Sentimentos'))}
+     {renderSecao('👾🤖 Afrofuturismo', filtrarPorPalavra('Afrofuturismo'))}
+   
    
 
 

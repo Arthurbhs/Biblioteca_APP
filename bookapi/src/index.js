@@ -1343,6 +1343,336 @@ export default {
 },
 
 
+// comportamento / sentimento
+
+{
+  id: 78,
+  titulo: "Há um monstro debaixo da minha cama",
+  autor: "Clemency Pearce",
+  editora: "Ciranda Cultural",
+  tema: "Comportamento / Sentimentos",
+  genero: "Literatura infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "Uma história divertida e sensível sobre enfrentar medos noturnos, mostrando que o que parece assustador pode ser só imaginação.",
+  dataPublicacao: "2017-03-15",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/HaUmMonstroDebaixoDaMinhaCama.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/HaUmMonstroDebaixoDaMinhaCama.jpeg?raw=true"
+},
+
+{
+  id: 79,
+  titulo: "Fantasma Equilibrista",
+  autor: "Tânia Alexandre Martinelli",
+  editora: "Positivo",
+  tema: "Comportamento / Sentimentos",
+  genero: "Literatura infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 48,
+  resumo: "A história de um fantasma que sonha em ser equilibrista, mostrando que coragem e persistência são essenciais para superar inseguranças.",
+  dataPublicacao: "2015-05-10",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/FantasmaEquilibrista.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/FantasmaEquilibrista.jpeg?raw=true"
+},
+
+{
+  id: 80,
+  titulo: "Ela e os Chega do Mimimi: A Busca pela Palavra Secreta",
+  autor: "Eliane Ramos de Sousa",
+  editora: "Dialética",
+  tema: "Comportamento / Sentimentos",
+  genero: "Literatura juvenil contemporânea",
+  classificacaoLiteraria: "Juvenil",
+  numeroPaginas: 92,
+  resumo: "Em uma jornada criativa e cheia de reflexões, uma garota enfrenta dilemas emocionais e sociais em busca da palavra que transforma relações.",
+  dataPublicacao: "2021-08-30",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/ElaEOsChegaDoMimimi.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/ElaEOsChegaDoMimimi.jpeg?raw=true"
+},
+
+
+{
+  id: 81,
+  titulo: "Ernesto",
+  autor: "Biandina Franco",
+  editora: "Companhia das Letrinhas",
+  tema: "Comportamento / Sentimentos",
+  genero: "Literatura infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 36,
+  resumo: "A história sensível de Ernesto, um menino que aprende a lidar com suas emoções e encontrar seu lugar no mundo.",
+  dataPublicacao: "2013-10-05",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Ernesto.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Ernesto.jpeg?raw=true"
+},
+
+{
+  id: 82,
+  titulo: "O Monstro das Cores",
+  autor: "Anna Llenas",
+  editora: "Aletria",
+  tema: "Comportamento / Sentimentos",
+  genero: "Literatura infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 48,
+  resumo: "O Monstro das Cores está confuso e precisa entender seus sentimentos com a ajuda das cores. Uma história encantadora sobre educação emocional.",
+  dataPublicacao: "2015-03-12",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/MonstroDasCores.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MonstroDasCores.jpeg?raw=true"
+},
+
+{
+  id: 83,
+  titulo: "Não Fui Eu! Aprendendo Sobre Honestidade",
+  autor: "Brian Moses e Mike Gordon",
+  editora: "Scipione",
+  tema: "Comportamento / Sentimentos",
+  genero: "Literatura educativa infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "Com histórias do dia a dia, o livro ensina às crianças o valor da honestidade e a importância de assumir a responsabilidade por seus atos.",
+  dataPublicacao: "2010-06-20",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/NaoFuiEu.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/NaoFuiEu.jpeg?raw=true"
+},
+
+{
+  id: 84,
+  titulo: "Jogo limpo, diversão garantida",
+  autor: "Daniel Grippo",
+  editora: "Terapia Infantil",
+  tema: "Comportamento / Sentimentos",
+  genero: "Literatura educativa infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "Este livro ensina às crianças a importância do jogo limpo e do respeito nas brincadeiras, promovendo valores como empatia e honestidade.",
+  dataPublicacao: "2011-04-10",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/JogoLimpo.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/JogoLimpo.jpeg?raw=true"
+},
+
+{
+  id: 85,
+  titulo: "O que Fazer Quando Você se Preocupa Demais: Um Guia para as Crianças Superarem a Ansiedade",
+  autor: "Dawn Huebner",
+  editora: "Artmed",
+  tema: "Comportamento / Sentimentos",
+  genero: "Autoajuda infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 88,
+  resumo: "Com linguagem acessível, este guia ajuda as crianças a lidarem com a ansiedade, oferecendo atividades práticas para enfrentar as preocupações do dia a dia.",
+  dataPublicacao: "2006-09-15",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/PreocupaDemais.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/PreocupaDemais.jpeg?raw=true"
+},
+
+{
+  id: 86,
+  titulo: "Por favor, aprendendo sobre boas maneiras",
+  autor: "Beatriz Meirelles",
+  editora: "Scipione",
+  tema: "Comportamento / Sentimentos",
+  genero: "Literatura educativa infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 28,
+  resumo: "Este livro divertido apresenta às crianças os conceitos básicos de boas maneiras, como dizer 'por favor' e 'obrigado', de forma leve e ilustrada.",
+  dataPublicacao: "2014-02-18",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/PorFavorBoasManeiras.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/PorFavorBoasManeiras.jpeg?raw=true"
+},
+
+
+
+{
+  id: 88,
+  titulo: "Raiva",
+  autor: "Blandina Franco",
+  editora: "Pequena Zahar",
+  tema: "Comportamento / Sentimentos",
+  genero: "Literatura infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 36,
+  resumo: "Com ilustrações expressivas e linguagem acessível, o livro fala sobre a emoção da raiva e como lidar com ela no cotidiano infantil.",
+  dataPublicacao: "2019-10-10",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Raiva.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Raiva.jpeg?raw=true"
+},
+
+{
+  id: 89,
+  titulo: "Sentimentos",
+  autor: "Núria Roca",
+  editora: "Ibep JR",
+  tema: "Comportamento / Sentimentos",
+  genero: "Literatura educativa infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 30,
+  resumo: "Um guia ilustrado que apresenta diferentes sentimentos de forma clara e acessível, ajudando as crianças a reconhecerem e expressarem suas emoções.",
+  dataPublicacao: "2015-04-12",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Sentimentos.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Sentimentos.jpeg?raw=true"
+},
+
+//questões sociais
+
+{
+  id: 87,
+  titulo: "Não é brincadeira",
+  autor: "Shirley Souza",
+  editora: "Escala Integrada",
+  tema: "Questões sociais",
+  genero: "Literatura infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 40,
+  resumo: "O livro aborda de maneira sensível temas como bullying e respeito às diferenças, incentivando o diálogo entre crianças e educadores.",
+  dataPublicacao: "2013-08-22",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/NaoBrincadeira.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/NaoBrincadeira.jpeg?raw=true"
+},
+
+{
+  id: 90,
+  titulo: "Menina que abraça o vento",
+  autor: "Fernanda Paraguassu",
+  editora: "Vooinho",
+  tema: "Questões sociais",
+  genero: "Literatura infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 32,
+  resumo: "A obra traz uma narrativa sensível sobre identidade, pertencimento e a força do afeto na construção da autoestima.",
+  dataPublicacao: "2017-03-15",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/MeninaAbraçaVento.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MeninaAbraçaVento.jpeg?raw=true"
+},
+
+{
+  id: 92,
+  titulo: "Pequenas confissões",
+  autor: "Georgina Martins",
+  editora: "Positivo",
+  tema: "Questões sociais",
+  genero: "Literatura infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 40,
+  resumo: "Coletânea de histórias curtas e tocantes que revelam sentimentos e desafios do cotidiano infantil, promovendo empatia e reflexão.",
+  dataPublicacao: "2016-09-04",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/PequenasConfissoes.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/PequenasConfissoes.jpeg?raw=true"
+},
+
+{
+  id: 93,
+  titulo: "Revolta dos Guarda-Chuvas",
+  autor: "Sidónio Muralha",
+  editora: "Global",
+  tema: "Questões sociais",
+  genero: "Literatura infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 36,
+  resumo: "Uma metáfora poética e crítica sobre resistência, onde os guarda-chuvas ganham vida para protestar contra a opressão e injustiças do cotidiano.",
+  dataPublicacao: "2014-11-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/RevoltaGuardaChuvas.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/RevoltaGuardaChuvas.jpeg?raw=true"
+},
+
+{
+  id: 94,
+  titulo: "Serafina e a Criança que Trabalha",
+  autor: "Jô Azevedo e Iolanda Huzak",
+  editora: "Ática",
+  tema: "Questões sociais",
+  genero: "Literatura educativa",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 32,
+  resumo: "Serafina conhece a realidade de uma criança em situação de trabalho infantil e aprende sobre empatia, justiça e os direitos das crianças.",
+  dataPublicacao: "2017-05-20",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/SerafinaCriancaTrabalha.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/SerafinaCriancaTrabalha.jpeg?raw=true"
+},
+
+{
+  id: 95,
+  titulo: "Refugiadas: Escapando do Céu em Perigo",
+  autor: "Maribel Vazquez",
+  editora: "Urutau",
+  tema: "Questões sociais",
+  genero: "Literatura contemporânea",
+  classificacaoLiteraria: "Juvenil",
+  numeroPaginas: 48,
+  resumo: "Histórias reais e ficcionais entrelaçadas para mostrar a dura realidade enfrentada por meninas refugiadas em zonas de conflito.",
+  dataPublicacao: "2020-08-12",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/RefugiadasCéuPerigo.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/RefugiadasCéuPerigo.jpeg?raw=true"
+},
+
+{
+  id: 96,
+  titulo: "Se os Tubarões Fossem Homens",
+  autor: "Bertolt Brecht",
+  editora: "Olhodevidro",
+  tema: "Questões sociais",
+  genero: "Literatura crítica",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 24,
+  resumo: "Uma fábula provocadora em que tubarões imaginários assumem o lugar de humanos para questionar estruturas de poder e dominação.",
+  dataPublicacao: "2013-06-15",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/TubaroesHomens.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/TubaroesHomens.jpeg?raw=true"
+},
+
+{
+  id: 97,
+  titulo: "Somos Iguais Mesmo Sendo Diferentes",
+  autor: "Marcos Ribeiro",
+  editora: "Moderna",
+  tema: "Questões sociais",
+  genero: "Literatura educativa",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "Um convite ao respeito à diversidade e à empatia, mostrando como podemos conviver em harmonia mesmo com diferenças de aparência, cultura e crenças.",
+  dataPublicacao: "2010-03-10",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/SomosIguaisDiferentes.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/SomosIguaisDiferentes.jpeg?raw=true"
+},
+
+
+// meio ambiente / reciclagem
+
+{
+  id: 91,
+  titulo: "Meu lugar no mundo - Cubatão",
+  autor: "Célia de Souza Pinto",
+  editora: "Cia da Cultura",
+  tema: "Meio ambiente / Reciclagem",
+  genero: "Literatura educativa",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 28,
+  resumo: "O livro destaca o papel das crianças na preservação do meio ambiente, explorando a cidade de Cubatão como exemplo de transformação ecológica.",
+  dataPublicacao: "2018-06-09",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/MeuLugarCubatão.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MeuLugarCubatão.jpeg?raw=true"
+},
+
  // Coleção Black Powe
 
 
