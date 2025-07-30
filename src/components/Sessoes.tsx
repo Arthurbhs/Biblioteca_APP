@@ -109,6 +109,8 @@ const ListaCategorias = () => {
     {renderSecao('♀️ Empoderamento Feminino', filtrarPorPalavra('empoderamento feminino'))}
     {renderSecao('👧 Infanto Juvenil', filtrarPorPalavra('infanto juvenil'))}
     {renderSecao('⚖️ Questões Sociais', filtrarPorPalavra('questões sociais'))}
+    {renderSecao('🧒👧 Infanto‑Juvenil', filtrarPorPalavra('Infanto‑Juvenil'))}
+   
 
 
 

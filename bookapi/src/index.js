@@ -39,7 +39,7 @@ export default {
   resumo: "Ananda pergunta por que é 'tão pretinha' e, com ajuda da família, mergulha em histórias de reis e rainhas africanos, ressignificando sua identidade e celebrando sua cor.",
   dataPublicacao: "16 de novembro de 2023",
   dataCatalogo: "2025-07-18",
-   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/TaoPretinha.jpg?raw=true",
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/TaoPretinha.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/TaoPretinha.jpeg?raw=true"
 },
 {
@@ -54,7 +54,7 @@ export default {
   resumo: "Na festa de 100 anos do bisavô Seu Benedito, as crianças escolhem penteados e oferecem virtudes como presentes, valorizando herança afro-brasileira, nomes e identidade.",
   dataPublicacao: "15 de junho de 2021",
   dataCatalogo: "2025-07-18",
-   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Conceicao.jpg?raw=true",
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Conceicao.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Conceicao.jpeg?raw=true"
 },
 {
@@ -69,7 +69,7 @@ export default {
   resumo: "Informações insuficientes nos catálogos consultados. Inserir sinopse quando disponível.",
   dataPublicacao: "21 de julho de 2023",
   dataCatalogo: "2025-07-18",
-   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Garfo.jpg?raw=true",
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Garfo.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Garfo.jpeg?raw=true"
 },
 
@@ -85,7 +85,7 @@ export default {
   resumo: "Poema rimado ilustrado que celebra os cabelos crespos e cacheados como coroas de identidade e poder, convidando meninas negras a se reconhecerem e se orgulharem desde a infância.",
   dataPublicacao: "8 de março de 2018",
   dataCatalogo: "2025-07-18",
-   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Conceicao.jpg?raw=true",
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Conceicao.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Conceicao.jpeg?raw=true"
 },
 {
@@ -100,7 +100,7 @@ export default {
   resumo: "Narrado pelo pequeno Akin, o livro celebra o vínculo entre mãe e filho por meio das tranças, símbolos de ancestralidade africana e afetividade.",
     dataPublicacao: "2021-03-05",
   dataCatalogo: "2025-07-18",
-   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/TrancasMae.jpg?raw=true",
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/TrancasMae.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/TrancasMae.jpeg?raw=true"
 },
 
@@ -118,7 +118,7 @@ export default {
   resumo: "Coletânea de breves biografias de 101 mulheres que marcaram a história em diversas áreas, com linguagem envolvente e ilustrações coloridas.",
   dataPublicacao: "2021",
    dataCatalogo: "2025-07-25",
-   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/101.jpg?raw=true",
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/101.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/101.jpeg?raw=true"
  
 },
@@ -151,7 +151,7 @@ export default {
   dataPublicacao: "2012-05-18",
   dataCatalogo: "2025-07-27",
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/APrincesaQueSalvaPrincipe.jpg?raw=true",
-  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpg?raw=true"
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/APrincesaQueSalvaPrincipe.jpeg?raw=true"
 },
 {
   id: 10,
@@ -198,7 +198,7 @@ export default {
   resumo: "Reconto irreverente da história de Cinderela, com princesas negras e princípios de autonomia e protagonismo feminino.",
   dataPublicacao: "2023-09-01",
   dataCatalogo: "2025-07-27",
-  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/CinderelaBaile.jpg?raw=true",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/CinderelaBaile.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/CinderelaBaile.jpeg?raw=true"
 },
 {
@@ -213,7 +213,7 @@ export default {
   resumo: "Mostra profissões e atividades fora dos estereótipos de gênero, incentivando meninas a se verem em múltiplas possibilidades.",
   dataPublicacao: "2016-10-04",
   dataCatalogo: "2025-07-27",
-  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/CoisaDeMenina.jpg?raw=true",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/CoisaDeMenina.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/CoisaDeMenina.jpeg?raw=true"
 },
 
@@ -280,7 +280,7 @@ export default {
   resumo: "Na pequena cidade de Palenque, uma menina aprende a ler com letras escritas no chão com carvão, valorizando cultura quilombola e tradição oral.",
   dataPublicacao: "2016-01-01",
   dataCatalogo: "2025-07-28",
-  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/LetrasDeCarvao.jpg?raw=true",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/LetrasDeCarvao.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/LetrasDeCarvao.jpeg?raw=true"
 },
 {
@@ -295,7 +295,7 @@ export default {
   resumo: "Inspirado em Marielle Franco, o livro conta como seu coração se transforma em semente e dá vida a uma árvore que floresce espalhando seu legado.",
   dataPublicacao: "2022-01-01",
   dataCatalogo: "2025-07-28",
-  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/JardimDeMarielle.jpg?raw=true",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/JardimDeMarielle.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/JardimDeMarielle.jpeg?raw=true"
 },
 
@@ -311,7 +311,7 @@ export default {
   resumo: "Narrativa poética que acolhe os medos infantis usando a metáfora do céu e das estrelas, trazendo conforto e autoestima às crianças.",
   dataPublicacao: "2021-10-04",
   dataCatalogo: "2025-07-28",
-  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Estrelas.jpg?raw=true",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Estrelas.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Estrelas.jpeg?raw=true"
 },
 {
@@ -326,7 +326,7 @@ export default {
   resumo: "Livro ilustrado que celebra a vida e o crescimento de crianças negras, promovendo autoestima, representatividade e orgulho desde a infância.",
   dataPublicacao: "2021-09-24",
   dataCatalogo: "2025-07-28",
-  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/EiVoce.jpg?raw=true",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/EiVoce.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/EiVoce.jpeg?raw=true"
 },
 {
@@ -341,7 +341,7 @@ export default {
   resumo: "Narrado por Gabriela, princesa de Daomé, que valoriza ancestralidade africana, coragem e vivência familiar, com mensagens de resistência e autoestima.",
   dataPublicacao: "2022-01-01",
   dataCatalogo: "2025‑07‑28",
-  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/GabrielaPrincesaDaome.jpg?raw=true",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/GabrielaPrincesaDaome.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/GabrielaPrincesaDaome.jpeg?raw=true"
 }
 ,
@@ -436,7 +436,7 @@ export default {
   resumo: "Kito é um menino negro curioso que aprende sobre países de língua hispânica e compartilha suas descobertas, promovendo curiosidade, leitura e representatividade.",
   dataPublicacao: "2021-01-01",
   dataCatalogo: "2025-07-28",
-  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/DescobertasKito.jpge?raw=true",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/DescobertasKito.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/DescobertasKito.jpeg?raw=true"
 },
 
@@ -545,8 +545,304 @@ export default {
   dataCatalogo: "2025‑07‑28",
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/MandisaVovoAlegria.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MandisaVovoAlegria.jpeg?raw=true"
-}
-,
+},
+
+{
+  id: 36,
+  titulo: "Caderno de rimas do João",
+  autor: "Lázaro Ramos",
+  editora: "Pallas",
+  tema: "Infanto‑Juvenil",
+  genero: "Poesia infantil",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 40,
+  resumo: "Primeiro livro infantil do autor, reúne rimas espontâneas sobre cotidiano, cultura e família, ilustrado por Mauricio Negro.",
+  dataPublicacao: "2010-12-21",
+  dataCatalogo: "2025‑07‑28",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/CadernoRimasJoao.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/CadernoRimasJoao.jpeg?raw=true"
+},
+{
+  id: 37,
+  titulo: "Caderno sem rimas da Maria",
+  autor: "Lázaro Ramos",
+  editora: "Pallas",
+  tema: "Infanto‑Juvenil",
+  genero: "Poesia infantil criativa",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 36,
+  resumo: "Inspirado na filha Maria, brinca com palavras inventadas e dá visibilidade à linguagem infantil plena de inventividade.",
+  dataPublicacao: "2018‑02‑01",
+  dataCatalogo: "2025‑07‑28",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/CadernoSemRimasMaria.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/CadernoSemRimasMaria.jpeg?raw=true"
+},
+{
+  id: 38,
+  titulo: "Calu: uma menina cheia de histórias",
+  autor: "Cássia Vale & Luciana Palmeira",
+  editora: "Malê Editora",
+  tema: "Infanto‑Juvenil",
+  genero: "Narrativa infantil comunitária",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 32,
+  resumo: "Calu transforma seu bairro em um museu a céu aberto, celebrando memória coletiva, pertencimento e pertencimento cultural.",
+  dataPublicacao: "2017‑01‑01",
+  dataCatalogo: "2025‑07‑28",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/CaluMeninaCheiaHistorias.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/CaluMeninaCheiaHistorias.jpeg?raw=true"
+},
+
+{
+  id: 39,
+  titulo: "Antônia e os cabelos que carregavam os segredos do Universo",
+  autor: "Alan Alves Brito",
+  editora: "Artêrinha",
+  tema: "Infanto‑Juvenil",
+  genero: "Narrativa infantil sobre identidade negra",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 36,
+  resumo: "Antônia, menina negra nordestina, usa seus cabelos crespos como porta‑voz de ancestralidade e indagações cósmicas, conectando identidade e ciência.",
+  dataPublicacao: "2022‑02‑24",
+  dataCatalogo: "2025‑07‑29",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AntoniaCabelosSegredosUniverso.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AntoniaCabelosSegredosUniverso.jpeg?raw=true"
+},
+{
+  id: 40,
+  titulo: "Chuva de manga",
+  autor: "James Rumford",
+  editora: "Brinque‑Book",
+  tema: "Infanto‑Juvenil",
+  genero: "Literatura infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "Tomás, menino chadiano, vive a espera da chuva que fará mangueiras florirem. Um relato sobre esperança, imaginação e vida no Chade.",
+  dataPublicacao: "2005‑11‑04",
+  dataCatalogo: "2025‑07‑29",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/ChuvaDeManga.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/ChuvaDeManga.jpeg?raw=true"
+},
+{
+  id: 41,
+  titulo: "Casas de Unzó",
+  autor: "Ciano",
+  editora: "Norte / Jandaíra",
+  tema: "Infanto‑Juvenil",
+  genero: "Narrativa periférica em realismo mágico",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 72,
+  resumo: "Unzó e sua avó perdem a casa e vivem uma noite mágica de resistência, identidade e moradia por meio de símbolos e linguagens populares.",
+  dataPublicacao: "2021‑11‑27",
+  dataCatalogo: "2025‑07‑29",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/CasasDeUnzo.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/CasasDeUnzo.jpeg?raw=true"
+},
+
+{
+  id: 42,
+  titulo: "Aqui no morro, tem princesa sim!",
+  autor: "Simone Botelho",
+  editora: "Albatrozinho",
+  tema: "Infanto‑Juvenil",
+  genero: "Narrativa infantil periférica",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 40,
+  resumo: "Alika, menina negra periférica, sonha ser princesa de verdade e descobre sua ancestralidade e realeza nos ritmos do samba e na cultura popular.",
+  dataPublicacao: "2022‑01‑11",
+  dataCatalogo: "2025‑07‑29",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AquiNoMorroTemPrincesaSim.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AquiNoMorroTemPrincesaSim.jpeg?raw=true"
+},
+{
+  id: 43,
+  titulo: "Bruna e a galinha d'Angola",
+  autor: "Gercilga de Almeida",
+  editora: "Pallas",
+  tema: "Infanto‑Juvenil",
+  genero: "Narrativa infantil mitológica",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 24,
+  resumo: "Bruna cria um vínculo mágico com uma galinha d’angola, descobrindo lendas africanas, oralidade e pertencimento a partir da ancestralidade da avó.",
+  dataPublicacao: "2009‑03‑19",
+  dataCatalogo: "2025‑07‑29",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/BrunaGalinhaDAngola.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/BrunaGalinhaDAngola.jpeg?raw=true"
+},
+
+{
+  id: 44,
+  titulo: "Brincar na rua",
+  autor: "Magna Domingues",
+  editora: "Baú Encantado",
+  tema: "Infanto‑Juvenil",
+  genero: "Narrativa infantil periférica",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 22,
+  resumo: "Maria Eunice e outras crianças da periferia se reúnem para brincar na rua, entre memórias e o direito de ocupar a cidade com autonomia e alegria.",
+  dataPublicacao: "2022‑01‑01",
+  dataCatalogo: "2025‑07‑29",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/BrincarNaRua.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/BrincarNaRua.jpeg?raw=true"
+},
+{
+  id: 45,
+  titulo: "Omo: o rio da liberdade",
+  autor: "Vanessa Alexandre",
+  editora: "PAE Editora",
+  tema: "Infanto‑Juvenil",
+  genero: "Narrativa infantil sobre natureza e liberdade",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 32,
+  resumo: "Sadiki e Ayana vivem às margens do rio Omo, na Nigéria; desconhecem a escravidão e são libertos pela natureza, criatividade e arte.",
+  dataPublicacao: "2021‑01‑01",
+  dataCatalogo: "2025‑07‑29",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/OmoRioLiberdade.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/OmoRioLiberdade.jpeg?raw=true"
+},
+
+{
+  id: 46,
+  titulo: "Bolota: uma certa jabuticaba muito esperta",
+  autor: "Iray Galrão",
+  editora: "Escritinha",
+  tema: "Infanto‑Juvenil",
+  genero: "Poesia infantil / pictórica",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 32,
+  resumo: "Bolota aprende sobre virtude das diferenças, igualdade racial e continuidade da vida ao observar sua jabuticabeira, com imagens bordadas feitas pela autora.",
+  dataPublicacao: "2014‑01‑01",
+  dataCatalogo: "2025‑07‑29",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/BolotaJabuticaba.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/BolotaJabuticaba.jpeg?raw=true"
+},
+
+{
+  id: 48,
+  titulo: "Bucalá: a pequena princesa do Quilombo Cabula",
+  autor: "Davi Nunes",
+  editora: "Malê Mirim",
+  tema: "Infanto‑Juvenil",
+  genero: "Narrativa infantil com ancestralidade",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 32,
+  resumo: "Bucalá vive no Quilombo Cabula e encanta com sua conexão com a natureza, fortalecimento de identidade quilombola e herança cultural.",
+  dataPublicacao: "2023‑04‑01",
+  dataCatalogo: "2025‑07‑29",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/BucalaPrincesaCabula.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/BucalaPrincesaCabula.jpeg?raw=true"
+},
+
+{
+  id: 49,
+  titulo: "Imani",
+  autor: "Marcos Cajé",
+  editora: "Mostarda",
+  tema: "Infanto‑Juvenil",
+  genero: "Literatura infantil com ancestralidade",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 24,
+  resumo: "Imani vive no quilombo Rio da Lua e deseja participar das rodas de capoeira; em sua jornada descobre que ver vai além dos olhos, construindo autonomia e magia.",
+  dataPublicacao: "2024‑???‑??", // data não divulgada no site da editora
+  dataCatalogo: "2025‑07‑29",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Imani.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Imani.jpeg?raw=true"
+},
+{
+  id: 50,
+  titulo: "Omo‑Obá; histórias de princesas",
+  autor: "Kiusam de Oliveira",
+  editora: "Mazza Edições",
+  tema: "Infanto‑Juvenil",
+  genero: "Coletânea ilustrada de mitos africanos",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 64,
+  resumo: "Narrativas de seis princesas-príncipes iorubás (orixás) que enfrentam desafios, amadurecem e ressignificam seu lugar no mundo, com muita força e ancestralidade.",
+  dataPublicacao: "2009‑01‑01",
+  dataCatalogo: "2025‑07‑29",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/OmoOba.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/OmoOba.jpeg?raw=true"
+},
+{
+  id: 51,
+  titulo: "África recontada para crianças",
+  autor: "Avani Souza Silva",
+  editora: "Martin Claret",
+  tema: "Infanto‑Juvenil",
+  genero: "Coletânea de contos africanos",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 120,
+  resumo: "Seleção de fábulas e contos tradicionais de países africanos de língua portuguesa, com adivinhas, músicas, gastronomia e elementos culturais diversos.",
+  dataPublicacao: "2020‑04‑01",
+  dataCatalogo: "2025‑07‑29",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AfricaRecontadaParaCriancas.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AfricaRecontadaParaCriancas.jpeg?raw=true"
+},
+
+{
+  id: 52,
+  titulo: "África: contos do rio, da selva e da savana",
+  autor: "Silvana Salerno",
+  editora: "Girassol",
+  tema: "Infanto‑Juvenil",
+  genero: "Antologia de contos africanos",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 80,
+  resumo: "Coletânea de contos orais de diversos países africanos (Congo, Guiné‑Bissau, Benin, Nigéria, Angola, Moçambique, Senegal), resgatando griôs e tradição ancestral.",
+  dataPublicacao: "2022‑11‑30",
+  dataCatalogo: "2025‑07‑30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AfricaContosRioSelvaSavana.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AfricaContosRioSelvaSavana.jpeg?raw=true"
+},
+{
+  id: 53,
+  titulo: "Pequenos contos negros",
+  autor: "Blaise Cendrars",
+  editora: "SM Educação",
+  tema: "Infanto‑Juvenil",
+  genero: "Contos africanos recontados",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 96,
+  resumo: "Histórias inspiradas em fontes etnográficas africanas, misturando animais, seres sobrenaturais e folclore, pela primeira vez publicadas no Brasil.",
+  dataPublicacao: "2014‑01‑01",
+  dataCatalogo: "2025‑07‑30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/PequenosContosNegros.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/PequenosContosNegros.jpeg?raw=true"
+},
+
+{
+  id: 54,
+  titulo: "África que você fala",
+  autor: "Claudio Fragata",
+  editora: "Globinho",
+  tema: "Infanto-Juvenil",
+  genero: "História e identidade africana",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 40,
+  resumo: "De forma leve e divertida, A África que você fala faz um passeio por palavras que pegamos emprestadas de idiomas como quimbundo, iorubá, jeje e banto. ",
+  dataPublicacao: "2021-01-15",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AfricaQueVoceFala.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AfricaQueVoceFala.jpeg?raw=true"
+},
+
+//comportamento e sentimento
+
+{
+  id: 47,
+  titulo: "Sinto o que sinto: um passeio pelos sentimentos",
+  autor: "Lázaro Ramos",
+  editora: "Sextante",
+  tema: "Comportamento/Sentimentos",
+  genero: "Narrativa sensorial infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 48,
+  resumo: "Dan, com ajuda do Mundo Bita, explora emoções como raiva, alegria, tristeza e orgulho, aprendendo a reconhecê-las e aceitá-las como parte natural da vida.",
+  dataPublicacao: "2025‑02‑05",
+  dataCatalogo: "2025‑07‑29",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/SintoOQueSinto.jpg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/SintoOQueSinto.jpeg?raw=true"
+},
 
 // manifestação cultural
 {
@@ -565,9 +861,522 @@ export default {
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MeninaNicinha.jpeg?raw=true"
 }
 ,
+// afrofuturismo
+{
+  id: 57,
+  titulo: "A Dáie de Vários Nomes",
+  autor: "Taslim",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Ficção infantojuvenil afrofuturista",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 160,
+  resumo: "Maisha é uma dáie que viaja no tempo para registrar eventos da pandemia de 2020 no Rio de Janeiro – uma ficção afrofuturista que mistura memórias, identidade negra e viagem temporal.",
+  dataPublicacao: "2024-09-07",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/ADaieDeVariosNomes.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/ADaieDeVariosNomes.jpeg?raw=true"
+},
+
+{
+  id: 58,
+  titulo: "Pensamentos Afrofuturistas",
+  autor: "Lu Ain Zaila (org.)",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Ensaio literário / antologia afrofuturista",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 144,
+  resumo: "Antologia organizada por Lu Ain Zaila com textos e reflexões de artistas e artivistas negros que exploram o Afrofuturismo à brasileira de forma poética e engajada.",
+  dataPublicacao: "2025-01-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/PensamentosAfrofuturistas.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/PensamentosAfrofuturistas.jpeg?raw=true"
+},
+
+{
+  id: 59,
+  titulo: "Máscaras do Poder: A Origem",
+  autor: "Márcio Roberto do Carmo",
+  editora: "Mostarda",
+  tema: "Afrofuturismo",
+  genero: "HQ / Ficção infantil afrocêntrica",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 64,
+  resumo: "História em quadrinhos que traz máscaras místicas inspiradas na mitologia africana, conferindo poderes ancestrais a jovens protagonistas negros que enfrentam ameaça global.",
+  dataPublicacao: "2024-04-15",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/MascarasDoPoder.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MascarasDoPoder.jpeg?raw=true"
+},
+
+{
+  id: 61,
+  titulo: "Beto, o garoto batuque",
+  autor: "Rodrigo Mendes & Thaís Ferreira",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Literatura ilustrada infantil com afrofuturismo",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 48,
+  resumo: "Beto adora batucar e sambar, unindo afeto e ancestralidade em uma batucada na escola — uma história visual com estética afrofuturista e celebração da cultura negra.",
+  dataPublicacao: "2024-11-20",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/BetoOGarotoBatuque.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/BetoOGarotoBatuque.jpeg?raw=true"
+},
+
+{
+  id: 62,
+  titulo: "Ubuntu 2048",
+  autor: "Raphael Silva & Inara Régia (Isdruxula)",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Ficção cyberpunk afrofuturista juvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 204,
+  resumo: "Em um futuro distópico, Teshai e a androide Kinaya enfrentam desafios para manter a filosofia Ubuntu viva — uma trama afrofuturista sobre identidade, tecnologia e solidariedade.",
+  dataPublicacao: "2021-05-19",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Ubuntu2048.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Ubuntu2048.jpeg?raw=true"
+},
+
+{
+  id: 63,
+  titulo: "Cabeça de Zumbi",
+  autor: "Israel Neto",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Suspense afrofuturista infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 124,
+  resumo: "Uma sociedade secreta busca garantir a passagem de Zumbi dos Palmares pela Kalunga. Jornalistas precisam usar suas vozes para preservar a memória e enfrentar uma trama ancestral.",
+  dataPublicacao: "2024-08-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/CabecaDeZumbi.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/CabecaDeZumbi.jpeg?raw=true"
+},
+
+{
+  id: 60,
+  titulo: "Por um fio",
+  autor: "Laura de Paula & Will Rez",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Conto afrofuturista infantojuvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: null,
+  resumo: "Conto afrofuturista que mescla realismo mágico e especulação tecnológica, com protagonistas negras em um universo permeado por ancestralidade e resiliência.",
+  dataPublicacao: "2024-??-??",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/PorUmFio.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/PorUmFio.jpeg?raw=true"
+},
+
+{
+  id: 64,
+  titulo: "Omi Ipalolo: águas silenciosas",
+  autor: "Will Braga & Douglas S. T. Reverie",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Afrofuturismo quântico / graphic novel",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 148,
+  resumo: "Expressionismo afro‑surreal se encontra ao futurismo quântico africano em uma jornada sobre colonização, mutação humana e resistências multissem domínio do multiverso.",
+  dataPublicacao: "2022-01-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/OmiIpaloloAguasSilenciosas.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/OmiIpaloloAguasSilenciosas.jpeg?raw=true"
+},
+{
+  id: 65,
+  titulo: "Almanaque Kitembo 2K23 - Quadrinhos Afrofuturistas",
+  autor: "Vários autores",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Antologia em HQ / quadrinhos infantis afrofuturistas",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 150,
+  resumo: "Volume anual com nove histórias em quadrinhos de criadoras e criadores negros por todo o Brasil, explorando propostas estéticas, políticas e afrofuturas narrativas plurais.",
+  dataPublicacao: "2024-04-24",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AlmanaqueKitembo2K23.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AlmanaqueKitembo2K23.jpeg?raw=true"
+}
+,
+{
+  id: 66,
+  titulo: "3 Esús e o Tempo: o mundo de Eleguá",
+  autor: "Israel Neto & Rodrigo Cândido",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Graphic novel / quadrinhos especulativos africanos",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 44,
+  resumo: "Eleguá se torna um andarilho em um mundo devastado por uma chuva interminável; retirante ancestral que recorre à profecia, herança espiritual e resistência para restaurar equilíbrio.",
+  dataPublicacao: "2023-12-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/3EsusOTempoElegua.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/3EsusOTempoElegua.jpeg?raw=true"
+}
+,
+
+{
+  id: 67,
+  titulo: "Ancestral",
+  autor: "Israel Neto & Gê Mendes",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Space opera afrofuturista",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 230,
+  resumo: "Uma space opera ambiciosa que entrelaça civilizações humanas em planetas do sistema estelar de Rá com conhecimentos ancestrais africanos, questionamentos sobre colonização galáctica e esperança coletiva.",
+  dataPublicacao: "2021-01-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Ancestral.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Ancestral.jpeg?raw=true"
+},
+
+{
+  id: 68,
+  titulo: "Afrofuturismo: O Futuro é Nosso – Vol. 1",
+  autor: "Vários autores",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Antologia afrofuturista infantil",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 108,
+  resumo: "Coletânea com contos que exploram futuros possíveis a partir de perspectivas afro-brasileiras — tecnologia ancestral, representatividade e inovação cultural, valorizando a imaginação negra.",
+  dataPublicacao: "2020-??-??",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AfrofuturismoOFuturoENossoVol1.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AfrofuturismoOFuturoENossoVol1.jpeg?raw=true"
+},
+
+{
+  id: 69,
+  titulo: "Afrofuturismo: O Futuro é Nosso – Vol. 3",
+  autor: "Vários autores",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Antologia em HQ / textos infantis",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 116,
+  resumo: "Terceiro volume da série antológica afrofuturista da Kitembo, com nove contos e histórias em quadrinhos escritos e ilustrados por autores negros do Brasil, destacando identidades negras e imaginação futurista.",
+  dataPublicacao: "2024-04-24",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AfrofuturismoOFuturoENossoVol3.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AfrofuturismoOFuturoENossoVol3.jpeg?raw=true"
+},
+
+{
+  id: 70,
+  titulo: "Akin: o rei de Igbo",
+  autor: "Marcos Cajé",
+  editora: "Malê Mirim",
+  tema: "Afrofuturismo",
+  genero: "Ficção infantojuvenil mitológica africana",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 54,
+  resumo: "Akin recebe a profecia de salvar o reino Igbo, embarcando numa viagem espiritual com ensinamentos dos mitos africanos até tornar-se líder e guerreiro ancestral.",
+  dataPublicacao: "2020-10-01",
+  dataCatalogo: "2025‑07‑30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AkinOReiDeIgbo.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AkinOReiDeIgbo.jpeg?raw=true"
+},
+
+{
+  id: 71,
+  titulo: "Antologia Afro‑Caribenha: ficção científica e literatura fantástica (edição República Dominicana)",
+  autor: "Vários autores",
+  editora: "Kitembo / ADFE",
+  tema: "Afrofuturismo",
+  genero: "Antologia de ficção especulativa afro‑caribenha",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 102,
+  resumo: "Contos especulativos de autoras e autores negros da República Dominicana, transitando entre Afrofuturismo, Taíno futurismo e víru­s‑punk.",
+  dataPublicacao: "2023-01-01",
+  dataCatalogo: "2025‑07‑30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AntologiaAfroCaribenha.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AntologiaAfroCaribenha.jpeg?raw=true"
+},
+
+{
+  id: 72,
+  titulo: "Afrofuturo ancestral do amanhã",
+  autor: "Henrique André & Tutano Nômade",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Poema ilustrado afrofuturista",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 44,
+  resumo: "A professora Amara convida crianças a projetarem o futuro a partir da ancestralidade negra — uma introdução afrofuturista para crianças sonhadoras.",
+  dataPublicacao: "2022-08-29",
+  dataCatalogo: "2025‑07‑30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AfrofuturoAncestralDoAmanha.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AfrofuturoAncestralDoAmanha.jpeg?raw=true"
+},
+
+{
+  id: 73,
+  titulo: "Afrofuturismo: O Futuro é Nosso – Vol. 2",
+  autor: "Vários autores",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Antologia infantojuvenil de contos afrofuturistas",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 126,
+  resumo: "Volume com contos de jovens autores negros brasileiros ambientados em universos futuristas, space‑opera, tramas policiais e androides.",
+  dataPublicacao: "2020‑01‑01",
+  dataCatalogo: "2025‑07‑30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AfrofuturismoOFuturoENossoVol2.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AfrofuturismoOFuturoENossoVol2.jpeg?raw=true"
+},
+
+{
+  id: 66,
+  titulo: "Os 3 Esús e o Tempo",
+  autor: "Israel Neto & Rodrigo Cândido",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Graphic novel / HQ afrofuturista",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 40,
+  resumo: "Uma aventura afrofuturista em que um aprendiz de Orunmilá quebra o tempo, promovendo o encontro de três dimensões e refletindo sobre legados, ancestralidade e profecia.",
+  dataPublicacao: "2021-01-08",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Os3EsusETempo.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Os3EsusETempo.jpeg?raw=true"
+},
+
+{
+  id: 67,
+  titulo: "(Amor)Talhamento e Os Fantasmas da Rua Sete",
+  autor: "Juciane Reis & Danilo Celso",
+  editora: "Kitembo / Festival Literaturas Negras",
+  tema: "Afrofuturismo",
+  genero: "Coletânea infantojuvenil afrofuturista",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 116,
+  resumo: "Volume 1 da Coleção ‘Literaturas Negras’, reúne dois contos: (Amor)Talhamento, sobre luto e feminicídio negro, e Os Fantasmas da Rua Sete, que entrelaça ancestralidade, medicina e reencarnação.",
+  dataPublicacao: "2021-07-17",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AmorTalhamentoFantasmaRuaSete.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AmorTalhamentoFantasmaRuaSete.jpeg?raw=true"
+},
+
+{
+  id: 68,
+  titulo: "Almanaque Kitembo: Quadrinhos Afrofuturismol 2k24",
+  autor: "Vários autores",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Quadrinhos / HQ afrofuturista",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 48,
+  resumo: "Edição especial do Almanaque Kitembo com histórias em quadrinhos que exploram o afrofuturismo sob múltiplos olhares. Reúne artistas negros em narrativas que mesclam ancestralidade, tecnologia e crítica social.",
+  dataPublicacao: "2024-03-22",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Afrofuturismol2k24.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Afrofuturismol2k24.jpeg?raw=true"
+},
+
+{
+  id: 69,
+  titulo: "Almanaque Kitembo: Quadrinhos Afrofuturismo 2k22",
+  autor: "Vários autores",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Quadrinhos / HQ afrofuturista",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 52,
+  resumo: "Primeira edição do Almanaque Kitembo com histórias em quadrinhos que exploram o afrofuturismo por meio de personagens negros, mitologias afro-brasileiras e ficção especulativa.",
+  dataPublicacao: "2022-11-20",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AlmanaqueKitembo2k22.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AlmanaqueKitembo2k22.jpeg?raw=true"
+},
+
+{
+  id: 70,
+  titulo: "Multiverso em Multiverso",
+  autor: "Poeta Afroluffy",
+  editora: "Independente",
+  tema: "Afrofuturismo",
+  genero: "Poesia especulativa",
+  classificacaoLiteraria: "Adulto",
+  numeroPaginas: 110,
+  resumo: "Obra poética que atravessa tempos, dimensões e identidades negras. Com uma linguagem futurista e lírica, o autor questiona a realidade e propõe existências múltiplas, afrorreferenciadas e interplanetárias.",
+  dataPublicacao: "2023-12-08",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/MultiversoEmMultiverso.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MultiversoEmMultiverso.jpeg?raw=true"
+},
+
+{
+  id: 71,
+  titulo: "Crianças nas Sombras",
+  autor: "Hedjan CS e Amora Moreira",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Romance distópico juvenil",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 168,
+  resumo: "Uma distopia afrofuturista em que crianças negras com dons especiais enfrentam um mundo que as quer invisíveis. A obra denuncia o racismo estrutural e propõe resistência por meio da imaginação.",
+  dataPublicacao: "2024-05-17",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/CriancasNasSombras.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/CriancasNasSombras.jpeg?raw=true"
+},
+
+{
+  id: 72,
+  titulo: "Caçador Cibernético da Rua 13",
+  autor: "Fábio Kabral",
+  editora: "Malê Mirim",
+  tema: "Afrofuturismo",
+  genero: "Ficção científica afrofuturista",
+  classificacaoLiteraria: "Juvenil / Adulto",
+  numeroPaginas: 180,
+  resumo: "Em uma metrópole futurista do Brasil, um jovem caçador de recompensas se envolve em uma missão que coloca à prova sua ancestralidade e seu vínculo com as tecnologias dos orixás.",
+  dataPublicacao: "2017-10-10",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/CacadorCiberneticoRua13.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/CacadorCiberneticoRua13.jpeg?raw=true"
+},
+
+{
+  id: 73,
+  titulo: "Uzuri: A Guerreira de Ketu",
+  autor: "Marcos Cajé",
+  editora: "Quadrinhos da Mostarda",
+  tema: "Afrofuturismo",
+  genero: "Quadrinhos / HQ",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 48,
+  resumo: "Uzuri, uma jovem guerreira do Reino de Ketu, usa armas tecnológicas e conhecimentos ancestrais para proteger seu povo. Uma aventura afrofuturista repleta de ação e mitologia afro-brasileira.",
+  dataPublicacao: "2023-03-21",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/UzuriGuerreiraDeKetu.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/UzuriGuerreiraDeKetu.jpeg?raw=true"
+},
+
+{
+  id: 74,
+  titulo: "A Cientista Guerreira do Facão Furioso",
+  autor: "Fábio Kabral",
+  editora: "Malê Mirim",
+  tema: "Afrofuturismo",
+  genero: "Ficção científica",
+  classificacaoLiteraria: "Juvenil / Adulto",
+  numeroPaginas: 196,
+  resumo: "Um afrofuturo em que uma cientista se transforma em guerreira para proteger sua comunidade. Repleto de referências às culturas afro-brasileiras e orixás, a obra mistura ciência, resistência e misticismo.",
+  dataPublicacao: "2020-09-15",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/CientistaGuerreiraFacaoFurioso.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/CientistaGuerreiraFacaoFurioso.jpeg?raw=true"
+},
+
+{
+  id: 75,
+  titulo: "Eu Conheço Uzomi",
+  autor: "Kinaya",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Ficção afrofuturista",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 32,
+  resumo: "A história de Uzomi é uma celebração da ancestralidade, identidade e tecnologia em um mundo onde o futuro ecoa as raízes africanas.",
+  dataPublicacao: "2023-05-20",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/EuConhecoUzomi.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/EuConhecoUzomi.jpeg?raw=true"
+},
+
+{
+  id: 76,
+  titulo: "Imortal",
+  autor: "Sabine Mendes",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Ficção científica",
+  classificacaoLiteraria: "Juvenil",
+  numeroPaginas: 140,
+  resumo: "Imortal é uma jornada pelo tempo e espaço conduzida por saberes ancestrais e resistências negras. Uma narrativa potente sobre o legado imaterial africano no futuro.",
+  dataPublicacao: "2022-11-10",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Imortal.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Imortal.jpeg?raw=true"
+},
+
+{
+  id: 75,
+  titulo: "Pantera Negra: O Jovem Príncipe",
+  autor: "Ronald L. Smith",
+  editora: "Excelsior Book One",
+  tema: "Afrofuturismo",
+  genero: "Aventura juvenil / ficção especulativa Marvel",
+  classificacaoLiteraria: "Juvenil",
+  numeroPaginas: 208,
+  resumo: "T’Challa é um jovem príncipe de Wakanda que é enviado para estudar em Chicago. Entre experiências típicas da adolescência e missões heroicas, ele precisa encontrar seu lugar, esconder sua identidade real e enfrentar forças místicas e ameaças sobrenaturais.",
+  dataPublicacao: "2020-03-10",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/PanteraNegraOJovemPrincipe.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/PanteraNegraOJovemPrincipe.jpeg?raw=true"
+},
+
+{
+  id: 76,
+  titulo: "Ubuntu",
+  autor: "Raphael Silva",
+  editora: "Kitembo",
+  tema: "Afrofuturismo",
+  genero: "Ficção afrofuturista",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 96,
+  resumo: "Uma jornada afrofuturista sobre coletividade, tecnologia ancestral e conexão espiritual, onde o jovem protagonista redescobre a força de seus ancestrais para transformar o futuro.",
+  dataPublicacao: "2022-10-18",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Ubuntu.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Ubuntu.jpeg?raw=true"
+},
 
 
  // Coleção Black Powe
+
+
+{
+  id: 55,
+  titulo: "Mário de Andrade – Edição Especial",
+  autor: "André Augustus Diasz",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantil",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 28,
+  resumo: "Biografia especialmente adaptada para crianças sobre o modernista Mário de Andrade, destacando sua relação com cultura afro-brasileira e folclore.",
+  dataPublicacao: "2024-01-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/MarioDeAndradeSpecial.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MarioDeAndradeSpecial.jpeg?raw=true"
+},
+{
+  id: 56,
+  titulo: "Mestre Didi: Deoscóredes M. dos Santos",
+  autor: "Marcos Cajé",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Biografia infantil ilustrada",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 32,
+  resumo: "Retrato de Mestre Didi, artista-sacerdote de Candomblé, mostrando como sua arte e religiosidade influenciaram a cultura afro-brasileira.",
+  dataPublicacao: "2023-01-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/MestreDidi.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MestreDidi.jpeg?raw=true"
+},
+
 {
   id: 85,
   titulo: "Conceição Evaristo",
