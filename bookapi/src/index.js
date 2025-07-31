@@ -88,21 +88,7 @@ export default {
    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Conceicao.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Conceicao.jpeg?raw=true"
 },
-{
-  id: 6,
-  titulo: "As tranças de minha mãe",
-  autor: "Ana Fátima",
-  editora: "Ereginga Educação",
-  tema: "Afroestima",
-  genero: "Literatura infantil",
-  classificacaoLiteraria: "Infantil",
-  numeroPaginas: 32, // confirmar número exato
-  resumo: "Narrado pelo pequeno Akin, o livro celebra o vínculo entre mãe e filho por meio das tranças, símbolos de ancestralidade africana e afetividade.",
-    dataPublicacao: "2021-03-05",
-  dataCatalogo: "2025-07-18",
-   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/TrancasMae.jpeg?raw=true",
-  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/TrancasMae.jpeg?raw=true"
-},
+
 
 
 //empoderamento feminino
@@ -122,6 +108,23 @@ export default {
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/101.jpeg?raw=true"
  
 },
+
+{
+  id: 106,
+  titulo: "Sejamos Todos Feministas (versão adaptada para jovens)",
+  autor: "Chimamanda Ngozi Adichie",
+  editora: "Companhia das Letrinhas",
+  tema: "Empoderamento Feminino",
+  genero: "Ensaio / Sociedade",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 64,
+  resumo: "Uma introdução poderosa ao feminismo, adaptada especialmente para o público jovem, escrita por uma das maiores vozes contemporâneas.",
+  dataPublicacao: "2017-11-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/SejamosTodosFeministas.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/SejamosTodosFeministas.jpeg?raw=true"
+},
+
 
 {
   id: 8,
@@ -264,7 +267,199 @@ export default {
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/HarrietTubman.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/HarrietTubman.jpeg?raw=true"
 },
+
+{
+  id: 98,
+  titulo: "Meninas Sonhadoras, Mulheres Cientistas – Linguagens e Ciências Humanas",
+  autor: "Flávia Martins de Carvalho",
+  editora: "Mostarda",
+  tema: "Empoderamento Feminino",
+  genero: "Biografia / Educação",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 40,
+  resumo: "Inspira meninas a seguirem carreiras nas ciências humanas, mostrando a trajetória de grandes mulheres da área.",
+  dataPublicacao: "2022-10-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/MeninasSonhadorasCienciasHumanas.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MeninasSonhadorasCienciasHumanas.jpeg?raw=true"
+},
+
+{
+  id: 99,
+  titulo: "Mulheres Incríveis que Mudaram o Mundo",
+  autor: "Alice Ramos",
+  editora: "Ciranda Cultural",
+  tema: "Empoderamento Feminino",
+  genero: "Biografia",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 28,
+  resumo: "Apresenta a vida de mulheres notáveis que impactaram a história, incentivando novas gerações com suas conquistas.",
+  dataPublicacao: "2021-03-20",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/MulheresIncriveis.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MulheresIncriveis.jpeg?raw=true"
+},
+
+{
+  id: 100,
+  titulo: "Meninas Sonhadoras, Mulheres Cientistas – Sustentabilidade I",
+  autor: "Flávia Martins de Carvalho",
+  editora: "Mostarda",
+  tema: "Empoderamento Feminino",
+  genero: "Ciência / Sustentabilidade",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 42,
+  resumo: "Retrata o protagonismo feminino em pesquisas ligadas à sustentabilidade, destacando cientistas que atuam pela preservação do planeta.",
+  dataPublicacao: "2023-05-12",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/MeninasSonhadorasSustentabilidade.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MeninasSonhadorasSustentabilidade.jpeg?raw=true"
+},
+
+{
+  id: 101,
+  titulo: "Menina que Brincava de Tudo",
+  autor: "Carolina Magalhães",
+  editora: "Carolina Magalhães",
+  tema: "Empoderamento Feminino",
+  genero: "Ficção Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 24,
+  resumo: "Uma história sobre liberdade, criatividade e empoderamento, mostrando que meninas podem brincar e ser o que quiserem.",
+  dataPublicacao: "2021-07-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/MeninaQueBrincavaDeTudo.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MeninaQueBrincavaDeTudo.jpeg?raw=true"
+},
+
+{
+  id: 102,
+  titulo: "Tarsila, Menina Pintora",
+  autor: "Lúcia Fidalgo",
+  editora: "Paulus",
+  tema: "Empoderamento Feminino",
+  genero: "Biografia / Arte",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "A trajetória da artista Tarsila do Amaral desde a infância, incentivando meninas a valorizarem a arte e sua identidade.",
+  dataPublicacao: "2020-02-15",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/TarsilaMeninaPintora.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/TarsilaMeninaPintora.jpeg?raw=true"
+},
+
+{
+  id: 103,
+  titulo: "Pequenas Grandes Líderes: Mulheres Importantes da História Negra",
+  autor: "Vashti Harrison",
+  editora: "Harperkids",
+  tema: "Empoderamento Feminino",
+  genero: "Biografia / História Negra",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 96,
+  resumo: "Retrata mulheres negras que marcaram a história com coragem, talento e liderança, inspirando novas gerações.",
+  dataPublicacao: "2019-09-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/PequenasGrandesLideres.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/PequenasGrandesLideres.jpeg?raw=true"
+},
+
+
+//familias diversar
+
+{
+  id: 108,
+  titulo: "O Amor é Animal",
+  autor: "José Roberto Torero",
+  editora: "Padaria de Livros",
+  tema: "Famílias Diversas",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "Uma história divertida e sensível que mostra como o amor pode existir de diferentes formas e em diferentes tipos de famílias.",
+  dataPublicacao: "2018-05-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/OAmorEAnimal.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/OAmorEAnimal.jpeg?raw=true"
+},
    
+{
+  id: 110,
+  titulo: "Família",
+  autor: "Núria Roca",
+  editora: "Ibep JR",
+  tema: "Famílias Diversas",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 28,
+  resumo: "Este livro mostra, de forma simples e inclusiva, os diferentes tipos de famílias existentes, promovendo respeito e empatia.",
+  dataPublicacao: "2017-08-20",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Familia.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Familia.jpeg?raw=true"
+},
+{
+  id: 111,
+  titulo: "Mãe Não é Uma Só, Eu Tenho Duas",
+  autor: "Nanda Matheus e Raphaela Comisso",
+  editora: "Saíra",
+  tema: "Famílias Diversas",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "Uma obra que apresenta com delicadeza a vivência de uma criança com duas mães, valorizando a diversidade e o amor familiar.",
+  dataPublicacao: "2021-03-12",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/MaeNaoEUmaSoEuTenhoDuas.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MaeNaoEUmaSoEuTenhoDuas.jpeg?raw=true"
+},
+
+{
+  id: 113,
+  titulo: "Pequeno Sereio",
+  autor: "Janaína Tokitaka",
+  editora: "Companhia das Letrinhas",
+  tema: "Famílias Diversas",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 28,
+  resumo: "Uma releitura moderna e inclusiva do clássico, em que o pequeno sereio vive entre mundos e identidades, abordando a diversidade familiar e de gênero.",
+  dataPublicacao: "2020-10-15",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/PequenoSereio.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/PequenoSereio.jpeg?raw=true"
+},
+
+{
+  id: 114,
+  titulo: "Minhas Duas Avós",
+  autor: "Ana Teixeira",
+  editora: "Pólen",
+  tema: "Famílias Diversas",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 24,
+  resumo: "Uma narrativa carinhosa sobre o vínculo com duas avós de culturas diferentes, valorizando a diversidade familiar e afetiva.",
+  dataPublicacao: "2018-04-08",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/MinhasDuasAvos.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MinhasDuasAvos.jpeg?raw=true"
+},
+{
+  id: 115,
+  titulo: "Olívia Tem Dois Pais",
+  autor: "Márcia Leite",
+  editora: "Companhia das Letrinhas",
+  tema: "Famílias Diversas",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 30,
+  resumo: "A história de Olívia, uma menina com dois pais, que lida com curiosidades e desafios de maneira afetuosa e divertida.",
+  dataPublicacao: "2021-01-22",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/OliviaTemDoisPais.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/OliviaTemDoisPais.jpeg?raw=true"
+},
 
 //infantojuvenil
 
@@ -825,6 +1020,107 @@ export default {
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AfricaQueVoceFala.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AfricaQueVoceFala.jpeg?raw=true"
 },
+
+
+//maternidade
+
+
+{
+  id: 6,
+  titulo: "As tranças de minha mãe",
+  autor: "Ana Fátima",
+  editora: "Ereginga Educação",
+  tema: "maternidade",
+  genero: "Literatura infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32, // confirmar número exato
+  resumo: "Narrado pelo pequeno Akin, o livro celebra o vínculo entre mãe e filho por meio das tranças, símbolos de ancestralidade africana e afetividade.",
+    dataPublicacao: "2021-03-05",
+  dataCatalogo: "2025-07-18",
+   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/TrancasMae.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/TrancasMae.jpeg?raw=true"
+},
+
+{
+  id: 104,
+  titulo: "Ashanti, Nossa Pretinha",
+  autor: "Taís Espirito Santo",
+  editora: "Malê Mirim",
+  tema: "Maternidade",
+  genero: "Infantil / Cultura Afro-brasileira",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 28,
+  resumo: "A história sensível de uma criança negra e sua relação de afeto com a mãe e sua ancestralidade.",
+  dataPublicacao: "2022-03-10",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AshantiNossaPretinha.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AshantiNossaPretinha.jpeg?raw=true"
+},
+
+{
+  id: 105,
+  titulo: "Mãe Dinha",
+  autor: "Maria do Carmo",
+  editora: "Maza Edições",
+  tema: "Maternidade",
+  genero: "Literatura Afro-brasileira",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 30,
+  resumo: "Uma homenagem às mulheres negras que transmitem sabedoria, acolhimento e resistência por meio da maternidade.",
+  dataPublicacao: "2021-06-05",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/MaeDinha.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MaeDinha.jpeg?raw=true"
+},
+
+{
+  id: 107,
+  titulo: "Cheirinho de Neném",
+  autor: "Patrícia Santana",
+  editora: "Maza Edições",
+  tema: "Maternidade",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 24,
+  resumo: "Uma narrativa delicada sobre os primeiros momentos de vida e o vínculo entre mãe e bebê.",
+  dataPublicacao: "2020-02-14",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/CheirinhoDeNenem.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/CheirinhoDeNenem.jpeg?raw=true"
+},
+
+{
+  id: 109,
+  titulo: "Mamãe Sangra",
+  autor: "Cláudia Pacheco",
+  editora: "Cláudia Pacheco",
+  tema: "Maternidade",
+  genero: "Educação / Corpo Humano",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 36,
+  resumo: "Um livro que aborda a menstruação com naturalidade e afeto, ajudando crianças a compreenderem esse processo com empatia.",
+  dataPublicacao: "2022-10-10",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/MamaeSangra.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MamaeSangra.jpeg?raw=true"
+},
+
+{
+  id: 112,
+  titulo: "Lenço de Cetim da Mamãe",
+  autor: "Chimamanda Ngozi Adichie",
+  editora: "Companhia das Letrinhas",
+  tema: "Maternidade",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 20,
+  resumo: "Uma história sensível sobre a relação entre mãe e filha, com toques culturais e afetivos.",
+  dataPublicacao: "2019-06-05",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/LencoDeCetimDaMamae.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/LencoDeCetimDaMamae.jpeg?raw=true"
+},
+
 
 //comportamento e sentimento
 
@@ -1652,6 +1948,151 @@ export default {
   dataCatalogo: "2025-07-30",
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/SomosIguaisDiferentes.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/SomosIguaisDiferentes.jpeg?raw=true"
+},
+
+{
+  id: 116,
+  titulo: "Boneco do Marcinho",
+  autor: "Ermeson Alcalde",
+  editora: "Edicon",
+  tema: "Questões Sociais",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "Marcinho ganha um boneco especial que o ajuda a entender temas como inclusão e respeito às diferenças sociais.",
+  dataPublicacao: "2019-06-05",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/BonecoDoMarcinho.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/BonecoDoMarcinho.jpeg?raw=true"
+},
+
+{
+  id: 117,
+  titulo: "Aprendendo a Ser Cidadão",
+  autor: "Celia Siqueira",
+  editora: "Nobel",
+  tema: "Questões Sociais",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 36,
+  resumo: "Uma introdução ao conceito de cidadania para crianças, com exemplos práticos de direitos e deveres.",
+  dataPublicacao: "2017-09-18",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AprendendoASerCidadao.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AprendendoASerCidadao.jpeg?raw=true"
+},
+
+{
+  id: 118,
+  titulo: "Aporofobia",
+  autor: "Padre Julio Lancellotti",
+  editora: "Companhia das Letrinhas",
+  tema: "Questões Sociais",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 40,
+  resumo: "Uma obra sensível que aborda o preconceito contra pessoas em situação de pobreza e incentiva a empatia e o acolhimento.",
+  dataPublicacao: "2022-03-12",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Aporofobia.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Aporofobia.jpeg?raw=true"
+},
+
+{
+  id: 119,
+  titulo: "De Onde Você Veio",
+  autor: "Liliana Iacocca e Michele Iacocca",
+  editora: "Ática",
+  tema: "Questões Sociais",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "Uma história lúdica que ajuda as crianças a entenderem suas origens, identidades e histórias de vida.",
+  dataPublicacao: "2016-08-12",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/DeOndeVoceVeio.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/DeOndeVoceVeio.jpeg?raw=true"
+},
+
+{
+  id: 120,
+  titulo: "Conversando sobre Violência Sexual contra a Criança",
+  autor: "Adriana Costa de Miranda",
+  editora: "Liber Livro",
+  tema: "Questões Sociais",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 40,
+  resumo: "Com linguagem acessível, este livro orienta crianças sobre como identificar e denunciar abusos, promovendo a prevenção e proteção.",
+  dataPublicacao: "2018-10-10",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/ConversandoViolenciaSexual.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/ConversandoViolenciaSexual.jpeg?raw=true"
+},
+
+{
+  id: 121,
+  titulo: "Da Minha Janela",
+  autor: "Otávio Júnior",
+  editora: "Companhia das Letrinhas",
+  tema: "Questões Sociais",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 28,
+  resumo: "Um menino observa o mundo a partir de sua janela em uma favela carioca, trazendo reflexões sobre realidade e sonhos.",
+  dataPublicacao: "2020-01-20",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/DaMinhaJanela.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/DaMinhaJanela.jpeg?raw=true"
+},
+
+
+{
+  id: 122,
+  titulo: "Diversidade",
+  autor: "Núria Roca",
+  editora: "Ibep JR",
+  tema: "Questões Sociais",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "Um livro que apresenta às crianças a importância de respeitar as diferenças entre as pessoas, promovendo empatia e inclusão.",
+  dataPublicacao: "2014-05-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Diversidade.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Diversidade.jpeg?raw=true"
+},
+
+{
+  id: 123,
+  titulo: "Guerra e Paz",
+  autor: "Mônica",
+  editora: "Martins Editora",
+  tema: "Questões Sociais",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 30,
+  resumo: "Com linguagem acessível, o livro aborda o contraste entre a guerra e a paz, incentivando reflexões sobre convivência e empatia.",
+  dataPublicacao: "2017-04-12",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/GuerraEPaz.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/GuerraEPaz.jpeg?raw=true"
+},
+
+{
+  id: 124,
+  titulo: "Ester Conhece Paulo Freire",
+  autor: "Alê Oliveira",
+  editora: "Baioque",
+  tema: "Questões Sociais",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 36,
+  resumo: "Ester conhece o educador Paulo Freire e descobre como a educação pode ser um instrumento de transformação social.",
+  dataPublicacao: "2021-09-15",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/EsterConhecePauloFreire.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/EsterConhecePauloFreire.jpeg?raw=true"
 },
 
 
