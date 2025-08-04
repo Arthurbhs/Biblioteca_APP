@@ -92,6 +92,23 @@ export default {
 
 
 //empoderamento feminino
+
+{
+  id: 131,
+  titulo: "Luanda no mundo da ciência",
+  autor: "Ana Lúcia Nunes de Sousa",
+  editora: "Kitembo",
+  tema: "Empoderamento Feminino",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "Luanda é uma menina curiosa e inteligente que nos leva a descobrir o mundo da ciência e o poder do conhecimento.",
+  dataPublicacao: "2023-01-10",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/LuandaNoMundoDaCiencia.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/LuandaNoMundoDaCiencia.jpeg?raw=true"
+},
+
 {
    id: 7,
   titulo: "101 Mulheres Incríveis Que Mudaram o Mundo",
@@ -269,7 +286,7 @@ export default {
 },
 
 {
-  id: 98,
+  id: 149,
   titulo: "Meninas Sonhadoras, Mulheres Cientistas – Linguagens e Ciências Humanas",
   autor: "Flávia Martins de Carvalho",
   editora: "Mostarda",
@@ -285,7 +302,7 @@ export default {
 },
 
 {
-  id: 99,
+  id: 150,
   titulo: "Mulheres Incríveis que Mudaram o Mundo",
   autor: "Alice Ramos",
   editora: "Ciranda Cultural",
@@ -301,7 +318,7 @@ export default {
 },
 
 {
-  id: 100,
+  id: 151,
   titulo: "Meninas Sonhadoras, Mulheres Cientistas – Sustentabilidade I",
   autor: "Flávia Martins de Carvalho",
   editora: "Mostarda",
@@ -317,7 +334,7 @@ export default {
 },
 
 {
-  id: 101,
+  id: 144,
   titulo: "Menina que Brincava de Tudo",
   autor: "Carolina Magalhães",
   editora: "Carolina Magalhães",
@@ -333,7 +350,7 @@ export default {
 },
 
 {
-  id: 102,
+  id: 152,
   titulo: "Tarsila, Menina Pintora",
   autor: "Lúcia Fidalgo",
   editora: "Paulus",
@@ -349,7 +366,7 @@ export default {
 },
 
 {
-  id: 103,
+  id: 153,
   titulo: "Pequenas Grandes Líderes: Mulheres Importantes da História Negra",
   autor: "Vashti Harrison",
   editora: "Harperkids",
@@ -368,7 +385,7 @@ export default {
 //familias diversar
 
 {
-  id: 108,
+  id: 154,
   titulo: "O Amor é Animal",
   autor: "José Roberto Torero",
   editora: "Padaria de Livros",
@@ -384,7 +401,7 @@ export default {
 },
    
 {
-  id: 110,
+  id: 155,
   titulo: "Família",
   autor: "Núria Roca",
   editora: "Ibep JR",
@@ -399,7 +416,7 @@ export default {
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Familia.jpeg?raw=true"
 },
 {
-  id: 111,
+  id: 156,
   titulo: "Mãe Não é Uma Só, Eu Tenho Duas",
   autor: "Nanda Matheus e Raphaela Comisso",
   editora: "Saíra",
@@ -431,7 +448,7 @@ export default {
 },
 
 {
-  id: 114,
+  id: 158,
   titulo: "Minhas Duas Avós",
   autor: "Ana Teixeira",
   editora: "Pólen",
@@ -1021,6 +1038,57 @@ export default {
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AfricaQueVoceFala.jpeg?raw=true"
 },
 
+{
+  id: 130,
+  titulo: "Ruas do brincar",
+  autor: "Leandro Rodrigues e Fernando Erminio",
+  editora: "Coleção Literária Besouro",
+  tema: "Infanto-Juvenil",
+  genero: "Infanto-Juvenil",
+  classificacaoLiteraria: "Infanto-Juvenil",
+  numeroPaginas: 36,
+  resumo: "Um passeio afetivo pelas brincadeiras tradicionais de rua, resgatando memórias e promovendo a valorização da cultura popular.",
+  dataPublicacao: "2022-04-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/RuasDoBrincar.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/RuasDoBrincar.jpeg?raw=true"
+},
+
+{
+  id: 132,
+  titulo: "É besouro porque é preto e voa",
+  autor: "Vários Autores",
+  editora: "Coleção Literária Besouro",
+  tema: "Infanto-Juvenil",
+  genero: "Infanto-Juvenil",
+  classificacaoLiteraria: "Infanto-Juvenil",
+  numeroPaginas: 40,
+  resumo: "Coletânea de histórias e poesias que celebram a cultura negra e a imaginação de crianças pretas que sonham e voam.",
+  dataPublicacao: "2023-08-15",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/EBesouroPorqueEPretoEVoa.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/EBesouroPorqueEPretoEVoa.jpeg?raw=true"
+},
+
+//axé
+
+{
+  id: 133,
+  titulo: "ÉDÁ, EDÁ – as palavras e cores da criação Òkè",
+  autor: "Mariana Moretti e Luiz Carlos Garcia",
+  editora: "Literatura Suburbana e Literária Besouro",
+  tema: "Axé",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 34,
+  resumo: "Inspirado na cosmovisão africana, o livro apresenta de forma poética e visual os mitos da criação a partir das palavras e cores sagradas de Òkè.",
+  dataPublicacao: "2022-12-05",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/EdaEda.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/EdaEda.jpeg?raw=true"
+},
+
+
 
 //maternidade
 
@@ -1058,7 +1126,7 @@ export default {
 },
 
 {
-  id: 105,
+  id: 161,
   titulo: "Mãe Dinha",
   autor: "Maria do Carmo",
   editora: "Maza Edições",
@@ -1121,6 +1189,201 @@ export default {
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/LencoDeCetimDaMamae.jpeg?raw=true"
 },
 
+
+// cultura indigena
+
+{
+  id: 134,
+  titulo: "Juntos na aldeia",
+  autor: "Lúis Donisete Benzi Grupioni",
+  editora: "Berlendis & Vertecchia",
+  tema: "Cultura Indígena",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "Um olhar sensível sobre o cotidiano de uma aldeia indígena, destacando a importância da coletividade e das tradições.",
+  dataPublicacao: "2022-05-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/JuntosNaAldeia.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/JuntosNaAldeia.jpeg?raw=true"
+},
+
+{
+  id: 135,
+  titulo: "Curumim que virou gigante",
+  autor: "Joel Rufino do Santos",
+  editora: "Ática",
+  tema: "Cultura Indígena",
+  genero: "Infanto-Juvenil",
+  classificacaoLiteraria: "Infanto-Juvenil",
+  numeroPaginas: 28,
+  resumo: "Inspirado nas lendas indígenas, conta a história de um curumim que se transforma em gigante para proteger seu povo.",
+  dataPublicacao: "2021-11-20",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/CurumimQueVirouGigante.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/CurumimQueVirouGigante.jpeg?raw=true"
+},
+
+{
+  id: 136,
+  titulo: "Clara como Sol; escuro como a noite",
+  autor: "José Bortolini e Pallus",
+  editora: "—",
+  tema: "Cultura Indígena",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 30,
+  resumo: "Uma narrativa que explora as diferenças, a ancestralidade e o respeito entre culturas, inspirada nos saberes indígenas.",
+  dataPublicacao: "2023-03-12",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/ClaraComoSol.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/ClaraComoSol.jpeg?raw=true"
+},
+
+{
+  id: 137,
+  titulo: "Kariri Xocó; contos indígenas",
+  autor: "Denízia Cruz",
+  editora: "Estúdio Kiwi",
+  tema: "Cultura Indígena",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 34,
+  resumo: "Coletânea de contos que apresentam a riqueza da cultura e espiritualidade do povo Kariri Xocó.",
+  dataPublicacao: "2022-08-10",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/KaririXoco.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/KaririXoco.jpeg?raw=true"
+},
+{
+  id: 138,
+  titulo: "Pia o pio; pia Martim",
+  autor: "Karina Ferro Otauka",
+  editora: "Projeto Contemplado",
+  tema: "Cultura Indígena",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 36,
+  resumo: "Uma história poética sobre o despertar da natureza e os sons da floresta, conectando o leitor à cosmovisão indígena.",
+  dataPublicacao: "2021-09-15",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/PiaOPio.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/PiaOPio.jpeg?raw=true"
+},
+{
+  id: 139,
+  titulo: "Mani; a origem da mandioca",
+  autor: "Lenda Guarani",
+  editora: "Pallus",
+  tema: "Cultura Indígena",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 24,
+  resumo: "Reconta a tradicional lenda Guarani sobre Mani, a menina que deu origem à mandioca, um dos alimentos mais importantes da cultura indígena.",
+  dataPublicacao: "2020-06-05",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Mani.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Mani.jpeg?raw=true"
+},
+
+{
+  id: 165,
+  titulo: "Povos Indígenas no Brasil",
+  autor: "Rosa Gauditano",
+  editora: "Caixa Cultural",
+  tema: "Cultura Indígena",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 42,
+  resumo: "Uma introdução à diversidade dos povos indígenas brasileiros com fotos, histórias e saberes tradicionais.",
+  dataPublicacao: "2019-03-12",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/PovosIndigenas.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/PovosIndigenas.jpeg?raw=true"
+},
+
+{
+  id: 165,
+  titulo: "Viagem ao mundo indígena",
+  autor: "Lúis Donisete Benzi Grupioni",
+  editora: "Berlendis & Vertecchia",
+  tema: "Cultura Indígena",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 38,
+  resumo: "Uma jornada educativa pelas culturas indígenas brasileiras, promovendo o respeito e a valorização da diversidade.",
+  dataPublicacao: "2021-04-18",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/ViagemMundoIndigena.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/ViagemMundoIndigena.jpeg?raw=true"
+},
+
+{
+  id: 142,
+  titulo: "Lenda do Sol e da Lua",
+  autor: "Hardy Guedes",
+  editora: "HGF",
+  tema: "Cultura Indígena",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 20,
+  resumo: "Uma bela lenda indígena que narra a origem do Sol e da Lua, trazendo ensinamentos sobre harmonia e dualidade.",
+  dataPublicacao: "2020-01-08",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/LendaSolLua.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/LendaSolLua.jpeg?raw=true"
+},
+
+{
+  id: 144,
+  titulo: "Saguairu",
+  autor: "Júlio Emílio Braz",
+  editora: "Mostarda",
+  tema: "Cultura Indígena",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 36,
+  resumo: "Inspirado em lendas indígenas, o livro conta a história de Saguairu, um jovem que aprende sobre coragem e ancestralidade.",
+  dataPublicacao: "2018-06-20",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Saguairu.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Saguairu.jpeg?raw=true"
+},
+
+
+// coleção itau
+
+{
+  id: 143,
+  titulo: "Tatu Balão",
+  autor: "Sonia Barros",
+  editora: "Aletria",
+  tema: "Coleção Literária Itaú - Leia para uma criança",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 28,
+  resumo: "Um tatu sonhador transforma um simples balão em uma grande aventura, incentivando a imaginação e a criatividade das crianças.",
+  dataPublicacao: "2017-09-10",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/TatuBalao.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/TatuBalao.jpeg?raw=true"
+},
+
+{
+  id: 145,
+  titulo: "Em cima daquela serra",
+  autor: "Eucanaã Ferraz",
+  editora: "Companhia das Letrinhas",
+  tema: "Coleção Literária Itaú - Leia para uma criança",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 30,
+  resumo: "Com uma linguagem poética, o autor convida o leitor a observar e imaginar o que existe no alto de uma serra encantada.",
+  dataPublicacao: "2019-02-25",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/EmCimaDaquelaSerra.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/EmCimaDaquelaSerra.jpeg?raw=true"
+},
 
 //comportamento e sentimento
 
@@ -1319,7 +1582,7 @@ export default {
 ,
 
 {
-  id: 67,
+  id: 167,
   titulo: "Ancestral",
   autor: "Israel Neto & Gê Mendes",
   editora: "Kitembo",
@@ -1335,7 +1598,7 @@ export default {
 },
 
 {
-  id: 68,
+  id: 168,
   titulo: "Afrofuturismo: O Futuro é Nosso – Vol. 1",
   autor: "Vários autores",
   editora: "Kitembo",
@@ -1399,7 +1662,7 @@ export default {
 },
 
 {
-  id: 72,
+  id: 172,
   titulo: "Afrofuturo ancestral do amanhã",
   autor: "Henrique André & Tutano Nômade",
   editora: "Kitembo",
@@ -1415,7 +1678,7 @@ export default {
 },
 
 {
-  id: 73,
+  id: 173,
   titulo: "Afrofuturismo: O Futuro é Nosso – Vol. 2",
   autor: "Vários autores",
   editora: "Kitembo",
@@ -1431,7 +1694,7 @@ export default {
 },
 
 {
-  id: 66,
+  id: 166,
   titulo: "Os 3 Esús e o Tempo",
   autor: "Israel Neto & Rodrigo Cândido",
   editora: "Kitembo",
@@ -1463,6 +1726,38 @@ export default {
 },
 
 {
+  id: 128,
+  titulo: "Rebouças André e Antônio Rebouças",
+  autor: "Júlio Emílio Braz",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 28,
+  resumo: "Narrativa sobre os irmãos André e Antônio Rebouças, engenheiros negros que se destacaram na história do Brasil Império.",
+  dataPublicacao: "2021-03-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/ReboucasAndreEAntonio.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/ReboucasAndreEAntonio.jpeg?raw=true"
+},
+
+{
+  id: 129,
+  titulo: "Tubman Harriet",
+  autor: "Majori Silva",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 30,
+  resumo: "A história inspiradora de Harriet Tubman, mulher negra que lutou contra a escravidão e se tornou símbolo de liberdade.",
+  dataPublicacao: "2021-03-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/TubmanHarriet.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/TubmanHarriet.jpeg?raw=true"
+},
+
+{
   id: 68,
   titulo: "Almanaque Kitembo: Quadrinhos Afrofuturismol 2k24",
   autor: "Vários autores",
@@ -1479,7 +1774,7 @@ export default {
 },
 
 {
-  id: 69,
+  id: 169,
   titulo: "Almanaque Kitembo: Quadrinhos Afrofuturismo 2k22",
   autor: "Vários autores",
   editora: "Kitembo",
@@ -1495,7 +1790,7 @@ export default {
 },
 
 {
-  id: 70,
+  id: 170,
   titulo: "Multiverso em Multiverso",
   autor: "Poeta Afroluffy",
   editora: "Independente",
@@ -1511,7 +1806,7 @@ export default {
 },
 
 {
-  id: 71,
+  id: 171,
   titulo: "Crianças nas Sombras",
   autor: "Hedjan CS e Amora Moreira",
   editora: "Kitembo",
@@ -1575,7 +1870,7 @@ export default {
 },
 
 {
-  id: 75,
+  id: 175,
   titulo: "Eu Conheço Uzomi",
   autor: "Kinaya",
   editora: "Kitembo",
@@ -1591,7 +1886,7 @@ export default {
 },
 
 {
-  id: 76,
+  id: 176,
   titulo: "Imortal",
   autor: "Sabine Mendes",
   editora: "Kitembo",
@@ -1755,7 +2050,7 @@ export default {
 },
 
 {
-  id: 85,
+  id: 140,
   titulo: "O que Fazer Quando Você se Preocupa Demais: Um Guia para as Crianças Superarem a Ansiedade",
   autor: "Dawn Huebner",
   editora: "Artmed",
@@ -1771,7 +2066,7 @@ export default {
 },
 
 {
-  id: 86,
+  id: 141,
   titulo: "Por favor, aprendendo sobre boas maneiras",
   autor: "Beatriz Meirelles",
   editora: "Scipione",
@@ -1805,7 +2100,7 @@ export default {
 },
 
 {
-  id: 89,
+  id: 179,
   titulo: "Sentimentos",
   autor: "Núria Roca",
   editora: "Ibep JR",
@@ -1839,7 +2134,7 @@ export default {
 },
 
 {
-  id: 90,
+  id: 180,
   titulo: "Menina que abraça o vento",
   autor: "Fernanda Paraguassu",
   editora: "Vooinho",
@@ -1855,7 +2150,7 @@ export default {
 },
 
 {
-  id: 92,
+  id: 182,
   titulo: "Pequenas confissões",
   autor: "Georgina Martins",
   editora: "Positivo",
@@ -1903,7 +2198,7 @@ export default {
 },
 
 {
-  id: 95,
+  id: 185,
   titulo: "Refugiadas: Escapando do Céu em Perigo",
   autor: "Maribel Vazquez",
   editora: "Urutau",
@@ -1919,7 +2214,7 @@ export default {
 },
 
 {
-  id: 96,
+  id: 186,
   titulo: "Se os Tubarões Fossem Homens",
   autor: "Bertolt Brecht",
   editora: "Olhodevidro",
@@ -1951,7 +2246,7 @@ export default {
 },
 
 {
-  id: 116,
+  id: 188,
   titulo: "Boneco do Marcinho",
   autor: "Ermeson Alcalde",
   editora: "Edicon",
@@ -2181,7 +2476,7 @@ export default {
 },
 
 {
-  id: 87,
+  id: 178,
   titulo: "Glória Maria Matta da Silva",
   autor: "Duílio Fabbri Júnior e Manoela Costa",
   editora: "Mostarda",
@@ -2198,7 +2493,7 @@ export default {
 
 
 {
-  id: 88,
+  id: 177,
   titulo: "Abdias do Nascimento",
   autor: "Júlio Emílio Braz",
   editora: "Mostarda",
@@ -2248,7 +2543,7 @@ export default {
 },
 
 {
-  id: 91,
+  id: 181,
   titulo: "João Cândido",
   autor: "Júlio Emílio Braz",
   editora: "Mostarda",
@@ -2282,7 +2577,7 @@ export default {
 },
 
 {
-  id: 93,
+  id: 183,
   titulo: "Maria Felipa",
   autor: "Luciana Palmeira e Cássia Valle",
   editora: "Mostarda",
@@ -2299,7 +2594,7 @@ export default {
 },
 
 {
-  id: 94,
+  id: 184,
   titulo: "Maria Firmina dos Reis",
   autor: "s/a",
   editora: "Mostarda",
@@ -2350,7 +2645,7 @@ export default {
 },
 
 {
-  id: 97,
+  id: 187,
   titulo: "Davi Kopenawa",
   autor: "Orlando Nilha",
   editora: "Mostarda",
@@ -2469,7 +2764,7 @@ export default {
 },
 
 {
-  id: 104,
+  id: 160,
   titulo: "Sônia Guajajara",
   autor: "Rodrigo Luis",
   editora: "Mostarda",
@@ -2503,7 +2798,7 @@ export default {
 },
 
 {
-  id: 106,
+  id: 148,
   titulo: "João do Rio",
   autor: "Júlio Emílio Braz",
   editora: "Mostarda",
@@ -2520,7 +2815,7 @@ export default {
 },
 
 {
-  id: 106,
+  id: 147,
   titulo: "Júlio Emílio Braz",
   autor: "Júlio Emílio Braz",
   editora: "Mostarda",
@@ -2538,7 +2833,7 @@ export default {
 },
 
 {
-  id: 107,
+  id: 162,
   titulo: "Dandara e Zumbi",
   autor: "Maria Julia Maltese",
   editora: "Mostarda",
@@ -2571,7 +2866,7 @@ export default {
 
 
   {
-    id: 109,
+    id: 163,
     titulo: "Michelle Obama",
     autor: "Orlando Nilha",
     editora: "Mostarda",
@@ -2618,8 +2913,57 @@ export default {
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Patrocinio.jpeg?raw=true",
 
   },
+
   {
-    id: 112,
+  id: 125,
+  titulo: "Zeferina",
+  autor: "Cássia Vale e Luciana Palmeira",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 28,
+  resumo: "A história de Zeferina, uma importante liderança negra que lutou por liberdade e dignidade durante o período colonial.",
+  dataPublicacao: "2021-03-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Zeferina.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Zeferina.jpeg?raw=true"
+},
+{
+  id: 126,
+  titulo: "Mahin",
+  autor: "Cássia Vale e Luciana Palmeira",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 30,
+  resumo: "A obra apresenta Mahin, figura histórica que atuou na resistência negra e na luta pela liberdade no Brasil escravocrata.",
+  dataPublicacao: "2021-03-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/Mahin.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/Mahin.jpeg?raw=true"
+},
+{
+  id: 127,
+  titulo: "Tebas Joaquim Pinto de Oliveira",
+  autor: "Orlando Nilha",
+  editora: "Mostarda",
+  tema: "Coleção Black Power",
+  genero: "Infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "Biografia infantil de Tebas, arquiteto negro que deixou marcas na paisagem urbana de São Paulo colonial.",
+  dataPublicacao: "2021-03-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/TebasJoaquimPintoDeOliveira.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/TebasJoaquimPintoDeOliveira.jpeg?raw=true"
+},
+
+
+
+  {
+    id: 164,
     titulo: "Madalena Paraguaçu",
     autor: "Orlando Nilha",
     editora: "Mostarda",
@@ -2635,7 +2979,7 @@ export default {
 
   },
   {
-    id: 113,
+    id: 157,
     titulo: "André e Antônio Rebouças",
     autor: "Júlio Emílio Braz",
     editora: "Mostarda",
@@ -2667,7 +3011,7 @@ export default {
 
   },
   {
-    id: 115,
+    id: 159,
     titulo: "Rosa Parks",
     autor: "Orlando Nilha",
     editora: "Mostarda",

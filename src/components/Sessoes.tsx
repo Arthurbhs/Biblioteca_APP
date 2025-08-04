@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, ActivityIndicator, FlatList, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, ActivityIndicator, FlatList, StyleSheet, ScrollView, TouchableOpacity} from 'react-native';
 import LivroButton from './LivroButton';
 import { useRouter } from 'expo-router';
 
@@ -21,6 +21,8 @@ const ListaCategorias = () => {
   const router = useRouter();
   const [livros, setLivros] = useState<Livro[]>([]);
   const [carregando, setCarregando] = useState(true);
+  const [limiteSecoes, setLimiteSecoes] = useState(3);
+
 
   useEffect(() => {
     const buscarLivros = async () => {
@@ -72,55 +74,78 @@ const ListaCategorias = () => {
     });
   };
 
-  const renderSecao = (titulo: string, data: Livro[]) => {
-    if (data.length === 0) return null;
-
-    return (
-      <View style={styles.secao}>
-        <Text style={styles.titulo}>{titulo}</Text>
-        <FlatList
-          data={data}
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          keyExtractor={(item) => item.id.toString()}
-          contentContainerStyle={styles.listContainer}
-          renderItem={({ item }) => (
-            <LivroButton livro={item} onPress={() => router.push(`/livros/${item.id}`)} />
-          )}
-        />
-      </View>
-    );
-  };
-
-  if (carregando) {
-    return (
-      <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#333" />
-        <Text style={styles.loadingText}>Carregando livros...</Text>
-      </View>
-    );
-  }
+  
+const renderSecao = (titulo: string, filtrarPor: string) => {
+  const data = filtrarPorPalavra(filtrarPor);
+  if (data.length === 0) return null;
 
   return (
-    <ScrollView>
+    <View style={styles.secao}>
+     <TouchableOpacity
+  onPress={() => router.push({
+    pathname: '/sessao',
+    params: {
+      palavraChave: filtrarPor,
+      titulo: titulo
+    }
+  })}
+>
+  <Text style={styles.titulo}>{titulo}</Text>
+</TouchableOpacity>
 
-    {renderSecao('🪘 Capoeira', filtrarPorPalavra('capoeira'))}
-    {renderSecao('✊ Coleção Black Power', filtrarPorPalavra('coleção black power'))}
-    {renderSecao('♀️ Empoderamento Feminino', filtrarPorPalavra('empoderamento feminino'))}
-    {renderSecao('👧 Infanto Juvenil', filtrarPorPalavra('infanto juvenil'))}
-    {renderSecao('⚖️ Questões Sociais', filtrarPorPalavra('questões sociais'))}
-    {renderSecao('🧒👧 Infanto‑Juvenil', filtrarPorPalavra('Infanto‑Juvenil'))}
-     {renderSecao('📖 Questões sociais', filtrarPorPalavra('Questões sociais'))}
-      {renderSecao('🌳♻️ Meio ambiente / Reciclagem', filtrarPorPalavra('Meio ambiente / Reciclagem'))}
-     {renderSecao('❤️‍🩹🧠 Comportamento / Sentimentos', filtrarPorPalavra('Comportamento / Sentimentos'))}
-     {renderSecao('👾🤖 Afrofuturismo', filtrarPorPalavra('Afrofuturismo'))}
-   
-   
-
-
-
-    </ScrollView>
+      <FlatList
+        data={data}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        keyExtractor={(item) => item.id.toString()}
+        contentContainerStyle={styles.listContainer}
+        renderItem={({ item }) => (
+          <LivroButton livro={item} onPress={() => router.push(`/livros/${item.id}`)} />
+        )}
+      />
+    </View>
   );
+};
+
+
+ const secoes = [
+  { titulo: '🪘 Capoeira', palavra: 'capoeira' },
+  { titulo: '✊ Coleção Black Power', palavra: 'coleção black power' },
+  { titulo: '♀️ Empoderamento Feminino', palavra: 'empoderamento feminino' },
+  { titulo: '⚖️ Questões Sociais', palavra: 'questões sociais' },
+  { titulo: '🧒👧 Infanto‑Juvenil', palavra: 'Infanto‑Juvenil' },
+  { titulo: '📖 Questões sociais', palavra: 'Questões sociais' },
+  { titulo: '👧 Infanto Juvenil', palavra: 'infanto juvenil' },
+  { titulo: '🌳♻️ Meio ambiente / Reciclagem', palavra: 'Meio ambiente / Reciclagem' },
+  { titulo: '❤️‍🩹🧠 Comportamento / Sentimentos', palavra: 'Comportamento / Sentimentos' },
+  { titulo: '👾🤖 Afrofuturismo', palavra: 'Afrofuturismo' },
+  { titulo: 'Coleção Literária Itaú ', palavra: 'Coleção Literária Itaú - Leia para uma criança' },
+  { titulo: '👾🤖 Famílias Diversas', palavra: 'Famílias Diversas' },
+  { titulo: 'maternidade', palavra: 'maternidade' },
+  { titulo: 'manifestação cultural', palavra: 'manifestação cultural' },
+  { titulo: 'Cultura Indígena', palavra: 'Cultura Indígena' },
+];
+
+return (
+  <ScrollView>
+    <View>
+      {secoes.slice(0, limiteSecoes).map((secao, index) =>
+        renderSecao(secao.titulo, secao.palavra)
+      )}
+
+      {limiteSecoes < secoes.length && (
+        <TouchableOpacity
+          style={styles.botaoMais}
+          onPress={() => setLimiteSecoes((prev) => prev + 3)}
+        >
+          <Text style={styles.textoBotaoMais}>Mostrar mais</Text>
+        </TouchableOpacity>
+      )}
+    </View>
+  </ScrollView>
+);
+
+
 };
 
 const styles = StyleSheet.create({
@@ -146,6 +171,24 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#444',
   },
+
+botaoMais: {
+  backgroundColor: '#5ebf26',
+  padding: 12,
+  marginHorizontal: 16,
+  marginVertical: 24,
+  borderRadius: 8,
+  alignItems: 'center',
+},
+textoBotaoMais: {
+  color: '#fff',
+  fontSize: 16,
+  fontWeight: 'bold',
+},
+
+
 });
+
+
 
 export default ListaCategorias;
