@@ -10,7 +10,7 @@ import { db } from '../../firebase';
 import { doc, setDoc } from 'firebase/firestore';
 import { Image } from 'react-native';
 import { Switch } from 'react-native';
-import RadioForm from 'react-native-simple-radio-button';
+import { sendEmailVerification } from 'firebase/auth';
 import escolasPG from '../../assets/Data/SchoolsData.json';
 
 
@@ -62,89 +62,104 @@ const [escolaSelecionada, setEscolaSelecionada] = useState('');
     paddingHorizontal: 8,
   };
 
+const handleRegister = async () => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const nomeRegex = /^[A-Za-zÀ-ÿ\s]+$/;
+  const ruaEBairroRegex = /^[A-Za-zÀ-ÿ0-9\s.,-]+$/;
 
-  const handleRegister = async () => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const nomeRegex = /^[A-Za-zÀ-ÿ\s]+$/;
-    const ruaEBairroRegex = /^[A-Za-zÀ-ÿ0-9\s.,-]+$/;
-  
-    if (!nome.trim() || nome.trim().split(' ').length < 2 || !nomeRegex.test(nome.trim())) {
-      Alert.alert('Informe seu nome completo (somente letras e espaços)');
-      return;
-    }
-  
-    if (!profissao.trim() || profissao.trim().length < 3 || !nomeRegex.test(profissao.trim())) {
-      Alert.alert('Profissão inválida. Use apenas letras e espaços (mínimo 3 caracteres).');
-      return;
-    }
-  
-    if (!email.trim() || !emailRegex.test(email)) {
-      Alert.alert('E-mail inválido');
-      return;
-    }
-  
-    if (!rua.trim() || !ruaEBairroRegex.test(rua.trim())) {
-      Alert.alert('Rua inválida (use apenas letras, números e vírgulas)');
-      return;
-    }
-  
-    if (!numero.trim() || !/^\d+$/.test(numero.trim())) {
-      Alert.alert('Número da casa deve conter apenas dígitos');
-      return;
-    }
-  
-    if (!bairro.trim() || !ruaEBairroRegex.test(bairro.trim())) {
-      Alert.alert('Bairro inválido (use apenas letras, números e vírgulas)');
-      return;
-    }
-  
-    if (!cidade.trim()) {
-      Alert.alert('Selecione uma cidade');
-      return;
-    }
-  
-    if (senha.length < 6) {
-      Alert.alert('A senha deve ter pelo menos 6 caracteres');
-      return;
-    }
-  
-    if (senha !== confirmarSenha) {
-      Alert.alert('As senhas não coincidem');
-      return;
-    }
-  
-    try {
-      setLoading(true);
-      const userCredential = await createUserWithEmailAndPassword(auth, email, senha);
-      const user = userCredential.user;
-  
-     await setDoc(doc(db, "users", user.uid), {
-  uid: user.uid,
-  nome: nome.trim(),
-  profissao: profissao.trim(),
-  email: email.trim(),
-  endereco: {
-    rua: rua.trim(),
-    numero: numero.trim(),
-    bairro: bairro.trim(),
-    cidade: cidade,
-    estado: estado,
-  },
-  isEstudante: isEstudante,
-  escola: isEstudante ? escolaSelecionada : null,
-  createdAt: new Date()
+  if (!nome.trim() || nome.trim().split(' ').length < 2 || !nomeRegex.test(nome.trim())) {
+    Alert.alert('Informe seu nome completo (somente letras e espaços)');
+    return;
+  }
+
+  if (!profissao.trim() || profissao.trim().length < 3 || !nomeRegex.test(profissao.trim())) {
+    Alert.alert('Profissão inválida. Use apenas letras e espaços (mínimo 3 caracteres).');
+    return;
+  }
+
+  if (!email.trim() || !emailRegex.test(email)) {
+    Alert.alert('E-mail inválido');
+    return;
+  }
+
+  if (!rua.trim() || !ruaEBairroRegex.test(rua.trim())) {
+    Alert.alert('Rua inválida (use apenas letras, números e vírgulas)');
+    return;
+  }
+
+  if (!numero.trim() || !/^\d+$/.test(numero.trim())) {
+    Alert.alert('Número da casa deve conter apenas dígitos');
+    return;
+  }
+
+  if (!bairro.trim() || !ruaEBairroRegex.test(bairro.trim())) {
+    Alert.alert('Bairro inválido (use apenas letras, números e vírgulas)');
+    return;
+  }
+
+  if (!cidade.trim()) {
+    Alert.alert('Selecione uma cidade');
+    return;
+  }
+
+  if (senha.length < 6) {
+    Alert.alert('A senha deve ter pelo menos 6 caracteres');
+    return;
+  }
+
+  if (senha !== confirmarSenha) {
+    Alert.alert('As senhas não coincidem');
+    return;
+  }
+
+  try {
+    setLoading(true);
+
+    // Criação do usuário
+    const userCredential = await createUserWithEmailAndPassword(auth, email, senha);
+    const user = userCredential.user;
+
+    // Envia e-mail de verificação com link personalizado
+ await sendEmailVerification(user, {
+  url: 'https://phenomenal-kataifi-744f20.netlify.app/verificar-email',
+  handleCodeInApp: false,
 });
 
-      Alert.alert('Sucesso', 'Usuário registrado com sucesso!');
-      router.replace('../(drawer)/conteudo/HomeScreen'); 
-    } catch (error) {
-      console.error(error);
-      Alert.alert('Erro', error.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-  
+
+    // Cria documento no Firestore
+    await setDoc(doc(db, "users", user.uid), {
+      uid: user.uid,
+      nome: nome.trim(),
+      profissao: profissao.trim(),
+      email: email.trim(),
+      endereco: {
+        rua: rua.trim(),
+        numero: numero.trim(),
+        bairro: bairro.trim(),
+        cidade: cidade,
+        estado: estado,
+      },
+      isEstudante: isEstudante,
+      escola: isEstudante ? escolaSelecionada : null,
+      createdAt: new Date()
+    });
+
+    Alert.alert(
+      'Conta criada!',
+      'Verifique seu e-mail antes de acessar o app.'
+    );
+
+    router.replace('./loginScreen');
+
+  } catch (error) {
+    console.error(error);
+    Alert.alert('Erro', error.message);
+  } finally {
+    setLoading(false);
+  }
+};
+
+ 
   useEffect(() => {
   if (isEstudante) {
     setListaEscolas(escolasPG);

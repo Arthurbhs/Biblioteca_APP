@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { collection, query, where, onSnapshot, addDoc, setDoc, doc, getDoc } from 'firebase/firestore';
+import { collection, query, where, onSnapshot, setDoc, doc, getDoc } from 'firebase/firestore';
 import { db } from '../../firebase';
 import { FontAwesome } from '@expo/vector-icons';
 
@@ -25,15 +25,13 @@ const AvaliacaoEstrelas: React.FC<AvaliacaoProps> = ({ livroId }) => {
   }, []);
 
   useEffect(() => {
-    const q = query(
-      collection(db, 'avaliacoes'),
-      where('livroId', '==', livroId)
-    );
+    const q = query(collection(db, 'avaliacoes'), where('livroId', '==', livroId));
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const avaliacoes = snapshot.docs.map(doc => doc.data().nota as number);
       const soma = avaliacoes.reduce((a, b) => a + b, 0);
       const mediaCalculada = avaliacoes.length > 0 ? soma / avaliacoes.length : 0;
+
       setMedia(mediaCalculada);
       setTotalAvaliacoes(avaliacoes.length);
 
@@ -51,8 +49,10 @@ const AvaliacaoEstrelas: React.FC<AvaliacaoProps> = ({ livroId }) => {
       return;
     }
 
+    // Busca o nome do usuário ou admin com base no UID
     const userRef = doc(db, 'users', user.uid);
     const userSnap = await getDoc(userRef);
+
     const nome = userSnap.exists() ? userSnap.data().nome : 'Anônimo';
 
     await setDoc(doc(db, 'avaliacoes', `${livroId}_${user.uid}`), {
@@ -65,8 +65,7 @@ const AvaliacaoEstrelas: React.FC<AvaliacaoProps> = ({ livroId }) => {
   };
 
   const renderEstrelas = (notaAtual: number, interativa = false) => {
-  const estrelas: JSX.Element[] = [];
-
+    const estrelas: JSX.Element[] = [];
 
     for (let i = 1; i <= 5; i++) {
       estrelas.push(

@@ -1,9 +1,6 @@
 // app/(drawer)/_layout.tsx
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { DrawerContentScrollView, DrawerItemList, DrawerItem } from '@react-navigation/drawer';
-import { View } from 'react-native';
-import { auth } from '../../firebase';
 import HomeScreen from './Home';
 import PerfilScreen from './Profile'; // ou './index' se estiver usando a tela principal como index
 import CustomDrawerContent from "../../src/components/CustomDrawerContent"
@@ -32,5 +29,3 @@ export default function Layout() {
     </Drawer.Navigator>
   );
 }
-
-

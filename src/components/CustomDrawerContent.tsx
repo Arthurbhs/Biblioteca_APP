@@ -4,10 +4,10 @@ import { DrawerContentScrollView, DrawerItemList, DrawerItem } from '@react-navi
 import { auth } from '../../firebase';
 
 const temas = [
-  'capoeira', 'axé', 'adoção', 'afroestima', 'comportamento / sentimento', 
+   'axé', 'adoção', 'afroestima', 'comportamento / sentimento', 
   'cultura indígena', 'empoderamento feminino', 'famílias diversas', 
   'inclusão', 'infanto juvenil', 'maternidade', 
-  'meio ambiente / reciclagem', 'poesia', 'questões sociais'
+  'meio ambiente / reciclagem','questões sociais'
 ];
 
 export default function CustomDrawerContent(props: any) {

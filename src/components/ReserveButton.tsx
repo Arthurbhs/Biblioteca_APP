@@ -82,10 +82,30 @@ setUsuarioComLivro(data.usuario || null);
   }
 
 
-  const nomeUsuario =
-  usuario.displayName?.trim() ||
-  usuario.email?.split('@')[0] || // usa o início do e-mail
-  'Usuário Anônimo';
+  const buscarNomeDoUsuario = async (uid: string) => {
+  try {
+    const userRef = doc(db, 'users', uid);
+    const admRef = doc(db, 'admins', uid);
+
+    const userSnap = await getDoc(userRef);
+    if (userSnap.exists()) {
+      return userSnap.data().nomeCompleto || userSnap.data().nome || 'Usuário';
+    }
+
+    const admSnap = await getDoc(admRef);
+    if (admSnap.exists()) {
+      return admSnap.data().nomeCompleto || admSnap.data().nome || 'Administrador';
+    }
+
+    return 'Usuário';
+  } catch (error) {
+    console.error('Erro ao buscar nome do usuário/admin:', error);
+    return 'Usuário';
+  }
+};
+
+const nomeUsuario = await buscarNomeDoUsuario(usuario.uid);
+
 
   try {
     const q = query(collection(db, 'reservas'), where('livroId', '==', livroId));

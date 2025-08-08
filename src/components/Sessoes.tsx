@@ -76,7 +76,8 @@ const ListaCategorias = () => {
 
   
 const renderSecao = (titulo: string, filtrarPor: string) => {
-  const data = filtrarPorPalavra(filtrarPor);
+ const data = filtrarPorPalavra(filtrarPor).slice(0, 15);
+
   if (data.length === 0) return null;
 
   return (
@@ -109,21 +110,21 @@ const renderSecao = (titulo: string, filtrarPor: string) => {
 
 
  const secoes = [
-  { titulo: '🪘 Capoeira', palavra: 'capoeira' },
-  { titulo: '✊ Coleção Black Power', palavra: 'coleção black power' },
-  { titulo: '♀️ Empoderamento Feminino', palavra: 'empoderamento feminino' },
-  { titulo: '⚖️ Questões Sociais', palavra: 'questões sociais' },
-  { titulo: '🧒👧 Infanto‑Juvenil', palavra: 'Infanto‑Juvenil' },
-  { titulo: '📖 Questões sociais', palavra: 'Questões sociais' },
-  { titulo: '👧 Infanto Juvenil', palavra: 'infanto juvenil' },
-  { titulo: '🌳♻️ Meio ambiente / Reciclagem', palavra: 'Meio ambiente / Reciclagem' },
-  { titulo: '❤️‍🩹🧠 Comportamento / Sentimentos', palavra: 'Comportamento / Sentimentos' },
+  //{ titulo: '🪘 Capoeira', palavra: 'capoeira' },
   { titulo: '👾🤖 Afrofuturismo', palavra: 'Afrofuturismo' },
-  { titulo: 'Coleção Literária Itaú ', palavra: 'Coleção Literária Itaú - Leia para uma criança' },
-  { titulo: '👾🤖 Famílias Diversas', palavra: 'Famílias Diversas' },
-  { titulo: 'maternidade', palavra: 'maternidade' },
-  { titulo: 'manifestação cultural', palavra: 'manifestação cultural' },
-  { titulo: 'Cultura Indígena', palavra: 'Cultura Indígena' },
+  { titulo: '✊ Coleção Black Power', palavra: 'coleção black power' },
+  { titulo: '📖👶 Coleção Literária Itaú ', palavra: 'Coleção Literária Itaú - Leia para uma criança' },
+  { titulo: '❤️‍🩹🧠 Comportamento / Sentimentos', palavra: 'Comportamento / Sentimentos' },
+  { titulo: '🛖🏹 Cultura Indígena', palavra: 'Cultura Indígena' },
+  { titulo: '♀️ Empoderamento Feminino', palavra: 'empoderamento feminino' },
+  { titulo: '🏳️‍🌈 Famílias Diversas', palavra: 'Famílias Diversas' },
+  { titulo: '🧒👧 Infanto‑Juvenil', palavra: 'Infanto‑Juvenil' },
+  { titulo: '🇧🇷 manifestação cultural', palavra: 'manifestação cultural' },
+  { titulo: '🤰 maternidade', palavra: 'maternidade' },
+  { titulo: '🌳♻️ Meio ambiente / Reciclagem', palavra: 'Meio ambiente / Reciclagem' },
+  { titulo: '⚖️ Questões Sociais', palavra: 'questões sociais' },
+  
+ 
 ];
 
 return (

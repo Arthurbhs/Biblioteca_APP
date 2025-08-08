@@ -17,6 +17,7 @@ import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import Modal from 'react-native-modal';
 
+
 interface Comentario {
   id: string;
   texto: string;
@@ -25,16 +26,34 @@ interface Comentario {
   nome: string;
   avatar: string;
   createdAt: Timestamp | null;
+  hidden?: boolean;
 }
 
-interface ComentariosProps {
-  livroId: string;
-}
+type ComentariosProps = {
+  comentario: {
+    id: string;
+          livroId: string;
+    texto: string;
+    usuarioId: string;
+    usuarioNome: string;
+    avatar?: string;
+    criadoEm: any; // Timestamp do Firestore
+    editadoEm?: any;
+    retido?: boolean;
+  };
+  usuarioAtualId: string;
+  usuarioAtualAdmin: boolean;
+  onExcluir: (id: string) => void;
+  onEditar: (id: string, novoTexto: string) => void;
+  onReter: (id: string, reter: boolean) => void;
+};
+
 
 const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
   const [comentarios, setComentarios] = useState<Comentario[]>([]);
   const [comentario, setComentario] = useState('');
   const [user, setUser] = useState<User | null>(null);
+  const [isAdmin, setIsAdmin] = useState(false);
   const [editandoId, setEditandoId] = useState<string | null>(null);
   const [novoTexto, setNovoTexto] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
@@ -43,44 +62,69 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
 
   const router = useRouter();
 
+  // Carregar usuário e verificar se é admin
   useEffect(() => {
     const auth = getAuth();
-    const unsubscribe = onAuthStateChanged(auth, setUser);
+    const unsubscribe = onAuthStateChanged(auth, async (usuario) => {
+      setUser(usuario);
+      if (usuario) {
+        const userRef = doc(db, 'users', usuario.uid);
+        const userSnap = await getDoc(userRef);
+        setIsAdmin(userSnap.exists() && userSnap.data().administrator === true);
+      }
+    });
     return () => unsubscribe();
   }, []);
 
+  const republicarComentario = async (comentarioId: string) => {
+  try {
+    await updateDoc(doc(db, 'comentarios', comentarioId), { hidden: false });
+  } catch (error) {
+    console.error('Erro ao republicar comentário:', error);
+  }
+};
+  // Buscar comentários (filtrando se necessário)
   useEffect(() => {
-    const q = query(
-      collection(db, 'comentarios'),
-      where('livroId', '==', livroId),
-      orderBy('createdAt', 'desc')
+  const q = query(
+    collection(db, 'comentarios'),
+    where('livroId', '==', livroId),
+    orderBy('createdAt', 'desc')
+  );
+
+  const unsubscribe = onSnapshot(q, async (snapshot) => {
+    const lista: Comentario[] = await Promise.all(
+      snapshot.docs.map(async (docSnap) => {
+        const data = docSnap.data();
+        
+        // Busca informações do usuário
+        const userRef = doc(db, 'users', data.userId);
+        const userSnap = await getDoc(userRef);
+        const nome = userSnap.exists() ? userSnap.data().nome : 'Anônimo';
+        const avatar = userSnap.exists() ? userSnap.data().avatarBase64 || '' : '';
+
+        return {
+          id: docSnap.id,
+          texto: data.texto,
+          userId: data.userId,
+          userEmail: data.userEmail,
+          nome,
+          avatar,
+          createdAt: data.createdAt ?? null,
+          hidden: data.hidden || false // 🔹 Adiciona status de retenção
+        };
+      })
     );
 
-    const unsubscribe = onSnapshot(q, async (snapshot) => {
-      const lista: Comentario[] = await Promise.all(
-        snapshot.docs.map(async (docSnap) => {
-          const data = docSnap.data();
-          const userRef = doc(db, 'users', data.userId);
-          const userSnap = await getDoc(userRef);
-          const nome = userSnap.exists() ? userSnap.data().nome : 'Anônimo';
-          const avatar = userSnap.exists() ? userSnap.data().avatarBase64 : '';
-          return {
-            id: docSnap.id,
-            texto: data.texto,
-            userId: data.userId,
-            userEmail: data.userEmail,
-            nome,
-            avatar,
-            createdAt: data.createdAt ?? null
-          };
-        })
-      );
-      setComentarios(lista);
-    });
+    // 🔹 Se for admin, mostra todos (incluindo retidos)
+    // 🔹 Se não for admin, remove retidos
+    const filtrados = isAdmin ? lista : lista.filter(c => !c.hidden);
+    setComentarios(filtrados);
+  });
 
-    return () => unsubscribe();
-  }, [livroId]);
+  return () => unsubscribe();
+}, [livroId, isAdmin]);
 
+  // Funções
   const enviarComentario = async () => {
     if (!comentario.trim() || !user) return;
 
@@ -96,7 +140,8 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
         userId: user.uid,
         userEmail: user.email,
         nome,
-        avatar,
+        avatar: user?.photoURL || "https://i.imgur.com/placeholder.png", // valor padrão
+        hidden: false,
         createdAt: serverTimestamp()
       });
 
@@ -116,13 +161,19 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
 
   const editarComentario = async (comentarioId: string, novoTexto: string) => {
     try {
-      await updateDoc(doc(db, 'comentarios', comentarioId), {
-        texto: novoTexto
-      });
+      await updateDoc(doc(db, 'comentarios', comentarioId), { texto: novoTexto });
       setEditandoId(null);
       setNovoTexto('');
     } catch (error) {
       console.error('Erro ao editar comentário:', error);
+    }
+  };
+
+  const reterComentario = async (comentarioId: string) => {
+    try {
+      await updateDoc(doc(db, 'comentarios', comentarioId), { hidden: true });
+    } catch (error) {
+      console.error('Erro ao reter comentário:', error);
     }
   };
 
@@ -144,10 +195,10 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
   };
 
   const formatarData = (data: Timestamp | null) => {
-  if (!data) return '';
-  const date = data.toDate();
-  return `${date.toLocaleDateString()} - ${date.getHours()}:${date.getMinutes().toString().padStart(2, '0')}`;
-};
+    if (!data) return '';
+    const date = data.toDate();
+    return `${date.toLocaleDateString()} - ${date.getHours()}:${date.getMinutes().toString().padStart(2, '0')}`;
+  };
 
   const renderItem = ({ item }: { item: Comentario }) => {
     const isAuthor = user?.uid === item.userId;
@@ -168,7 +219,7 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
               <TouchableOpacity onPress={() => navegarParaPerfil(item.userId)}>
                 <Text style={styles.nome}>{item.nome}</Text>
               </TouchableOpacity>
-              {isAuthor && (
+              {(isAuthor || isAdmin) && (
                 <TouchableOpacity
                   onPress={(event) => {
                     const { pageX, pageY } = event.nativeEvent;
@@ -186,109 +237,136 @@ const Comentarios: React.FC<ComentariosProps> = ({ livroId }) => {
           </View>
         </View>
 
-        {editandoId === item.id ? (
-          <>
-            <TextInput
-              value={novoTexto}
-              onChangeText={setNovoTexto}
-              style={[styles.input, { marginTop: 8 }]}
-              multiline
-            />
-            <View style={{ flexDirection: 'row', marginTop: 4 }}>
-              <Button title="Salvar" onPress={() => editarComentario(item.id, novoTexto)} />
-              <View style={{ width: 8 }} />
-              <Button title="Cancelar" color="gray" onPress={() => setEditandoId(null)} />
-            </View>
-          </>
-        ) : (
-          <Text>{item.texto}</Text>
-        )}
+       {editandoId === item.id ? (
+  <>
+    <TextInput
+      value={novoTexto}
+      onChangeText={setNovoTexto}
+      style={[styles.input, { marginTop: 8 }]}
+      multiline
+    />
+    <View style={{ flexDirection: 'row', marginTop: 4 }}>
+      <Button title="Salvar" onPress={() => editarComentario(item.id, novoTexto)} />
+      <View style={{ width: 8 }} />
+      <Button title="Cancelar" color="gray" onPress={() => setEditandoId(null)} />
+    </View>
+  </>
+) : (
+  <Text
+    style={{
+      opacity: item.hidden ? 0.6 : 1,
+      color: isAdmin && item.hidden ? 'red' : 'black'
+    }}
+  >
+    {item.texto}
+  </Text>
+)}
+
       </View>
     );
   };
 
- return (
-  <KeyboardAvoidingView
-    style={{ flex: 1 }}
-    behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-    keyboardVerticalOffset={Platform.OS === 'ios' ? 100 : 0}
+  return (
+    <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+      <Text style={styles.titulo}>Comentarios</Text>
+      <TouchableOpacity style={{ flex: 1 }} activeOpacity={1} onPress={() => Keyboard.dismiss()}>
+        <View style={styles.container}>
+          <FlatList
+            data={comentarios}
+            renderItem={renderItem}
+            keyExtractor={(item) => item.id}
+            contentContainerStyle={{ paddingBottom: 120 }}
+            keyboardShouldPersistTaps="handled"
+          />
+
+          <View style={{ paddingBottom: 16, paddingHorizontal: 16, width: '100%' }}>
+            <TextInput
+              placeholder="Escreva um comentário"
+              value={comentario}
+              onChangeText={setComentario}
+              style={styles.input}
+              multiline
+            />
+            <Button title="Enviar" onPress={enviarComentario} />
+          </View>
+        </View>
+
+        {/* Menu */}
+        <Modal
+          isVisible={modalVisible}
+          onBackdropPress={() => setModalVisible(false)}
+          backdropColor="transparent"
+          style={{
+            justifyContent: 'flex-start',
+            alignItems: 'flex-start',
+            margin: 0,
+            paddingTop: modalPosition.y,
+            paddingLeft: modalPosition.x + 20,
+          }}
+        >
+          <View style={styles.menuContainer}>
+            {modalComentarioId && (
+              <>
+                {/* Editar - apenas autor dentro do prazo */}
+                {comentarios.find(c => c.id === modalComentarioId)?.userId === user?.uid &&
+                  podeEditar(comentarios.find(c => c.id === modalComentarioId)?.createdAt || null) && (
+                    <TouchableOpacity
+                      style={styles.menuButton}
+                      onPress={() => {
+                        const texto = comentarios.find(c => c.id === modalComentarioId)?.texto || '';
+                        setEditandoId(modalComentarioId);
+                        setNovoTexto(texto);
+                        setModalVisible(false);
+                      }}
+                    >
+                      <Text style={styles.menuText}>Editar</Text>
+                    </TouchableOpacity>
+                  )}
+
+                {/* Reter - apenas admin */}
+              {isAdmin && !comentarios.find(c => c.id === modalComentarioId)?.hidden && (
+  <TouchableOpacity
+    style={styles.menuButton}
+    onPress={() => {
+      reterComentario(modalComentarioId);
+      setModalVisible(false);
+    }}
   >
-       <Text style={styles.titulo}>Comentarios</Text>
-    <TouchableOpacity
-      style={{ flex: 1 }}
-      activeOpacity={1}
-      onPress={() => Keyboard.dismiss()}
-    >
-      <View style={styles.container}>
-        <FlatList
-          data={comentarios}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.id}
-          contentContainerStyle={{ paddingBottom: 120 }}
-          keyboardShouldPersistTaps="handled"
-        />
+    <Text style={styles.menuText}>Reter</Text>
+  </TouchableOpacity>
+)}
 
-      <View style={{ paddingBottom: 16, paddingHorizontal: 16, width: '100%' }}>
-  <TextInput
-    placeholder="Escreva um comentário"
-    value={comentario}
-    onChangeText={setComentario}
-    style={styles.input}
-    multiline
-  />
-  <Button title="Enviar" onPress={enviarComentario} />
-</View>
+                {isAdmin && comentarios.find(c => c.id === modalComentarioId)?.hidden && (
+  <TouchableOpacity
+    style={styles.menuButton}
+    onPress={() => {
+      republicarComentario(modalComentarioId);
+      setModalVisible(false);
+    }}
+  >
+    <Text style={styles.menuText}>Republicar</Text>
+  </TouchableOpacity>
+)}
 
-      </View>
-
-      <Modal
-        isVisible={modalVisible}
-        onBackdropPress={() => setModalVisible(false)}
-        backdropColor="transparent"
-        animationIn="fadeIn"
-        animationOut="fadeOut"
-        style={{
-          justifyContent: 'flex-start',
-          alignItems: 'flex-start',
-          margin: 0,
-          paddingTop: modalPosition.y,
-          paddingLeft: modalPosition.x + 20,
-        }}
-      >
-        <View style={styles.menuContainer}>
-          {modalComentarioId && (
-            <>
-              {comentarios.find(c => c.id === modalComentarioId)?.userId === user?.uid &&
-                podeEditar(comentarios.find(c => c.id === modalComentarioId)?.createdAt || null) && (
+                {/* Excluir - autor ou admin */}
+                {(comentarios.find(c => c.id === modalComentarioId)?.userId === user?.uid || isAdmin) && (
                   <TouchableOpacity
                     style={styles.menuButton}
                     onPress={() => {
-                      const texto = comentarios.find(c => c.id === modalComentarioId)?.texto || '';
-                      setEditandoId(modalComentarioId);
-                      setNovoTexto(texto);
+                      deletarComentario(modalComentarioId);
                       setModalVisible(false);
                     }}
                   >
-                    <Text style={styles.menuText}>Editar</Text>
+                    <Text style={[styles.menuText, { color: 'red' }]}>Excluir</Text>
                   </TouchableOpacity>
                 )}
-              <TouchableOpacity
-                style={styles.menuButton}
-                onPress={() => {
-                  deletarComentario(modalComentarioId);
-                  setModalVisible(false);
-                }}
-              >
-                <Text style={[styles.menuText, { color: 'red' }]}>Excluir</Text>
-              </TouchableOpacity>
-            </>
-          )}
-        </View>
-      </Modal>
-    </TouchableOpacity>
-  </KeyboardAvoidingView>
-);
-
+              </>
+            )}
+          </View>
+        </Modal>
+      </TouchableOpacity>
+    </KeyboardAvoidingView>
+  );
 };
 
 const styles = StyleSheet.create({

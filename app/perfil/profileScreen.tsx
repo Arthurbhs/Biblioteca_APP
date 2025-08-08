@@ -3,6 +3,7 @@ import { View, Text, TextInput, StyleSheet, Alert, ScrollView, Image } from 'rea
 import { Button } from 'react-native-elements';
 import { auth, db } from '../../firebase';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { Platform } from 'react-native'; // já que vamos precisar
 import * as ImagePicker from 'expo-image-picker';
 import * as FileSystem from 'expo-file-system';
 import CustomHeader from '@/src/components/Header';
@@ -53,23 +54,25 @@ const [usuario, setUsuario] = useState<User | null>(null);
     carregarDados();
   }, []);
 
-  const pickImage = async () => {
-    const permission = await ImagePicker.requestMediaLibraryPermissionsAsync();
-    if (!permission.granted) {
-      Alert.alert('Permissão necessária', 'Precisamos de acesso à galeria.');
-      return;
-    }
+ const pickImage = async () => {
+  const permission = await ImagePicker.requestMediaLibraryPermissionsAsync();
+  if (!permission.granted) {
+    Alert.alert('Permissão necessária', 'Precisamos de acesso à galeria.');
+    return;
+  }
 
     const result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
-      allowsEditing: true,
-      aspect: [1, 1],
-      quality: 0.7,
-      base64: true, // necessário!
-    });
+    mediaTypes: ImagePicker.MediaTypeOptions.Images,
+    allowsEditing: true,
+    aspect: [1, 1],
+    quality: 0.7,
+    base64: true, // necessário para salvar no Firestore
+  });
 
     if (!result.canceled) {
-      const selected = result.assets[0];
+    const selected = result.assets[0];
+
+    if (Platform.OS !== 'web') {
       const fileInfo = await FileSystem.getInfoAsync(selected.uri);
       if (!fileInfo.exists) {
         Alert.alert('Erro', 'Arquivo não encontrado.');
@@ -81,14 +84,17 @@ const [usuario, setUsuario] = useState<User | null>(null);
         Alert.alert('Imagem muito grande', 'Escolha uma imagem com até 5MB.');
         return;
       }
-
-      // ⚠️ Aqui usamos base64
-      if (selected.base64) {
-        const base64Uri = `data:image/jpeg;base64,${selected.base64}`;
-        setAvatar(base64Uri);
-      }
+    } else {
+      console.log('Rodando no web — pulando verificação de FileSystem.');
     }
-  };
+
+    // salvar imagem em base64
+    if (selected.base64) {
+      const base64Uri = `data:image/jpeg;base64,${selected.base64}`;
+      setAvatar(base64Uri);
+    }
+  }
+};
 
   const salvarAlteracoes = async () => {
     if (!usuario) return;

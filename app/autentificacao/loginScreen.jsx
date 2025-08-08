@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Alert, Image } from 'react-native';
-import { Input, Button} from 'react-native-elements';
-import { Text } from 'react-native'; 
+import { Input, Button } from 'react-native-elements';
+import { Text } from 'react-native';
 import { auth } from '../../firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { useRouter } from 'expo-router';
-
 
 export default function LoginScreen() {
   const [email, setEmail] = useState('');
@@ -13,18 +12,32 @@ export default function LoginScreen() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  const handleLogin = async () => {
-    setLoading(true);
-    try {
-      await signInWithEmailAndPassword(auth, email, senha);
-      Alert.alert('Login realizado com sucesso!');
-      router.push('../(drawer)/Home');
-    } catch (error) {
-      Alert.alert('Erro no login', error.message);
-    } finally {
-      setLoading(false);
+ const handleLogin = async () => {
+  setLoading(true);
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, senha);
+    const user = userCredential.user;
+
+    // Atualiza os dados do usuário
+    await user.reload();
+
+    if (!user.emailVerified) {
+      await signOut(auth); // força logout
+      Alert.alert(
+        'Verificação necessária',
+        'Por favor, verifique seu e-mail antes de acessar o aplicativo.'
+      );
+      return;
     }
-  };
+
+    Alert.alert('Login realizado com sucesso!');
+    router.push('../(drawer)/Home');
+  } catch (error) {
+    Alert.alert('Erro no login', error.message);
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <View style={styles.container}>
