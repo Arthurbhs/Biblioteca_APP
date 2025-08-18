@@ -6,6 +6,7 @@ import { doc, getDoc, setDoc } from 'firebase/firestore';
 import * as ImagePicker from 'expo-image-picker';
 import * as FileSystem from 'expo-file-system';
 import CustomHeader from '@/src/components/Header';
+import ButtonExel from "../../src/components/ButtonExel"
 
 
 export default function AdminProfileScreen() {
@@ -156,6 +157,8 @@ const pickImage = async () => {
         ) : (
           <Button title="Editar" onPress={() => setEditando(true)} buttonStyle={styles.botao} />
         )}
+
+        <ButtonExel/>
       </ScrollView>
     </>
   );

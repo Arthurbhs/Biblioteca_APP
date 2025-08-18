@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
-import { collection, getDocs, doc, updateDoc, getDoc } from 'firebase/firestore';
+import { collection, getDocs, doc, updateDoc, getDoc, query, where } from 'firebase/firestore';
 import { db } from '../../firebase';
 import Toast from 'react-native-toast-message';
 import { deleteDoc } from 'firebase/firestore';
@@ -36,24 +36,26 @@ export default function LivrosReservados({ uid, mostrarCancelar = false }: Props
         if (data.reservadoPor !== uid) return null;
 
         try {
-          const response = await fetch(`https://bookapi.apimateriallistcalculator.workers.dev/livros/${data.livroId}`);
+          // 🔹 Busca o livro pelo campo 'id' na coleção livros
+          const q = query(collection(db, "livros"), where("id", "==", data.livroId));
+          const livroSnap = await getDocs(q);
 
-          if (!response.ok) {
-            console.warn(`⚠️ API retornou erro para livro ${data.livroId}:`, response.status);
+          if (livroSnap.empty) {
+            console.warn(`⚠️ Livro ${data.livroId} não encontrado no Firestore`);
             return null;
           }
 
-          const livro = await response.json();
+          const livroData = livroSnap.docs[0].data();
 
           return {
             id: reservaId,
             livroId: data.livroId,
-            titulo: livro.titulo || 'Título não encontrado',
+            titulo: livroData?.titulo || 'Título não encontrado',
             dataReserva: data.dataReserva,
           } as LivroReservado;
 
         } catch (error) {
-          console.error(`❌ Erro ao buscar livro na API (id ${data.livroId}):`, error);
+          console.error(`❌ Erro ao buscar livro no Firestore (id ${data.livroId}):`, error);
           return null;
         }
       });
@@ -78,50 +80,32 @@ export default function LivrosReservados({ uid, mostrarCancelar = false }: Props
     carregar();
   }, [uid]);
 
- const deixarDeReservar = async (reservaId: string) => {
-  const ref = doc(db, 'reservas', reservaId);
-  const snap = await getDoc(ref);
-  if (!snap.exists()) return;
+  const deixarDeReservar = async (reservaId: string) => {
+    const ref = doc(db, 'reservas', reservaId);
+    const snap = await getDoc(ref);
+    if (!snap.exists()) return;
 
-  const data = snap.data();
-  const novaFila: string[] = data.fila || [];
+    const data = snap.data();
+    const novaFila: string[] = data.fila || [];
 
-  if (novaFila.length === 0) {
-    // ✅ Ninguém na fila: remover documento da reserva
-    await deleteDoc(ref);
-    Toast.show({
-      type: 'success',
-      text1: 'Reserva cancelada e removida',
-    });
-  } else {
-    // 👥 Ainda há fila: passar para o próximo da fila
-    const novoReservado = novaFila.shift(); // remove o primeiro da fila
+    if (novaFila.length === 0) {
+      await deleteDoc(ref);
+      Toast.show({ type: 'success', text1: 'Reserva cancelada e removida' });
+    } else {
+      const novoReservado = novaFila.shift(); 
+      await updateDoc(ref, { reservadoPor: novoReservado, fila: novaFila });
+      Toast.show({ type: 'success', text1: 'Reserva cancelada, próximo da fila foi promovido' });
+    }
 
-    await updateDoc(ref, {
-      reservadoPor: novoReservado,
-      fila: novaFila,
-    });
-
-    Toast.show({
-      type: 'success',
-      text1: 'Reserva cancelada, próximo da fila foi promovido',
-    });
-  }
-
-  carregar(); // recarrega a lista após cancelar
-};
+    carregar();
+  };
 
   if (loading) return <Text>Carregando reservas...</Text>;
-
-  if (!loading && livros.length === 0) {
-    console.log("📭 Nenhum livro reservado encontrado.");
-    return <Text>Sem livros reservados.</Text>;
-  }
+  if (!loading && livros.length === 0) return <Text>Sem livros reservados.</Text>;
 
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Seus livros reservados</Text>
-
       <FlatList
         data={livros}
         keyExtractor={(item) => item.id}
@@ -149,37 +133,11 @@ export default function LivrosReservados({ uid, mostrarCancelar = false }: Props
 }
 
 const styles = StyleSheet.create({
-  container: {
-    marginTop: 20,
-    paddingHorizontal: 16,
-  },
-  titulo: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginBottom: 8,
-  },
-  item: {
-    backgroundColor: '#f0f0f0',
-    padding: 12,
-    borderRadius: 8,
-    marginBottom: 10,
-  },
-  livroId: {
-    fontSize: 16,
-  },
-  data: {
-    fontSize: 14,
-    color: '#666',
-  },
-  botaoCancelar: {
-    marginTop: 8,
-    padding: 8,
-    backgroundColor: '#f44336',
-    borderRadius: 6,
-  },
-  textoCancelar: {
-    color: '#fff',
-    textAlign: 'center',
-    fontWeight: 'bold',
-  },
+  container: { marginTop: 20, paddingHorizontal: 16 },
+  titulo: { fontSize: 18, fontWeight: 'bold', marginBottom: 8 },
+  item: { backgroundColor: '#f0f0f0', padding: 12, borderRadius: 8, marginBottom: 10 },
+  livroId: { fontSize: 16 },
+  data: { fontSize: 14, color: '#666' },
+  botaoCancelar: { marginTop: 8, padding: 8, backgroundColor: '#f44336', borderRadius: 6 },
+  textoCancelar: { color: '#fff', textAlign: 'center', fontWeight: 'bold' },
 });

@@ -9,9 +9,11 @@ import {
 } from 'react-native';
 import Header  from '../../src/components/Header';
 import LivroButton  from '../../src/components/LivroButton';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase';
 
 type Livro = {
-  id: number;
+  id: string;
   titulo: string;
   capa: string;
   mostruario: string;
@@ -19,14 +21,6 @@ type Livro = {
   tema: string;
   genero: string;
 };
-
-const gerarSlug = (titulo: string) =>
-  titulo
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
 
 const SearchPage = () => {
   const { termo } = useLocalSearchParams<{ termo?: string }>();
@@ -39,15 +33,18 @@ const SearchPage = () => {
       if (!termo) return;
 
       try {
-        const response = await fetch('https://bookapi.apimateriallistcalculator.workers.dev/livros');
-        const data: Livro[] = await response.json();
+        const snapshot = await getDocs(collection(db, "livros"));
+        const todosLivros: Livro[] = snapshot.docs.map(doc => ({
+          id: doc.id,
+          ...(doc.data() as Omit<Livro, "id">)
+        }));
 
         const termoNormalizado = termo
           .toLowerCase()
           .normalize('NFD')
           .replace(/[\u0300-\u036f]/g, '');
 
-        const livrosFiltrados = data.filter((livro) => {
+        const livrosFiltrados = todosLivros.filter((livro) => {
           const titulo = livro.titulo?.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '') || '';
           const tema = livro.tema?.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '') || '';
           const genero = livro.genero?.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '') || '';
@@ -61,7 +58,7 @@ const SearchPage = () => {
 
         setLivros(livrosFiltrados);
       } catch (error) {
-        console.error('Erro ao buscar livros:', error);
+        console.error('Erro ao buscar livros no Firestore:', error);
       } finally {
         setLoading(false);
       }
@@ -76,28 +73,30 @@ const SearchPage = () => {
 
   if (!termo || livros.length === 0) {
     return (
-      <><Header/>
-      <View style={styles.container}>
-        <Text style={styles.header}>Nenhum livro encontrado para "{termo}".</Text>
-      </View>
+      <>
+        <Header/>
+        <View style={styles.container}>
+          <Text style={styles.header}>Nenhum livro encontrado para "{termo}".</Text>
+        </View>
       </>
     );
   }
 
   return (
-    <><Header/>
-    <View style={styles.container}>
-      <Text style={styles.header}>Resultados para "{termo}"</Text>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {livros.map((livro) => (
-          <LivroButton
-            key={livro.id}
-            livro={livro}
-            onPress={() => router.push(`/livros/${livro.id}`)}
-          />
-        ))}
-      </ScrollView>
-    </View>
+    <>
+      <Header/>
+      <View style={styles.container}>
+        <Text style={styles.header}>Resultados para "{termo}"</Text>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          {livros.map((livro) => (
+            <LivroButton
+              key={livro.id}
+              livro={livro}
+              onPress={() => router.push(`/livros/${livro.id}`)}
+            />
+          ))}
+        </ScrollView>
+      </View>
     </>
   );
 };

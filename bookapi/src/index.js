@@ -1370,21 +1370,398 @@ export default {
 },
 
 {
-  id: 145,
+  id: 189,
+  titulo: "A Visita",
+  autor: "Antje Damm",
+  editora: "Companhia das Letrinhas",
+  tema: "Coleção Literária Itaú - Leia para uma criança",
+  genero: "Literatura infantil / emoções",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 40,
+  resumo: "Elise é uma mulher muito medrosa que vive isolada até que um aviãozinho de papel e uma visita inesperada a desafiam a sair da zona de conforto, promovendo transformação emocional.",
+  dataPublicacao: "2016-06-08",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/AVisita.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/AVisita.jpeg?raw=true"
+},
+
+{
+  id: 190,
+  titulo: "O Tupi que Você Fala",
+  autor: "Cláudio Fragata",
+  editora: "Globinho",
+  tema: "Coleção Literária Itaú - Leia para uma criança",
+  genero: "Literatura infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "Mostra como palavras do cotidiano têm origem indígena (como pipoca, saci, abacaxi), revelando que o tupi está vivo em nosso português de forma divertida e ilustrada.",
+  dataPublicacao: "2015-03-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/OTupiQueVoceFala.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/OTupiQueVoceFala.jpeg?raw=true"
+},
+
+{
+  id: 191,
+  titulo: "Selou e Maya",
+  autor: "Lara Meana",
+  editora: "SM Educação",
+  tema: "Coleção Literária Itaú - Leia para uma criança",
+  genero: "Narrativa infantil / fantasia cotidianas",
+  classificacaoLiteraria: "Infantojuvenil",
+  numeroPaginas: 32,
+  resumo: "Relata as fantasias de duas vizinhas: Selou brinca de galopar na savana ou assustar crocodilos, enquanto Maya imagina rodar no carrossel do Central Park ou nadar no rio Nilo — celebrando a imaginação e amizade.",
+  dataPublicacao: "2013-01-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/SelouEMaya.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/SelouEMaya.jpeg?raw=true"
+},
+
+{
+  id: 192,
+  titulo: "Chapeuzinho amarelo",
+  autor: "Chico Buarque",
+  editora: "Autêntica infantil e juvenil",
+  tema: "Coleção Literária Itaú - Leia para uma criança",
+  genero: "Literatura infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 36,
+  resumo: "Chapeuzinho é tão medrosa que tem medo até do próprio medo. Ao enfrentar o Lobo, ela aprende a superar seus temores e voltar a viver com alegria.",
+  dataPublicacao: "2017-03-15",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/ChapeuzinhoAmarelo.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/ChapeuzinhoAmarelo.jpeg?raw=true"
+},
+
+{
+  id: 194,
+  titulo: "Com que roupa irei para a festa do rei?",
+  autor: "Tino Freitas",
+  editora: "Editora do Brasil",
+  tema: "Coleção Literária Itaú - Leia para uma criança",
+  genero: "Literatura infantil / poesia",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 40,
+  resumo: "Em versos divertidos e ilustrações encantadoras, animais tentam adivinhar a roupa que o rei usará na festa — inspirada no conto de Andersen, com humor e referências culturais.",
+  dataPublicacao: "2017-?-?",  // ano de premiação e PNLD 2018 :contentReference[oaicite:0]{index=0}
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/ComQueRoupaIreiParaAFestaDoRei.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/ComQueRoupaIreiParaAFestaDoRei.jpeg?raw=true"
+},
+
+{
+  id: 195,
+  titulo: "Dorme, menino, dorme",
+  autor: "Laura Herrera",
+  editora: "Livros da Matriz",
+  tema: "Coleção Literária Itaú - Leia para uma criança",
+  genero: "Literatura infantil / cantiga de ninar",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "Com versos rimados e ilustrações sensíveis, acompanha um menino que não consegue dormir enquanto tenta se recolher ao mundo dos sonhos — uma cantiga reconfortante.",
+  dataPublicacao: "2014-?-?",  // edição 2014 estimada :contentReference[oaicite:2]{index=2}
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/DormeMeninoDorme.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/DormeMeninoDorme.jpeg?raw=true"
+},
+
+{
+  id: 196,
   titulo: "Em cima daquela serra",
   autor: "Eucanaã Ferraz",
   editora: "Companhia das Letrinhas",
   tema: "Coleção Literária Itaú - Leia para uma criança",
-  genero: "Infantil",
+  genero: "Poesia infantil",
   classificacaoLiteraria: "Infantil",
-  numeroPaginas: 30,
-  resumo: "Com uma linguagem poética, o autor convida o leitor a observar e imaginar o que existe no alto de uma serra encantada.",
-  dataPublicacao: "2019-02-25",
+  numeroPaginas: 40,
+  resumo: "Poema visual sobre o que passa por cima de uma serra — bois, balões, caminhões e até um elefante — com ritmo encantador e ilustrações poéticas de Yara Kono.",
+  dataPublicacao: "2013-02-19",
   dataCatalogo: "2025-07-30",
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/EmCimaDaquelaSerra.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/EmCimaDaquelaSerra.jpeg?raw=true"
 },
 
+{
+  id: 197,
+  titulo: "Enquanto o almoço não fica pronto",
+  autor: "Sonia Rosa",
+  editora: "Zit Editora",
+  tema: "Coleção Literária Itaú - Leia para uma criança",
+  genero: "Literatura infantil / cotidiano afetivo",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 24,
+  resumo: "Com poesia e humor, retrata a correria tranquila de uma família enquanto o almoço ainda não está pronto, exaltando o afeto doméstico.",
+  dataPublicacao: "2020-??-??",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/EnquantoOAlmocoNaoFicaPronto.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/EnquantoOAlmocoNaoFicaPronto.jpeg?raw=true"
+},
+
+{
+  id: 198,
+  titulo: "Festa no céu",
+  autor: "Ângela Lago",
+  editora: "Melhoramentos",
+  tema: "Coleção Literária Itaú - Leia para uma criança",
+  genero: "Folclore infantil ilustrado",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "Adaptação do folclore em que animais sem asas desejam ir à festa no céu; uma tartaruga esperta consegue driblar a impossibilidade e participar da celebração.",
+  dataPublicacao: "2019-04-04",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/FestaNoCeu.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/FestaNoCeu.jpeg?raw=true"
+},
+
+{
+  id: 199,
+  titulo: "Gato pra cá; rato pra lá",
+  autor: "Sylvia Orthof",
+  editora: "Rovelle",
+  tema: "Coleção Literária Itaú - Leia para uma criança",
+  genero: "Fábula poética infantil",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 21,
+  resumo: "Poética história noturna de um gato viajado que encontra um rato triste; o encontro desperta empatia e beleza na simplicidade da vida.",
+  dataPublicacao: "2012-??-??",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/GatoPraCaRatoPraLa.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/GatoPraCaRatoPraLa.jpeg?raw=true"
+},
+
+{
+  id: 200,
+  titulo: "Jogo da parlenda",
+  autor: "Heloisa Pietro",
+  editora: "Scipione",
+  tema: "Coleção Literária Itaú - Leia para uma criança",
+  genero: "Literatura infantil / parlendas",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 32,
+  resumo: "Uma coletânea divertida de parlendas brasileiras para brincar, aprender e se divertir com as rimas tradicionais.",
+  dataPublicacao: "2015-06-01",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/JogoDaParlenda.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/JogoDaParlenda.jpeg?raw=true"
+},
+{
+  id: 201,
+  titulo: "Léo e a baleia",
+  autor: "Benjin Davis",
+  editora: "Callis Editora",
+  tema: "Coleção Literária Itaú - Leia para uma criança",
+  genero: "Literatura infantil / conto ilustrado",
+  classificacaoLiteraria: "Infantil",
+  numeroPaginas: 28,
+  resumo: "A história emocionante de um menino chamado Léo que sonha em conhecer uma baleia e vive uma aventura cheia de aprendizado e amizade.",
+  dataPublicacao: "2018-03-15",
+  dataCatalogo: "2025-07-30",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/LeoEBaleia.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/LeoEBaleia.jpeg?raw=true"
+},
+{
+  id: 202,
+   titulo: "Lino",
+  autor: "André Neves",
+  editora: "Callis",
+  tema: "Infantil",
+  genero: "Literatura infantil",
+  classificacaoLiteraria: "Professores recomendam; faixa etária: 6-9 anos",
+  numeroPaginas: 36,
+  resumo: "Lino é a história de um porquinho que fez amizade com uma coelhinha branca chamada Lua na fábrica de brinquedos. Depois que Lua desaparece, Lino sente falta dela — quem seria seu companheiro de corridas e de histórias na hora de dormir? O livro trata de amizade, saudade e superação com linguagem acessível para crianças pequenas.",
+  dataPublicacao: "28 de julho de 2010",
+  dataCatalogo: "2025-08-12",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/lino.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/lino.jpeg?raw=true"
+},
+
+{
+  id: 203,  // você pode definir o id conforme desejar
+  titulo: "O Menino Azul",
+  autor: "Cecília Meireles",
+  editora: "Global Editora",
+  tema: "Poesia infantil",
+  genero: "Literatura infantil / Poesia",
+  classificacaoLiteraria: "",
+  numeroPaginas: 24,
+  resumo: "Um poema infantil que expressa o imaginário de uma criança que deseja um burrinho capaz de inventar histórias bonitas com pessoas, bichos e barquinhos no mar. A linguagem é leve, rica em imagens e simbolismo, encantando crianças, jovens e adultos.",
+  dataPublicacao: "1 de janeiro de 2013",
+  dataCatalogo: "2025-08-12",  // pode usar a data atual
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/o_menino_azul.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/o_menino_azul.jpeg?raw=true"
+},
+
+{
+  id: 205,
+  titulo: "O Mundo Inteiro",
+  autor: "Liz Garton Scanlon",
+  editora: "Paz & Terra",
+  tema: "Coleção Literária Itaú – Leia para uma Criança",
+  genero: "Poesia infantil / Literatura infantil",
+  classificacaoLiteraria: "",
+  numeroPaginas: 40,
+  resumo: "Livro poético que explora o que constitui “o mundo inteiro” por meio de versos rimados e ilustrações delicadas, celebrando a vida, as conexões humanas e os pequenos detalhes do dia a dia.",
+  dataPublicacao: "31 de dezembro de 2012",
+  dataCatalogo: "2025-08-12",
+  capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/o_mundo_inteiro.jpeg?raw=true",
+  mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/o_mundo_inteiro.jpeg?raw=true"
+},
+
+  {
+    id: 206,
+    titulo: "Lobisomem",
+    autor: "Equipe Girassol",
+    editora: "Girassol / Itaú Social",
+    tema: "Coleção Literária Itaú – Leia para uma Criança",
+    genero: "Literatura infantil / Folclore",
+    classificacaoLiteraria: "",
+    numeroPaginas: 16,
+    resumo: "A lenda do lobisomem reimaginada de forma leve e acessível: quando um oitavo filho completa 13 anos, se transforma em lobisomem e enfrenta um grande desafio para voltar ao normal.",
+    dataPublicacao: "2010",
+    dataCatalogo: "2025-08-12",
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/lobisomem.jpeg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/lobisomem.jpeg?raw=true"
+  },
+  {
+    id: 207,
+    titulo: "O ratinho, o morango vermelho maduro e o grande urso esfomeado",
+    autor: "Don & Audrey Wood",
+    editora: "Brinque-Book",
+    tema: "Coleção Literária Itaú – Leia para uma Criança",
+    genero: "Fábula infantil",
+    classificacaoLiteraria: "",
+    numeroPaginas: 34,
+    resumo: "Uma fábula repleta de humor sobre um ratinho tentando proteger seu morango de um narrador astuto e de um urso faminto que, curiosamente, não aparece.",
+    dataPublicacao: "2012",
+    dataCatalogo: "2025-08-12",
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/o_ratinho_morango_urso.jpeg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/o_ratinho_morango_urso.jpeg?raw=true"
+  },
+ 
+  {
+    id: 209,
+    titulo: "Olhos do Jaguar",
+    autor: "Yaguarê Yamã",
+    editora: "Jujuba Editora",
+    tema: "Coleção Itaú – Leia para uma Criança",
+    genero: "Fábula / Literatura infantil indígena",
+    classificacaoLiteraria: "",
+    numeroPaginas: 24,
+    resumo: "Fábula amazônica contada em linguagem maraguá: um jaguar tenta enganar um tatu, acaba perdendo seus olhos, mas é salvo por um pássaro amigo, numa história cheia de simbolismo e respeito à cultura indígena.",
+    dataPublicacao: "16 de setembro de 2021",
+    dataCatalogo: "2025-08-12",
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/olhos_do_jaguar.jpeg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/olhos_do_jaguar.jpeg?raw=true"
+  },
+  {
+    id: 210,
+    titulo: "Papai!",
+    autor: "Philippe Corentin",
+    editora: "Cosac Naify (edição Itaú Social)",
+    tema: "Coleção Itaú – Leia para uma Criança",
+    genero: "Literatura infantil",
+    classificacaoLiteraria: "",
+    numeroPaginas: 32,
+    resumo: "Uma história leve e divertida sobre a relação com o pai — com humor e simplicidade, típica do autor Philippe Corentin.",
+    dataPublicacao: "2008",
+    dataCatalogo: "2025-08-12",
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/papai.jpeg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/papai.jpeg?raw=true"
+  },
+
+  {
+    id: 208,
+    titulo: "Pedro vira porco-espinho",
+    autor: "Janaina Tokitaka",
+    editora: "Jujuba Editora",
+    tema: "Coleção Literária Itaú – Leia para uma Criança",
+    genero: "Literatura infantil / Metáfora emocional",
+    classificacaoLiteraria: "",
+    numeroPaginas: 31,
+    resumo: "Pedro é um menino normal que, em um dia frustrante, “vira porco-espinho” — uma metáfora divertida sobre como reagimos aos nossos sentimentos e emoções.",
+    dataPublicacao: "2018",
+    dataCatalogo: "2025-08-12",
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/pedro_vira_porco_espinho.jpeg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/pedro_vira_porco_espinho.jpeg?raw=true"
+  },
+
+   {
+    id: 211,
+    titulo: "Poeminhas da Terra",
+    autor: "Márcia Leite (ilustração Tatiana Móes)",
+    editora: "Pulo do Gato",
+    tema: "Coleção Literária Itaú – Leia para uma Criança",
+    genero: "Poesia infantil / Cultura indígena",
+    classificacaoLiteraria: "",
+    numeroPaginas: 32,
+    resumo: "Versos curtos em tupi-guarani que celebram o cotidiano da vida na aldeia, evocando cultura, natureza e identidade dos primeiros habitantes do Brasil.",
+    dataPublicacao: "2016",
+    dataCatalogo: "2025-08-12",
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/poeminhas_da_terra.jpeg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/poeminhas_da_terra.jpeg?raw=true"
+  },
+  {
+    id: 212,
+    titulo: "Poesia na Varanda",
+    autor: "Sônia Junqueira (ilustração Flávio Fargas)",
+    editora: "Autêntica Infantil e Juvenil",
+    tema: "Coleção Literária Itaú – Leia para uma Criança",
+    genero: "Poesia infantil",
+    classificacaoLiteraria: "",
+    numeroPaginas: 28,
+    resumo: "Poemas que revelam a poesia em elementos simples do cotidiano—plantas, chuva, noite estrelada—celebrando a descoberta poética através dos sentidos.",
+    dataPublicacao: "8 de fevereiro de 2011",
+    dataCatalogo: "2025-08-12",
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/poesia_na_varanda.jpeg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/poesia_na_varanda.jpeg?raw=true"
+  },
+  {
+    id: 213,
+    titulo: "Quero colo!",
+    autor: "Stela Barbieri & Fernando Vilela",
+    editora: "SM Edições",
+    tema: "Coleção Literária Itaú – Leia para uma Criança",  // caso esteja na Coleção Itaú, podemos ajustar
+    genero: "Literatura infantil / Afeto",
+    classificacaoLiteraria: "",
+    numeroPaginas: 36,
+    resumo: "Texto que apresenta o colo nas mais diversas culturas e contextos — humano e animal — em cenas que ressaltam afeto, cuidado e acolhimento.",
+    dataPublicacao: "2016",
+    dataCatalogo: "2025-08-12",
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/quero_colo.jpeg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/quero_colo.jpeg?raw=true"
+  },
+
+  {
+    id: 214,
+    titulo: "Árvore dos sonhos",
+    autor: "Fabiano Alves Onça",
+    editora: "Banco Itaú (Meu Dinheirinho)",
+    tema: "Coleção Literária Itaú – Leia para uma Criança",
+    genero: "Literatura infantil / Educação financeira",
+    classificacaoLiteraria: "",
+    numeroPaginas: 32,
+    resumo: "Livro infantil que apresenta o tema da educação financeira de forma lúdica e acessível, por meio de sonhos que crescem como árvores.",
+    dataPublicacao: "2012",
+    dataCatalogo: "2025-08-12",
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/arvore_dos_sonhos.jpeg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/arvore_dos_sonhos.jpeg?raw=true"
+  },
+  {
+    id: 215,
+    titulo: "Adivinha quanto eu te amo",
+    autor: "Sam McBratney (ilustração: Anita Jeram)",
+    editora: "Editora (edição brasileira)",
+    tema: "Coleção Literária Itaú – Leia para uma Criança",
+    genero: "Literatura infantil / Afeto",
+    classificacaoLiteraria: "",
+    numeroPaginas: 36,
+    resumo: "Coelhinho e Papai Coelho medem — em gestos e palavras — o tamanho do amor, numa história doce e envolvente que celebra o afeto entre pais e filhos.",
+    dataPublicacao: "edição brasileira (2019)",
+    dataCatalogo: "2025-08-12",
+    capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/adivinha_quanto_eu_te_amo.jpeg?raw=true",
+    mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/adivinha_quanto_eu_te_amo.jpeg?raw=true"
+  },
+  
 //comportamento e sentimento
 
 {
@@ -2408,6 +2785,11 @@ export default {
   capa: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/capa/MeuLugarCubatão.jpeg?raw=true",
   mostruario: "https://github.com/Arthurbhs/Biblioteca_APP/blob/main/assets/images/thumbnaill/MeuLugarCubatão.jpeg?raw=true"
 },
+
+
+
+
+
 
  // Coleção Black Powe
 

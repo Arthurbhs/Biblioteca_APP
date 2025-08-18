@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, ActivityIndicator, FlatList, StyleSheet, ScrollView, TouchableOpacity} from 'react-native';
+import { View, Text, FlatList, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator } from 'react-native';
 import LivroButton from './LivroButton';
 import { useRouter } from 'expo-router';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase'; // ajuste caminho se necessário
 
 type Livro = {
   id: number;
@@ -16,20 +18,18 @@ type Livro = {
   resumo: string;
 };
 
-
 const ListaCategorias = () => {
   const router = useRouter();
   const [livros, setLivros] = useState<Livro[]>([]);
   const [carregando, setCarregando] = useState(true);
   const [limiteSecoes, setLimiteSecoes] = useState(3);
 
-
   useEffect(() => {
     const buscarLivros = async () => {
       try {
-        const resposta = await fetch('https://bookapi.apimateriallistcalculator.workers.dev/livros');
-        const dados: Livro[] = await resposta.json();
-        setLivros(Array.isArray(dados) ? dados : []);
+        const snapshot = await getDocs(collection(db, 'livros'));
+        const dados: Livro[] = snapshot.docs.map(doc => doc.data() as Livro);
+        setLivros(dados);
       } catch (erro) {
         console.error('Erro ao buscar livros:', erro);
       } finally {
@@ -43,116 +43,102 @@ const ListaCategorias = () => {
   const normalizar = (texto: string) =>
     texto?.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
- const filtrarPorPalavra = (palavra: string) =>
-  livros.filter((livro) => {
-    const camposParaBuscar = [
-      livro.titulo,
-      livro.tema,
-      livro.genero,
-      livro.classificacaoLiteraria,
-      livro.resumo,
-    ];
+  const filtrarPorPalavra = (palavra: string) =>
+    livros.filter((livro) => {
+      const camposParaBuscar = [
+        livro.titulo,
+        livro.tema,
+        livro.genero,
+        livro.classificacaoLiteraria,
+        livro.resumo,
+      ];
 
-    return camposParaBuscar.some((campo) =>
-      normalizar(campo || '').includes(normalizar(palavra))
-    );
-  });
-
-
-  const filtrarRecentes = () =>
-    [...livros]
-      .filter((l) => l.dataCatalogo)
-      .sort((a, b) => new Date(b.dataCatalogo).getTime() - new Date(a.dataCatalogo).getTime())
-      .slice(0, 20);
-
-  const filtrarLancamentosAnoAtual = () => {
-    const anoAtual = new Date().getFullYear();
-    return livros.filter((livro) => {
-      if (!livro.dataPublicacao) return false;
-      const anoLivro = new Date(livro.dataPublicacao).getFullYear();
-      return anoLivro === anoAtual;
+      return camposParaBuscar.some((campo) =>
+        normalizar(campo || '').includes(normalizar(palavra))
+      );
     });
+
+  const renderSecao = (titulo: string, filtrarPor: string) => {
+    const data = filtrarPorPalavra(filtrarPor).slice(0, 15);
+
+    if (data.length === 0) return null;
+
+    return (
+      <View style={styles.secao}>
+        <TouchableOpacity
+          onPress={() =>
+            router.push({
+              pathname: '/sessao',
+              params: { palavraChave: filtrarPor, titulo: titulo },
+            })
+          }
+        >
+          <Text style={styles.titulo}>{titulo}</Text>
+        </TouchableOpacity>
+
+        <FlatList
+          data={data}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          keyExtractor={(item) => item.id.toString()}
+          contentContainerStyle={styles.listContainer}
+          renderItem={({ item }) => (
+            <LivroButton
+              livro={item}
+              onPress={() => router.push(`/livros/${item.id}`)}
+            />
+          )}
+        />
+      </View>
+    );
   };
 
-  
-const renderSecao = (titulo: string, filtrarPor: string) => {
- const data = filtrarPorPalavra(filtrarPor).slice(0, 15);
+  const secoes = [
+    { titulo: '👾🤖 Afrofuturismo', palavra: 'Afrofuturismo' },
+    { titulo: '✊ Coleção Black Power', palavra: 'coleção black power' },
+    { titulo: '📖👶 Coleção Literária Itaú ', palavra: 'Coleção Literária Itaú - Leia para uma criança' },
+    { titulo: '❤️‍🩹🧠 Comportamento / Sentimentos', palavra: 'Comportamento / Sentimentos' },
+    { titulo: '🛖🏹 Cultura Indígena', palavra: 'Cultura Indígena' },
+    { titulo: '♀️ Empoderamento Feminino', palavra: 'empoderamento feminino' },
+    { titulo: '🏳️‍🌈 Famílias Diversas', palavra: 'Famílias Diversas' },
+    { titulo: '🧒👧 Infanto-Juvenil', palavra: 'Infanto-Juvenil' },
+    { titulo: '🇧🇷 manifestação cultural', palavra: 'manifestação cultural' },
+    { titulo: '🤰 maternidade', palavra: 'maternidade' },
+    { titulo: '🌳♻️ Meio ambiente / Reciclagem', palavra: 'Meio ambiente / Reciclagem' },
+    { titulo: '⚖️ Questões Sociais', palavra: 'questões sociais' },
+  ];
 
-  if (data.length === 0) return null;
+  if (carregando) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#5ebf26" />
+        <Text style={styles.loadingText}>Carregando livros...</Text>
+      </View>
+    );
+  }
 
   return (
-    <View style={styles.secao}>
-     <TouchableOpacity
-  onPress={() => router.push({
-    pathname: '/sessao',
-    params: {
-      palavraChave: filtrarPor,
-      titulo: titulo
-    }
-  })}
->
-  <Text style={styles.titulo}>{titulo}</Text>
-</TouchableOpacity>
-
-      <FlatList
-        data={data}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        keyExtractor={(item) => item.id.toString()}
-        contentContainerStyle={styles.listContainer}
-        renderItem={({ item }) => (
-          <LivroButton livro={item} onPress={() => router.push(`/livros/${item.id}`)} />
+    <ScrollView>
+      <View>
+        {secoes.slice(0, limiteSecoes).map((secao, index) =>
+          renderSecao(secao.titulo, secao.palavra)
         )}
-      />
-    </View>
+
+        {limiteSecoes < secoes.length && (
+          <TouchableOpacity
+            style={styles.botaoMais}
+            onPress={() => setLimiteSecoes((prev) => prev + 3)}
+          >
+            <Text style={styles.textoBotaoMais}>Mostrar mais</Text>
+          </TouchableOpacity>
+        )}
+      </View>
+    </ScrollView>
   );
 };
 
-
- const secoes = [
-  //{ titulo: '🪘 Capoeira', palavra: 'capoeira' },
-  { titulo: '👾🤖 Afrofuturismo', palavra: 'Afrofuturismo' },
-  { titulo: '✊ Coleção Black Power', palavra: 'coleção black power' },
-  { titulo: '📖👶 Coleção Literária Itaú ', palavra: 'Coleção Literária Itaú - Leia para uma criança' },
-  { titulo: '❤️‍🩹🧠 Comportamento / Sentimentos', palavra: 'Comportamento / Sentimentos' },
-  { titulo: '🛖🏹 Cultura Indígena', palavra: 'Cultura Indígena' },
-  { titulo: '♀️ Empoderamento Feminino', palavra: 'empoderamento feminino' },
-  { titulo: '🏳️‍🌈 Famílias Diversas', palavra: 'Famílias Diversas' },
-  { titulo: '🧒👧 Infanto‑Juvenil', palavra: 'Infanto‑Juvenil' },
-  { titulo: '🇧🇷 manifestação cultural', palavra: 'manifestação cultural' },
-  { titulo: '🤰 maternidade', palavra: 'maternidade' },
-  { titulo: '🌳♻️ Meio ambiente / Reciclagem', palavra: 'Meio ambiente / Reciclagem' },
-  { titulo: '⚖️ Questões Sociais', palavra: 'questões sociais' },
-  
- 
-];
-
-return (
-  <ScrollView>
-    <View>
-      {secoes.slice(0, limiteSecoes).map((secao, index) =>
-        renderSecao(secao.titulo, secao.palavra)
-      )}
-
-      {limiteSecoes < secoes.length && (
-        <TouchableOpacity
-          style={styles.botaoMais}
-          onPress={() => setLimiteSecoes((prev) => prev + 3)}
-        >
-          <Text style={styles.textoBotaoMais}>Mostrar mais</Text>
-        </TouchableOpacity>
-      )}
-    </View>
-  </ScrollView>
-);
-
-
-};
-
 const styles = StyleSheet.create({
-  secao: {
-    marginBottom: 24,
-  },
+  secao: { marginBottom: 24 },
   titulo: {
     fontSize: 20,
     fontWeight: 'bold',
@@ -160,36 +146,22 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     color: '#333',
   },
-  listContainer: {
-    paddingHorizontal: 16,
-  },
-  loadingContainer: {
-    marginTop: 40,
+  listContainer: { paddingHorizontal: 16 },
+  loadingContainer: { marginTop: 40, alignItems: 'center' },
+  loadingText: { marginTop: 10, fontSize: 16, color: '#444' },
+  botaoMais: {
+    backgroundColor: '#5ebf26',
+    padding: 12,
+    marginHorizontal: 16,
+    marginVertical: 24,
+    borderRadius: 8,
     alignItems: 'center',
   },
-  loadingText: {
-    marginTop: 10,
+  textoBotaoMais: {
+    color: '#fff',
     fontSize: 16,
-    color: '#444',
+    fontWeight: 'bold',
   },
-
-botaoMais: {
-  backgroundColor: '#5ebf26',
-  padding: 12,
-  marginHorizontal: 16,
-  marginVertical: 24,
-  borderRadius: 8,
-  alignItems: 'center',
-},
-textoBotaoMais: {
-  color: '#fff',
-  fontSize: 16,
-  fontWeight: 'bold',
-},
-
-
 });
-
-
 
 export default ListaCategorias;

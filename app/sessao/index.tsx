@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
-import LivroButton from '../../src/components/LivroButton'; // ajuste o caminho conforme sua pasta
-import Header from "../../src/components/Header"
+import LivroButton from '../../src/components/LivroButton';
+import Header from "../../src/components/Header";
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase'; // ajuste o caminho se necessário
 
 type Livro = {
   id: number;
@@ -29,18 +31,17 @@ const CategoriaScreen = () => {
 
     const buscarLivros = async () => {
       try {
-        const resposta = await fetch('https://bookapi.apimateriallistcalculator.workers.dev/livros');
-        const dados: Livro[] = await resposta.json();
+        const snapshot = await getDocs(collection(db, 'livros'));
+        const dados = snapshot.docs.map(doc => doc.data() as Livro);
 
         const livrosFiltrados = dados.filter((livro) =>
-          livro.tema?.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(
-            palavra.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
-          )
+          livro.tema?.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+            .includes(palavra.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase())
         );
 
         setLivros(livrosFiltrados);
       } catch (erro) {
-        console.error('Erro ao buscar livros:', erro);
+        console.error('Erro ao buscar livros no Firestore:', erro);
       }
     };
 
@@ -49,21 +50,21 @@ const CategoriaScreen = () => {
 
   return (
     <>
-    <Header/>
-    <View style={styles.container}>
-      <Text style={styles.header}>{tituloCategoria}</Text>
+      <Header />
+      <View style={styles.container}>
+        <Text style={styles.header}>{tituloCategoria}</Text>
 
-      <FlatList
-        data={livros}
-        keyExtractor={(item) => item.id.toString()}
-        numColumns={2}
-        columnWrapperStyle={styles.row}
-        contentContainerStyle={styles.listContent}
-        renderItem={({ item }) => (
-          <LivroButton livro={item} onPress={() => {}} />
-        )}
-      />
-    </View>
+        <FlatList
+          data={livros}
+          keyExtractor={(item) => item.id.toString()}
+          numColumns={2}
+          columnWrapperStyle={styles.row}
+          contentContainerStyle={styles.listContent}
+          renderItem={({ item }) => (
+            <LivroButton livro={item} onPress={() => {}} />
+          )}
+        />
+      </View>
     </>
   );
 };

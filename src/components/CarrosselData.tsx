@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { View, FlatList, Image, Text, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import { router } from 'expo-router';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase'; // ajuste o caminho se necessário
 
 const { width } = Dimensions.get('window');
 
@@ -18,15 +20,10 @@ const RecentBooksCarousel: React.FC = () => {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const buscarLivros = async () => {
       try {
-        const response = await fetch('https://bookapi.apimateriallistcalculator.workers.dev/livros');
-        const dados = await response.json();
-
-        if (!Array.isArray(dados)) {
-          console.error('A resposta da API não é um array:', dados);
-          return;
-        }
+        const snapshot = await getDocs(collection(db, 'livros'));
+        const dados = snapshot.docs.map(doc => doc.data() as Livro);
 
         const livrosOrdenados = dados
           .filter(l => l.dataCatalogo)
@@ -39,7 +36,7 @@ const RecentBooksCarousel: React.FC = () => {
       }
     };
 
-    fetchData();
+    buscarLivros();
   }, []);
 
   useEffect(() => {
@@ -47,7 +44,7 @@ const RecentBooksCarousel: React.FC = () => {
       intervalRef.current = setInterval(() => {
         currentIndex.current = (currentIndex.current + 1) % livrosRecentes.length;
         flatListRef.current?.scrollToIndex({ index: currentIndex.current, animated: true });
-      }, 3000); // 3 segundos
+      }, 3000);
 
       return () => clearInterval(intervalRef.current as NodeJS.Timeout);
     }
@@ -93,12 +90,11 @@ const styles = StyleSheet.create({
     padding: 16,
     alignItems: 'center',
   },
- image: {
-  width: width * 0.9,         // 90% da largura da tela
-  aspectRatio: 16 / 9,        // mantém a proporção widescreen
-  borderRadius: 12,
-},
-
+  image: {
+    width: width * 0.9,
+    aspectRatio: 16 / 9,
+    borderRadius: 12,
+  },
   title: {
     fontSize: 18,
     marginTop: 8,

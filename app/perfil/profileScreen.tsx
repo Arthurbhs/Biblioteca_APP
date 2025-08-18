@@ -9,13 +9,18 @@ import * as FileSystem from 'expo-file-system';
 import CustomHeader from '@/src/components/Header';
 import LivrosReservados from "../../src/components/ReserveBook"
 import { User } from 'firebase/auth';
+import ButtonExel from "../../src/components/ButtonExel"
+import Table from "../../src/components/ReservaTable"
+import { useRouter } from "expo-router"; // 👈 importar
+
+
 
 
 
 export default function ProfileScreen() {
   const [editando, setEditando] = useState(false);
   const [carregando, setCarregando] = useState(false);
-const [usuario, setUsuario] = useState<User | null>(null);
+  const [usuario, setUsuario] = useState<User | null>(null);
   const [nome, setNome] = useState('');
   const [profissao, setProfissao] = useState('');
   const [email, setEmail] = useState('');
@@ -24,7 +29,13 @@ const [usuario, setUsuario] = useState<User | null>(null);
   const [bairro, setBairro] = useState('');
   const [cidade, setCidade] = useState('');
   const [estado, setEstado] = useState('');
-  const [avatar, setAvatar] = useState<string>(''); 
+  const [avatar, setAvatar] = useState<string>('');
+  const [isAdmin, setIsAdmin] = useState(false); // <-- novo estado
+const [mostrar, setMostrar] = useState<"reservas" | "tabela">("reservas");
+  const router = useRouter(); // 👈 inicializar
+
+
+
   useEffect(() => {
     const carregarDados = async () => {
       const user = auth.currentUser;
@@ -34,7 +45,7 @@ const [usuario, setUsuario] = useState<User | null>(null);
         const docRef = doc(db, 'users', user.uid);
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
-          const data = docSnap.data();// @ts-ignore
+          const data = docSnap.data();
           setUsuario(user);
           setNome(data.nome || '');
           setProfissao(data.profissao || '');
@@ -45,14 +56,17 @@ const [usuario, setUsuario] = useState<User | null>(null);
           setCidade(data.endereco?.cidade || '');
           setEstado(data.endereco?.estado || '');
           setAvatar(data.avatarBase64 || '');
+          setIsAdmin(data.administrator === true); // <-- pega se é admin
         }
       } catch (error) {
         Alert.alert('Erro ao carregar dados', error instanceof Error ? error.message : String(error));
       }
     };
-
+  
     carregarDados();
   }, []);
+
+
 
  const pickImage = async () => {
   const permission = await ImagePicker.requestMediaLibraryPermissionsAsync();
@@ -97,12 +111,14 @@ const [usuario, setUsuario] = useState<User | null>(null);
 };
 
   const salvarAlteracoes = async () => {
-    if (!usuario) return;
+  if (!usuario) return;
 
-    try {
-      setCarregando(true);
-// @ts-ignore
-      await setDoc(doc(db, 'users', usuario.uid), {// @ts-ignore
+  try {
+    setCarregando(true);
+
+    await setDoc(
+      doc(db, 'users', usuario.uid),
+      {
         uid: usuario.uid,
         nome: nome.trim(),
         profissao: profissao.trim(),
@@ -115,20 +131,24 @@ const [usuario, setUsuario] = useState<User | null>(null);
           cidade: cidade.trim(),
           estado: estado.trim(),
         },
+        administrator: isAdmin, // 🔑 mantém o valor
         updatedAt: new Date(),
-      });
+      },
+      { merge: true } // 🔑 não sobrescreve campos que não estiverem aqui
+    );
 
-      Alert.alert('Sucesso', 'Dados atualizados com sucesso!');
-      setEditando(false);
-    } catch (error) {
-      Alert.alert('Erro ao salvar', error instanceof Error ? error.message : String(error));
-    } finally {
-      setCarregando(false);
-    }
-  };
+    Alert.alert('Sucesso', 'Dados atualizados com sucesso!');
+    setEditando(false);
+  } catch (error) {
+    Alert.alert('Erro ao salvar', error instanceof Error ? error.message : String(error));
+  } finally {
+    setCarregando(false);
+  }
+};
 
-  return (
-    <><CustomHeader/>
+
+return (
+   <><CustomHeader/>
     <ScrollView contentContainerStyle={styles.container}>
 
 
@@ -202,13 +222,49 @@ const [usuario, setUsuario] = useState<User | null>(null);
         <Button title="Editar" onPress={() => setEditando(true)} buttonStyle={styles.botao} />
         
       )}
-{usuario && (
-  <LivrosReservados uid={usuario.uid} mostrarCancelar />
-)}
+    
+        {isAdmin && (
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-around",
+              marginTop: 15,
+            }}
+          >
+            <Button
+              title="📚 Ver Reservas"
+              onPress={() => setMostrar("reservas")}
+              buttonStyle={{ backgroundColor: "#4CAF50", flex: 1, marginRight: 5 }}
+            />
+            <Button
+              title="📊 Ver Tabela"
+              onPress={() => setMostrar("tabela")}
+              buttonStyle={{ backgroundColor: "#2196F3", flex: 1, marginHorizontal: 5 }}
+            />
+            <Button
+              title="📖 Gerenciar Livros"
+              onPress={() => router.push("../livros/Gerenciador")} // 👈 navega para nova página
+              buttonStyle={{ backgroundColor: "#FF9800", flex: 1, marginLeft: 5 }}
+            />
+          </View>
+        )}
 
+        {/* Renderização condicional */}
+        {isAdmin && mostrar === "reservas" && usuario && (
+          <LivrosReservados uid={usuario.uid} mostrarCancelar />
+        )}
 
+        {isAdmin && mostrar === "tabela" && (
+          <>
+            <Table />
+            <ButtonExel />
+          </>
+        )}
 
-    </ScrollView>
+        {!isAdmin && usuario && (
+          <LivrosReservados uid={usuario.uid} mostrarCancelar />
+        )}
+      </ScrollView>
     </>
   );
 }

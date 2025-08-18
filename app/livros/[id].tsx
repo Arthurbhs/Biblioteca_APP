@@ -9,6 +9,9 @@ import Comentario from '../../src/components/Comment'
 import ReservaButton from "../../src/components/ReserveButton"
 import { useRef } from 'react';
 import { findNodeHandle, UIManager } from 'react-native';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../../firebase'; // ajuste o caminho conforme seu projeto
+
 
 
 const screenWidth = Dimensions.get('window').width;
@@ -40,22 +43,28 @@ const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
 
 
   useEffect(() => {
-    if (!id) return;
+  if (!id) return;
 
-    const fetchLivro = async () => {
-      try {
-        const response = await fetch(`https://bookapi.apimateriallistcalculator.workers.dev/livros/${id}`);
-        const data = await response.json();
-        setLivro(data);
-      } catch (error) {
-        console.error('Erro ao buscar o livro:', error);
-      } finally {
-        setLoading(false);
+  const fetchLivro = async () => {
+    try {
+      const docRef = doc(db, 'livros', id.toString());
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+        setLivro(docSnap.data() as Livro);
+      } else {
+        console.warn('Livro não encontrado no Firestore');
+        setLivro(null);
       }
-    };
+    } catch (error) {
+      console.error('Erro ao buscar o livro no Firestore:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    fetchLivro();
-  }, [id]);
+  fetchLivro();
+}, [id]);
 
   if (loading) {
     return (

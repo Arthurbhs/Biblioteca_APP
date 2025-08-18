@@ -7,7 +7,7 @@ import { router } from 'expo-router';
 const { width } = Dimensions.get('window');
 
 interface LivroAPI {
-  id: number;
+  id: string; // agora é string pois vem do Firestore
   titulo: string;
   mostruario: string;
 }
@@ -25,11 +25,17 @@ const ImageCarouselTopRated: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://bookapi.apimateriallistcalculator.workers.dev/livros');
-        const livrosAPI: LivroAPI[] = await response.json();
+        // 🔹 Busca livros do Firestore
+        const livrosSnap = await getDocs(collection(db, 'livros'));
+        const livrosAPI: LivroAPI[] = livrosSnap.docs.map(doc => ({
+          id: doc.id,
+          titulo: doc.data().titulo,
+          mostruario: doc.data().mostruario,
+        }));
 
+        // 🔹 Busca avaliações do Firestore
         const avaliacoesSnap = await getDocs(collection(db, 'avaliacoes'));
-        const mapaNotas: { [livroId: number]: number[] } = {};
+        const mapaNotas: { [livroId: string]: number[] } = {};
 
         avaliacoesSnap.forEach(doc => {
           const { livroId, nota } = doc.data();
@@ -37,6 +43,7 @@ const ImageCarouselTopRated: React.FC = () => {
           mapaNotas[livroId].push(nota);
         });
 
+        // 🔹 Calcula média e total de avaliações
         const livrosComNota: LivroComNota[] = livrosAPI.map((livro) => {
           const notas = mapaNotas[livro.id] || [];
           const media = notas.length > 0 ? notas.reduce((a, b) => a + b, 0) / notas.length : 0;
@@ -47,6 +54,7 @@ const ImageCarouselTopRated: React.FC = () => {
           };
         });
 
+        // 🔹 Seleciona top 5
         const top5 = livrosComNota
           .filter(l => l.totalAvaliacoes > 0)
           .sort((a, b) => b.media - a.media)
@@ -54,7 +62,7 @@ const ImageCarouselTopRated: React.FC = () => {
 
         setTopLivros(top5);
       } catch (err) {
-        console.error('Erro ao buscar livros ou avaliações:', err);
+        console.error('Erro ao buscar livros ou avaliações no Firestore:', err);
       }
     };
 
@@ -83,7 +91,7 @@ const ImageCarouselTopRated: React.FC = () => {
       horizontal
       pagingEnabled
       showsHorizontalScrollIndicator={false}
-      keyExtractor={(item) => item.id.toString()}
+      keyExtractor={(item) => item.id}
       renderItem={({ item }) => (
         <TouchableOpacity onPress={() => router.push(`/livros/${item.id}`)}>
           <View style={styles.carouselItem}>
@@ -110,10 +118,10 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   image: {
-  width: width * 0.9,         // 90% da largura da tela
-  aspectRatio: 16 / 9,        // mantém a proporção widescreen
-  borderRadius: 12,
-},
+    width: width * 0.9,
+    aspectRatio: 16 / 9,
+    borderRadius: 12,
+  },
   title: {
     fontSize: 18,
     marginTop: 8,
